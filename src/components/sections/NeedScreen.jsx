@@ -1,20 +1,62 @@
+// File: src/components/NeedScreen.js
+
 import React from "react";
-import { Section, SectionTitle, InfoBox, Paragraph } from "../styles";
+import {
+  Section,
+  SectionTitle,
+  AttentionBox,
+  ImpactText,
+  StatGrid,
+  StatCard,
+  StatNumber,
+  StatLabel,
+  QuoteText,
+  BridgeText,
+  SourceText,
+  HeroButton
+} from "../styles";
 
 const NeedScreen = () => (
   <Section id="need-screen">
     <SectionTitle>Need to Screen</SectionTitle>
-    <InfoBox>
-      <Paragraph>
-        For older adults, falls are serious.
-      </Paragraph>
-      <Paragraph>
-        Each year, millions of seniors suffer a fall. One in five will result in a severe injury such as a broken bone or head injury. In fact, falling is the leading cause of death in older adults.
-      </Paragraph>
-      <Paragraph>
-        If you are at risk of falling, it’s critical for your health and safety to pinpoint your risk and prevent falls from happening.
-      </Paragraph>
-    </InfoBox>
+
+    <AttentionBox>
+      <ImpactText>
+        For older adults, falls are a critical threat.
+      </ImpactText>
+
+      <QuoteText>
+        It’s not just about preventing a fall; it’s about preserving independence and ensuring peace of mind for the entire family.
+      </QuoteText>
+
+      <StatGrid>
+        <StatCard>
+          <StatNumber>1 in 4</StatNumber>
+          <StatLabel>Seniors experience a fall each year.</StatLabel>
+        </StatCard>
+        <StatCard>
+          <StatNumber>1 in 5</StatNumber>
+          <StatLabel>Falls result in a serious injury like a broken bone or head trauma.</StatLabel>
+        </StatCard>
+        <StatCard className="serious">
+          <StatNumber>#1</StatNumber>
+          <StatLabel>Leading cause of injury-related death among older adults.</StatLabel>
+        </StatCard>
+      </StatGrid>
+
+      <BridgeText>
+        Understanding the risk is the first step. The next is taking decisive, evidence-based action to prevent it.
+      </BridgeText>
+      
+      <HeroButton href="#solution-screen">
+        See How We Can Help
+      </HeroButton>
+
+      <SourceText>
+        All statistics sourced from the Centers for Disease Control and Prevention (CDC). <a href="https://www.cdc.gov/falls/data/falls-by-state.html" target="_blank" rel="noopener noreferrer">Learn more.</a>
+      </SourceText>
+
+    </AttentionBox>
   </Section>
 );
 
