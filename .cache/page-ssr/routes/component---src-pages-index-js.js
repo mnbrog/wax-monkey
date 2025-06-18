@@ -7594,7 +7594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:#0A2640;line-height:1.5;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:#3FD0C9;border-radius:4px;}"]));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:50;}html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:#0A2640;line-height:1.5;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:#3FD0C9;border-radius:4px;}"]));
 
 /***/ }),
 
@@ -7661,11 +7661,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
+// File: src/components/sections/About.jsx
 
 
+// Import all the necessary styled components
+
+
+// --- Create your team data here ---
+const teamData = [{
+  name: "John Doe",
+  title: "Co-Founder & CEO",
+  bio: "With over 20 years in clinical practice, John founded Upright Medical to bridge the gap between reactive treatment and proactive, preventative care.",
+  // Replace with actual image paths
+  photoUrl: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=2787&auto=format&fit=crop"
+}, {
+  name: "Jane Smith",
+  title: "Co-Founder & CTO",
+  bio: "Jane is the architect of our evidence-based platform, dedicated to creating technology that is both powerful for clinicians and simple to use.",
+  photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop"
+}
+// Add more team members here if you like
+];
 const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.InfoBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Paragraph, null, "As a national distributor we offer value base care solutions to our customers that can be beneficial to their patients.")));
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower healthcare providers with innovative, value-based solutions that significantly reduce patient falls, enhance safety, and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
+  as: "h2",
+  style: {
+    fontSize: '2rem',
+    marginBottom: '3rem'
+  }
+}, "Meet Our Leadership"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
+  key: index
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
+  src: member.photoUrl,
+  alt: `Photo of ${member.name}`
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
@@ -7684,34 +7714,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
+// File: src/components/sections/Contact.jsx
 
+
+// Import all the necessary styled components
+
+
+// Import icons for contact details
 
 const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "contact"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Contact"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-  style: {
-    textAlign: 'center',
-    marginBottom: '1rem'
-  }
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Let\u2019s Talk Fall Prevention.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-  style: {
-    textAlign: 'center',
-    marginBottom: '1rem'
-  }
-}, "Interested in learning more? Contact us for a demo or partnership discussion."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Get in Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Subheading, null, "Let\u2019s Talk Fall Prevention."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactParagraph, null, "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
+  color: "#3FD0C9",
+  size: "24"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "mailto:info@uprightmedicalsolutions.com"
+}, "info@uprightmedicalsolutions.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaPhoneAlt, {
+  color: "#3FD0C9",
+  size: "24"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "tel:+1-800-555-1234"
+}, "+1 (800) 555-1234"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
   type: "text",
-  placeholder: "Name",
+  name: "name",
+  placeholder: "Full Name",
   required: true
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
   type: "email",
-  placeholder: "Email",
+  name: "email",
+  placeholder: "Work Email",
   required: true
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
-  rows: "4",
-  placeholder: "Message"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
+  name: "subject",
+  required: true
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "",
+  disabled: true,
+  selected: true
+}, "I'm interested in..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "Demo Request"
+}, "Requesting a Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "Pricing Information"
+}, "Pricing Information"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "Partnership"
+}, "Partnership Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "General Question"
+}, "General Question")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
+  name: "message",
+  rows: "5",
+  placeholder: "Your message..."
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
   type: "submit"
-}, "Send")));
+}, "Send Message"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.PrivacyNote, null, "We respect your privacy and will never share your information."))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
 
 /***/ }),
@@ -7877,21 +7932,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/NeedScreen.js
+// File: src/components/sections/NeedScreen.jsx
 
 
+// Import the layout components we need
 
-const NeedScreen = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
+const NeedScreen = () =>
+/*#__PURE__*/
+// We are now using React.forwardRef to allow this component to be observed for auto-scrolling nav
+react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "need-screen"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Need to Screen"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AttentionBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "For older adults, falls are a critical threat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.QuoteText, null, "It\u2019s not just about preventing a fall; it\u2019s about preserving independence and ensuring peace of mind for the entire family."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Seniors experience a fall each year.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Falls result in a serious injury like a broken bone or head trauma.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "The Unseen Risk in Plain Sight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "For older adults, falls are a critical threat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.QuoteText, null, "It\u2019s not just about preventing a fall; it\u2019s about preserving independence and ensuring peace of mind for the entire family."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Seniors experience a fall each year.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Falls result in a serious injury like a broken bone or head trauma.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, {
   className: "serious"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "#1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Leading cause of injury-related death among older adults."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BridgeText, null, "Understanding the risk is the first step. The next is taking decisive, evidence-based action to prevent it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-  href: "#solution-screen"
+  href: "#fra-overview"
 }, "See How We Can Help"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SourceText, null, "All statistics sourced from the Centers for Disease Control and Prevention (CDC). ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "https://www.cdc.gov/falls/data/falls-by-state.html",
+  href: "https://www.cdc.gov/falls/data-research/index.html",
   target: "_blank",
   rel: "noopener noreferrer"
-}, "Learn more."))));
+}, "Learn more."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  src: "https://images.unsplash.com/photo-1576765608866-5b4104033438?q=80&w=2787&auto=format&fit=crop",
+  alt: "Caring healthcare professional assisting a senior patient"
+}))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NeedScreen);
 
 /***/ }),
@@ -7910,11 +7972,80 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
+// File: src/components/sections/WhoWeHelp.jsx
 
 
-const WhoWeHelp = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "who-we-help"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Who We Help"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.InfoBox, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Paragraph, null, "Upright Medical Solutions Fall Risk platform has provided vital fall-prevention solutions to thousands of Physicians and Healthcare clinics the United States. While our primary focus is the +65 population, there is a growing need for introducing a Fall Risk plan of care for patients with underlying conditions that can contribute to falls. We would welcome the opportunity to discuss the value this Fall Risk program could bring to your practice.")));
+// Import all the necessary styled components
+
+
+// Import icons for each profile
+
+
+// Define the content for our tabs in an array for clean code
+const whoWeHelpData = [{
+  id: 'providers',
+  title: 'Healthcare Providers',
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaUserMd, null),
+  description: "Our platform provides vital fall-prevention solutions to thousands of Physicians and Healthcare clinics across the United States, enabling superior patient care and new revenue opportunities.",
+  benefits: ["Implement an evidence-based screening protocol.", "Create new service lines for your practice.", "Improve patient outcomes and satisfaction.", "Utilize detailed reporting for better care coordination."]
+}, {
+  id: 'seniors',
+  title: 'Senior Patients (65+)',
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaUserFriends, null),
+  description: "Our primary focus is the +65 population. We provide the tools to help seniors maintain their independence and safety by proactively identifying and managing fall risks.",
+  benefits: ["Gain a clear understanding of your personal fall risk.", "Receive a customized plan to improve balance and strength.", "Maintain independence and confidence in daily activities.", "Share clear, understandable results with family and doctors."]
+}, {
+  id: 'at-risk',
+  title: 'At-Risk Populations',
+  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaHeartbeat, null),
+  description: "There is a growing need for introducing a Fall Risk plan of care for patients with underlying conditions (neurological, vestibular, etc.) that can contribute to falls at any age.",
+  benefits: ["Address fall risks associated with specific medical conditions.", "Integrate fall prevention into post-operative rehabilitation.", "Manage risks related to medication side effects.", "Provide a proactive layer of care for complex patients."]
+}];
+const WhoWeHelp = () => {
+  const {
+    0: activeTab,
+    1: setActiveTab
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(whoWeHelpData[0].id);
+  const activeContent = whoWeHelpData.find(tab => tab.id === activeTab);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
+    id: "who-we-help"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Who We Help"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabContainer, null, whoWeHelpData.map(tab => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabButton, {
+    key: tab.id,
+    active: activeTab === tab.id,
+    onClick: () => setActiveTab(tab.id)
+  }, tab.title))), activeContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabContent, {
+    key: activeContent.id
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, {
+    style: {
+      marginBottom: '1.5rem'
+    }
+  }, activeContent.icon), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LeadParagraph, null, activeContent.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    style: {
+      marginBottom: '1rem'
+    }
+  }, "Key Benefits:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BulletList, null, activeContent.benefits.map((benefit, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    key: index
+  }, benefit)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CTAWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
+    style: {
+      marginBottom: '1rem'
+    }
+  }, "Ready to Enhance Patient Care?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    style: {
+      maxWidth: '600px',
+      margin: '0 auto 1.5rem auto'
+    }
+  }, "We would welcome the opportunity to discuss the value this Fall Risk program could bring to your practice."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
+    href: "#contact"
+  }, "Schedule a Consultation")));
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WhoWeHelp);
 
 /***/ }),
@@ -7928,12 +8059,18 @@ const WhoWeHelp = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AboutIntroWrapper: () => (/* binding */ AboutIntroWrapper),
 /* harmony export */   AttentionBox: () => (/* binding */ AttentionBox),
 /* harmony export */   BackgroundVideo: () => (/* binding */ BackgroundVideo),
 /* harmony export */   BridgeText: () => (/* binding */ BridgeText),
 /* harmony export */   BulletList: () => (/* binding */ BulletList),
 /* harmony export */   COLORS: () => (/* binding */ COLORS),
+/* harmony export */   CTAWrapper: () => (/* binding */ CTAWrapper),
+/* harmony export */   ContactDetail: () => (/* binding */ ContactDetail),
 /* harmony export */   ContactForm: () => (/* binding */ ContactForm),
+/* harmony export */   ContactInfo: () => (/* binding */ ContactInfo),
+/* harmony export */   ContactLayout: () => (/* binding */ ContactLayout),
+/* harmony export */   ContactParagraph: () => (/* binding */ ContactParagraph),
 /* harmony export */   FeatureCard: () => (/* binding */ FeatureCard),
 /* harmony export */   FeatureDescription: () => (/* binding */ FeatureDescription),
 /* harmony export */   FeatureGrid: () => (/* binding */ FeatureGrid),
@@ -7949,15 +8086,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   InfoBox: () => (/* binding */ InfoBox),
 /* harmony export */   LeadParagraph: () => (/* binding */ LeadParagraph),
 /* harmony export */   LogoWrapper: () => (/* binding */ LogoWrapper),
+/* harmony export */   MemberBio: () => (/* binding */ MemberBio),
+/* harmony export */   MemberName: () => (/* binding */ MemberName),
+/* harmony export */   MemberPhoto: () => (/* binding */ MemberPhoto),
+/* harmony export */   MemberTitle: () => (/* binding */ MemberTitle),
 /* harmony export */   MethodologyContainer: () => (/* binding */ MethodologyContainer),
+/* harmony export */   MissionStatement: () => (/* binding */ MissionStatement),
 /* harmony export */   NavBar: () => (/* binding */ NavBar),
 /* harmony export */   NavLinks: () => (/* binding */ NavLinks),
 /* harmony export */   Paragraph: () => (/* binding */ Paragraph),
+/* harmony export */   PrivacyNote: () => (/* binding */ PrivacyNote),
 /* harmony export */   ProcessStep: () => (/* binding */ ProcessStep),
 /* harmony export */   ProcessStepper: () => (/* binding */ ProcessStepper),
 /* harmony export */   ProductCard: () => (/* binding */ ProductCard),
 /* harmony export */   ProductGrid: () => (/* binding */ ProductGrid),
 /* harmony export */   QuoteText: () => (/* binding */ QuoteText),
+/* harmony export */   SecondaryButton: () => (/* binding */ SecondaryButton),
 /* harmony export */   Section: () => (/* binding */ Section),
 /* harmony export */   SectionTitle: () => (/* binding */ SectionTitle),
 /* harmony export */   SourceText: () => (/* binding */ SourceText),
@@ -7970,6 +8114,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   StepList: () => (/* binding */ StepList),
 /* harmony export */   StepTitle: () => (/* binding */ StepTitle),
 /* harmony export */   SubIndicator: () => (/* binding */ SubIndicator),
+/* harmony export */   Subheading: () => (/* binding */ Subheading),
+/* harmony export */   TabButton: () => (/* binding */ TabButton),
+/* harmony export */   TabContainer: () => (/* binding */ TabContainer),
+/* harmony export */   TabContent: () => (/* binding */ TabContent),
+/* harmony export */   TeamGrid: () => (/* binding */ TeamGrid),
+/* harmony export */   TeamMemberCard: () => (/* binding */ TeamMemberCard),
 /* harmony export */   TextColumn: () => (/* binding */ TextColumn),
 /* harmony export */   TwoColumnLayout: () => (/* binding */ TwoColumnLayout)
 /* harmony export */ });
@@ -7998,9 +8148,12 @@ const LogoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 const NavLinks = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "styles__NavLinks"
 })(["list-style:none;display:flex;gap:1rem;margin:0;padding:0.5rem 1rem;position:relative;> li{position:relative;}a,button{display:block;padding:0.5rem 0.75rem;font-size:1rem;background:none;border:none;text-align:left;cursor:pointer;width:100%;color:", ";transition:color 0.2s ease-in-out,font-weight 0.2s ease-in-out;}a:hover,button:hover{background:#f2f4f5;color:", ";}a.active{color:", ";font-weight:600;text-decoration:underline;}ul{display:none;position:absolute;top:100%;left:0;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);margin:0;padding:0;list-style:none;min-width:200px;z-index:10;}li:hover > ul,li:focus-within > ul{display:block;}ul li{position:relative;white-space:nowrap;}ul li ul{top:0;left:100%;}@media (max-width:768px){flex-direction:column;align-items:flex-start;position:fixed;top:0;left:0;height:100vh;width:260px;transform:translateX(-100%);transition:transform 0.2s ease;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);&.open{transform:translateX(0);}> li{width:100%;}> li > ul{position:static;box-shadow:none;}> li.open > ul{display:block;}ul li ul{position:static;}}"], COLORS.darkBlue, COLORS.teal, COLORS.teal, COLORS.cardBg, COLORS.cardBg);
+
+// In src/components/styles/index.js, replace your existing Section style with this:
+
 const Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__Section"
-})(["max-width:960px;margin:4rem auto;padding:2rem 1rem;scroll-snap-align:start;"]);
+})(["max-width:1100px;margin:5rem auto;padding:2rem 1.5rem;scroll-margin-top:200px;"]);
 const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
   displayName: "styles__SectionTitle"
 })(["font-size:2rem;margin-bottom:1rem;text-align:center;"]);
@@ -8126,6 +8279,71 @@ const StepTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.w
 const StepDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StepDescription"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
+// Add this component to your src/components/styles/index.js file
+
+const SecondaryButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
+  displayName: "styles__SecondaryButton"
+})(["display:inline-block;background:transparent;color:", ";padding:0.75rem 1.5rem;border-radius:8px;font-weight:600;border:1px solid ", ";transition:background 0.2s ease,color 0.2s ease,border-color 0.2s ease;&:hover{background:", ";border-color:", ";}"], COLORS.darkBlue, COLORS.neutralGray, COLORS.lightBg, COLORS.darkBlue);
+// Add these new components to your src/components/styles/index.js
+
+const TabContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__TabContainer"
+})(["display:flex;justify-content:center;margin-bottom:2.5rem;border-bottom:1px solid #EAECEF;"]);
+const TabButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
+  displayName: "styles__TabButton"
+})(["padding:1rem 1.5rem;font-size:1.125rem;font-weight:600;color:", ";background:none;border:none;cursor:pointer;position:relative;transition:color 0.3s ease;&::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:3px;background-color:", ";transform:", ";transition:transform 0.3s ease-in-out;}&:hover{color:", ";}"], props => props.active ? COLORS.darkBlue : COLORS.neutralGray, COLORS.teal, props => props.active ? 'scaleX(1)' : 'scaleX(0)', COLORS.darkBlue);
+const TabContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__TabContent"
+})(["animation:fadeIn 0.5s ease-in-out;@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}"]);
+const CTAWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__CTAWrapper"
+})(["text-align:center;margin-top:4rem;padding:3rem 1.5rem;background:", ";border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.08);"], COLORS.cardBg);
+// Add these new components to your src/components/styles/index.js
+
+const AboutIntroWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__AboutIntroWrapper"
+})(["text-align:center;max-width:800px;margin:0 auto 4rem auto;"]);
+const MissionStatement = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
+  displayName: "styles__MissionStatement"
+})(["font-size:1.5rem;font-weight:500;line-height:1.6;color:#334D6E;margin-bottom:2rem;"]);
+const TeamGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__TeamGrid"
+})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;"]);
+const TeamMemberCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__TeamMemberCard"
+})(["background:", ";border-radius:16px;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease;&:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}"], COLORS.cardBg);
+const MemberPhoto = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].img.withConfig({
+  displayName: "styles__MemberPhoto"
+})(["width:140px;height:140px;border-radius:50%;object-fit:cover;margin-bottom:1.5rem;border:4px solid ", ";"], COLORS.lightTeal);
+const MemberName = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h4.withConfig({
+  displayName: "styles__MemberName"
+})(["font-size:1.35rem;font-weight:700;margin-bottom:0.25rem;"]);
+const MemberTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "styles__MemberTitle"
+})(["font-size:1rem;color:", ";font-weight:600;margin-bottom:1rem;"], COLORS.teal);
+const MemberBio = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "styles__MemberBio"
+})(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
+// Add these new components to your src/components/styles/index.js
+
+const ContactLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ContactLayout"
+})(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;@media (max-width:820px){grid-template-columns:1fr;}"]);
+const ContactInfo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ContactInfo"
+})([""]);
+const Subheading = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
+  displayName: "styles__Subheading"
+})(["font-size:1.75rem;font-weight:600;line-height:1.3;margin-bottom:1rem;"]);
+const ContactParagraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "styles__ContactParagraph"
+})(["font-size:1.125rem;color:#334D6E;margin-bottom:2rem;"]);
+const ContactDetail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ContactDetail"
+})(["display:flex;align-items:center;gap:1rem;margin-bottom:1rem;font-size:1.1rem;font-weight:500;a{color:", ";text-decoration:none;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.darkBlue, COLORS.teal);
+const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
+  displayName: "styles__PrivacyNote"
+})(["font-size:0.875rem;color:", ";margin-top:1rem;text-align:center;"], COLORS.neutralGray);
 
 /***/ }),
 

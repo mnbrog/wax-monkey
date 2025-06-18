@@ -43,19 +43,10 @@ const About = () => (
     </AboutIntroWrapper>
 
     <SectionTitle as="h2" style={{ fontSize: '2rem', marginBottom: '3rem' }}>
-      Meet Our Leadership
+      
     </SectionTitle>
 
-    <TeamGrid>
-      {teamData.map((member, index) => (
-        <TeamMemberCard key={index}>
-          <MemberPhoto src={member.photoUrl} alt={`Photo of ${member.name}`} />
-          <MemberName>{member.name}</MemberName>
-          <MemberTitle>{member.title}</MemberTitle>
-          <MemberBio>{member.bio}</MemberBio>
-        </TeamMemberCard>
-      ))}
-    </TeamGrid>
+    
   </Section>
 );
 

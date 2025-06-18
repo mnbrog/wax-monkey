@@ -224,9 +224,11 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 2rem;
+  /* Reduced font size for a more compact feel */
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
   margin-bottom: 1rem;
   text-align: center;
+  font-weight: 700;
 `;
 
 export const InfoBox = styled.div`
@@ -370,60 +372,75 @@ export const ContactForm = styled.form`
 // --- STYLES FOR THE "NEED SCREEN" SECTION ---
 
 export const ImpactText = styled.h3`
-  font-size: clamp(2rem, 5vw, 3rem);
+  /* Further reduced font size and margin */
+  font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
   color: ${COLORS.darkBlue};
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 `;
 
 export const QuoteText = styled.p`
   font-style: italic;
-  font-size: 1.2rem;
+  /* Further reduced font size and margin */
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  line-height: 1.6;
   color: #334D6E;
-  max-width: 600px;
-  margin: 0 auto 2.5rem auto;
+  max-width: 550px;
+  margin: 0 auto 1.5rem auto;
   position: relative;
   padding: 0 1rem;
 
   &::before, &::after {
     content: '"';
-    font-size: 3rem;
+    /* Further reduced quote mark size */
+    font-size: 2rem;
     color: ${COLORS.lightTeal};
     position: absolute;
     line-height: 1;
   }
 
   &::before {
-    top: -0.5rem;
-    left: -0.5rem;
+    top: -0.25rem;
+    left: 0;
   }
 
   &::after {
-    bottom: -1.5rem;
-    right: -0.5rem;
+    bottom: -1rem;
+    right: 0;
   }
 `;
 
+
+// Recommended responsive 3-column grid
 export const StatGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
   width: 100%;
-  margin: 2rem 0;
+  margin: 1.5rem 0; /* Reduced margin */
+
+  /* On larger screens, use 3 columns */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* On smaller screens, stack to 1 column for readability */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 // Define StatNumber FIRST to prevent initialization errors
 export const StatNumber = styled.p`
-  font-size: 2.5rem;
+  /* Further reduced font size */
+  font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
   color: ${COLORS.darkBlue};
-  line-height: 1.1;
+  line-height: .7;
   transition: color 0.3s ease-in-out;
 `;
 
 export const StatLabel = styled.p`
-  font-size: 1rem;
+  /* Further reduced font size */
+  font-size: 0.85rem;
   color: #334D6E;
   line-height: 1.4;
 `;
@@ -449,15 +466,16 @@ export const StatCard = styled.div`
 `;
 
 export const BridgeText = styled.p`
-  font-size: 1.125rem;
+  /* Further reduced font size and margin */
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
   font-weight: 500;
   max-width: 550px;
-  margin: 0 auto 1.5rem auto;
+  margin: 0 auto 1.25rem auto;
   line-height: 1.6;
 `;
 
 export const SourceText = styled.p`
-  font-size: 0.875rem;
+  font-size: 0.5rem;
   color: ${COLORS.neutralGray};
   margin-top: 3rem;
 
@@ -516,12 +534,12 @@ export const TwoColumnLayout = styled.div`
 `;
 
 export const LeadParagraph = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.7;
-  color: #334D6E; // Softer color for readability
+  /* Reduced font size and tightened line-height */
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  color: #334D6E;
   margin-bottom: 1.5rem;
 `;
-
 export const ImageWrapper = styled.div`
   img {
     width: 100%;
@@ -533,9 +551,14 @@ export const ImageWrapper = styled.div`
 
 // In src/components/styles/index.js, replace your FeatureGrid with this:
 
+// In src/components/styles/index.js, replace your FeatureGrid with this:
+
 export const FeatureGrid = styled.div`
   display: grid;
   gap: 1.5rem;
+  
+  /* This is the fix. It adds an offset when scrolling to this grid's ID */
+  scroll-margin-top: 400px; /* Adjust this value to match your nav bar's height */
 
   /* Mobile First: Defaults to a single column */
   grid-template-columns: 1fr;
@@ -865,4 +888,13 @@ export const PrivacyNote = styled.p`
   color: ${COLORS.neutralGray};
   margin-top: 1rem;
   text-align: center;
+`;
+// Add this new component to your src/components/styles/index.js
+
+export const CenteredTextColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* This horizontally centers all items */
+  text-align: center;   /* This centers all the text */
 `;
