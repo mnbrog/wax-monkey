@@ -1,14 +1,13 @@
 import React from "react"
-import { Section, SectionTitle, InfoBox, BulletList } from "../styles"
+import { Section, SectionTitle, InfoBox, Paragraph } from "../styles"
 
 const About = () => (
   <Section id="about">
-    <SectionTitle>About Us</SectionTitle>
+    <SectionTitle>About Upright Medical Solutions</SectionTitle>
     <InfoBox>
-      <BulletList>
-        <li>Mission & Vision to reduce falls.</li>
-        <li>Leadership team and key partners.</li>
-      </BulletList>
+      <Paragraph>
+        As a national distributor we offer value base care solutions to our customers that can be beneficial to their patients.
+      </Paragraph>
     </InfoBox>
   </Section>
 )

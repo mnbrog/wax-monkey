@@ -4,16 +4,18 @@ import { Section, SectionTitle, ContactForm } from "../styles"
 const Contact = () => (
   <Section id="contact">
     <SectionTitle>Contact</SectionTitle>
+    <p style={{textAlign: 'center', marginBottom: '1rem'}}>
+      <strong>Let’s Talk Fall Prevention.</strong>
+    </p>
+    <p style={{textAlign: 'center', marginBottom: '1rem'}}>
+      Interested in learning more? Contact us for a demo or partnership discussion.
+    </p>
     <ContactForm>
       <input type="text" placeholder="Name" required />
       <input type="email" placeholder="Email" required />
       <textarea rows="4" placeholder="Message"></textarea>
-      <button type="submit">Request Demo</button>
+      <button type="submit">Send</button>
     </ContactForm>
-    <p style={{textAlign: 'center', marginTop: '1rem'}}>
-      123 Wellness Way, Suite 100<br />
-      Anytown, USA &bull; (555) 123-4567
-    </p>
   </Section>
 )
 
