@@ -5,15 +5,11 @@ import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
 
 import HeroSection from "../components/sections/Hero";
-import ProductsSection from "../components/sections/Products";
-import FallRiskAssessment from "../components/sections/FallRiskAssessment";
-import BalanceTraining from "../components/sections/BalanceTraining";
-import HomeSafety from "../components/sections/HomeSafety";
-import Telehealth from "../components/sections/Telehealth";
-import Pulse4Pulse from "../components/sections/Pulse4Pulse";
-import Resources from "../components/sections/Resources";
+import NeedScreen from "../components/sections/NeedScreen";
+import FraOverview from "../components/sections/FraOverview";
+import FraResearch from "../components/sections/FraResearch";
+import WhoWeHelp from "../components/sections/WhoWeHelp";
 import About from "../components/sections/About";
-import Blog from "../components/sections/Blog";
 import Contact from "../components/sections/Contact";
 
 const FallRiskPage = () => {
@@ -22,15 +18,11 @@ const FallRiskPage = () => {
   useEffect(() => {
     const ids = [
       "hero",
-      "products",
-      "fra",
-      "balance",
-      "safety",
-      "telehealth",
-      "pulse",
-      "resources",
+      "need-screen",
+      "fra-overview",
+      "fra-research",
+      "who-we-help",
       "about",
-      "blog",
       "contact",
     ];
 
@@ -69,32 +61,20 @@ const FallRiskPage = () => {
       {/* ───────────── Hero / Introduction ───────────── */}
       <HeroSection id="hero" />
 
-      {/* ───────────── Products overview ───────────── */}
-      <ProductsSection id="products" />
+      {/* ───────────── Need to Screen ───────────── */}
+      <NeedScreen id="need-screen" />
 
-      {/* ───────────── Fall Risk Assessment ───────────── */}
-      <FallRiskAssessment id="fra" />
+      {/* ───────────── What is FRA ───────────── */}
+      <FraOverview id="fra-overview" />
 
-      {/* ───────────── Balance Training Program ───────────── */}
-      <BalanceTraining id="balance" />
+      {/* ───────────── FRA Research ───────────── */}
+      <FraResearch id="fra-research" />
 
-      {/* ───────────── Home Safety Toolkit ───────────── */}
-      <HomeSafety id="safety" />
+      {/* ───────────── Who We Help ───────────── */}
+      <WhoWeHelp id="who-we-help" />
 
-      {/* ───────────── Telehealth Integration ───────────── */}
-      <Telehealth id="telehealth" />
-
-      {/* ───────────── Pulse4Pulse Cardiovascular Assessment ───────────── */}
-      <Pulse4Pulse id="pulse" />
-
-      {/* ───────────── Resources ───────────── */}
-      <Resources id="resources" />
-
-      {/* ───────────── About Us ───────────── */}
+      {/* ───────────── About ───────────── */}
       <About id="about" />
-
-      {/* ───────────── Blog ───────────── */}
-      <Blog id="blog" />
 
       {/* ───────────── Contact ───────────── */}
       <Contact id="contact" />
