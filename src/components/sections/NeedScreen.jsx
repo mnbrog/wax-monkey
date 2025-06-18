@@ -53,7 +53,7 @@ const NeedScreen = () => (
       </HeroButton>
 
       <SourceText>
-        All statistics sourced from the Centers for Disease Control and Prevention (CDC). <a href="https://www.cdc.gov/falls/data/falls-by-state.html" target="_blank" rel="noopener noreferrer">Learn more.</a>
+        All statistics sourced from the Centers for Disease Control and Prevention (CDC). <a href="https://www.cdc.gov/falls/data-research/index.html" target="_blank" rel="noopener noreferrer">Learn more.</a>
       </SourceText>
 
     </AttentionBox>
