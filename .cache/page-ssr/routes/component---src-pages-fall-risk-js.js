@@ -7690,12 +7690,7 @@ const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cr
     fontSize: '2rem',
     marginBottom: '3rem'
   }
-}, "Meet Our Leadership"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
-  key: index
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
-  src: member.photoUrl,
-  alt: `Photo of ${member.name}`
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
+}));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
@@ -7935,14 +7930,15 @@ __webpack_require__.r(__webpack_exports__);
 // File: src/components/sections/NeedScreen.jsx
 
 
-// Import the layout components we need
+// Import all the necessary styled components, including the new CenteredTextColumn
 
-const NeedScreen = () =>
-/*#__PURE__*/
-// We are now using React.forwardRef to allow this component to be observed for auto-scrolling nav
-react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "need-screen"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "The Unseen Risk in Plain Sight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "For older adults, falls are a critical threat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.QuoteText, null, "It\u2019s not just about preventing a fall; it\u2019s about preserving independence and ensuring peace of mind for the entire family."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Seniors experience a fall each year.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Falls result in a serious injury like a broken bone or head trauma.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, {
+const NeedScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().forwardRef((props, ref) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
+  id: "need-screen",
+  ref: ref
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "The Unseen Risk in Plain Sight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  src: "../images/FRA.jpg",
+  alt: "Caring healthcare professional assisting a senior patient"
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CenteredTextColumn, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "For older adults, falls are a critical threat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.QuoteText, null, "It\u2019s not just about preventing a fall; it\u2019s about preserving independence and ensuring peace of mind for the entire family."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Seniors experience a fall each year.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Falls result in a serious injury like a broken bone or head trauma.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, {
   className: "serious"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "#1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Leading cause of injury-related death among older adults."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BridgeText, null, "Understanding the risk is the first step. The next is taking decisive, evidence-based action to prevent it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
   href: "#fra-overview"
@@ -7950,10 +7946,7 @@ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPO
   href: "https://www.cdc.gov/falls/data-research/index.html",
   target: "_blank",
   rel: "noopener noreferrer"
-}, "Learn more."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "https://images.unsplash.com/photo-1576765608866-5b4104033438?q=80&w=2787&auto=format&fit=crop",
-  alt: "Caring healthcare professional assisting a senior patient"
-}))));
+}, "Learn more."))))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NeedScreen);
 
 /***/ }),
@@ -8066,6 +8059,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   BulletList: () => (/* binding */ BulletList),
 /* harmony export */   COLORS: () => (/* binding */ COLORS),
 /* harmony export */   CTAWrapper: () => (/* binding */ CTAWrapper),
+/* harmony export */   CenteredTextColumn: () => (/* binding */ CenteredTextColumn),
 /* harmony export */   ContactDetail: () => (/* binding */ ContactDetail),
 /* harmony export */   ContactForm: () => (/* binding */ ContactForm),
 /* harmony export */   ContactInfo: () => (/* binding */ ContactInfo),
@@ -8156,7 +8150,7 @@ const Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].sectio
 })(["max-width:1100px;margin:5rem auto;padding:2rem 1.5rem;scroll-margin-top:200px;"]);
 const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
   displayName: "styles__SectionTitle"
-})(["font-size:2rem;margin-bottom:1rem;text-align:center;"]);
+})(["font-size:clamp(1.75rem,5vw,2.25rem);margin-bottom:1rem;text-align:center;font-weight:700;"]);
 const InfoBox = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__InfoBox"
 })(["background:", ";border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);padding:1.5rem;margin-top:1rem;"], COLORS.cardBg);
@@ -8195,32 +8189,36 @@ const ContactForm = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].fo
 
 const ImpactText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.withConfig({
   displayName: "styles__ImpactText"
-})(["font-size:clamp(2rem,5vw,3rem);font-weight:700;line-height:1.2;color:", ";margin-bottom:1.5rem;"], COLORS.darkBlue);
+})(["font-size:clamp(1.25rem,3vw,2rem);font-weight:700;line-height:1.2;color:", ";margin-bottom:0.75rem;"], COLORS.darkBlue);
 const QuoteText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__QuoteText"
-})(["font-style:italic;font-size:1.2rem;color:#334D6E;max-width:600px;margin:0 auto 2.5rem auto;position:relative;padding:0 1rem;&::before,&::after{content:'\"'; font-size: 3rem; color: ", "; position: absolute; line-height: 1; } &::before { top: -0.5rem; left: -0.5rem; } &::after { bottom: -1.5rem; right: -0.5rem; }"], COLORS.lightTeal);
+})(["font-style:italic;font-size:clamp(0.7rem,1.5vw,1rem);line-height:1.6;color:#334D6E;max-width:550px;margin:0 auto 1.5rem auto;position:relative;padding:0 1rem;&::before,&::after{content:'\"'; font-size: 2rem; color: ", "; position: absolute; line-height: 1; } &::before { top: -0.25rem; left: 0; } &::after { bottom: -1rem; right: 0; }"], COLORS.lightTeal);
+
+// Recommended responsive 3-column grid
 const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StatGrid"
-})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;width:100%;margin:2rem 0;"]);
+})(["display:grid;gap:1.5rem;width:100%;margin:1.5rem 0;grid-template-columns:repeat(3,1fr);@media (max-width:768px){grid-template-columns:1fr;}"]);
 
 // Define StatNumber FIRST to prevent initialization errors
 const StatNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StatNumber"
-})(["font-size:2.5rem;font-weight:700;color:", ";line-height:1.1;transition:color 0.3s ease-in-out;"], COLORS.darkBlue);
+})(["font-size:clamp(1.2rem,3.5vw,1.8rem);font-weight:700;color:", ";line-height:.7;transition:color 0.3s ease-in-out;"], COLORS.darkBlue);
 const StatLabel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StatLabel"
-})(["font-size:1rem;color:#334D6E;line-height:1.4;"]);
+})(["font-size:0.85rem;color:#334D6E;line-height:1.4;"]);
 
 // NOW define StatCard, which can safely reference StatNumber
+// In src/components/styles/index.js, replace your StatCard with this updated version.
+
 const StatCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StatCard"
-})(["background:transparent;padding:1rem;border-top:3px solid ", ";transition:transform 0.3s ease;&.serious{border-top-color:", ";}&:hover{transform:translateY(-5px);", "{color:", ";}}"], COLORS.lightTeal, COLORS.seriousRed, StatNumber, COLORS.seriousRed);
+})(["display:flex;flex-direction:column;align-items:center;justify-content:center;background:transparent;padding:0.75rem;border-top:3px solid ", ";transition:transform 0.3s ease;&.serious{border-top-color:", ";}&:hover{transform:translateY(-5px);", "{color:", ";}}"], COLORS.lightTeal, COLORS.seriousRed, StatNumber, COLORS.seriousRed);
 const BridgeText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__BridgeText"
-})(["font-size:1.125rem;font-weight:500;max-width:550px;margin:0 auto 1.5rem auto;line-height:1.6;"]);
+})(["font-size:clamp(0.7rem,1.8vw,1rem);font-weight:500;max-width:550px;margin:0 auto 1.25rem auto;line-height:1.6;"]);
 const SourceText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__SourceText"
-})(["font-size:0.875rem;color:", ";margin-top:3rem;a{color:", ";text-decoration:underline;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.neutralGray, COLORS.neutralGray, COLORS.teal);
+})(["font-size:0.5rem;color:", ";margin-top:3rem;a{color:", ";text-decoration:underline;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.neutralGray, COLORS.neutralGray, COLORS.teal);
 const AttentionBox = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__AttentionBox"
 })(["position:relative;overflow:hidden;text-align:center;padding:clamp(2rem,6vw,4rem);max-width:800px;margin:2rem auto 0;border-radius:16px;background:linear-gradient(145deg,", " 0%,#FDFEFF 100%);box-shadow:0 8px 32px rgba(10,38,64,0.1);&::before{content:'\uD83D\uDEE1\uFE0F';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:250px;color:", ";opacity:0.04;z-index:0;}> *{position:relative;z-index:1;}"], COLORS.cardBg, COLORS.darkBlue);
@@ -8232,16 +8230,18 @@ const TwoColumnLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"
 })(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem;@media (max-width:768px){grid-template-columns:1fr;}"]);
 const LeadParagraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__LeadParagraph"
-})(["font-size:1.25rem;line-height:1.7;color:#334D6E;margin-bottom:1.5rem;"]);
+})(["font-size:clamp(1rem,2.5vw,1.1rem);line-height:1.6;color:#334D6E;margin-bottom:1.5rem;"]);
 const ImageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ImageWrapper"
 })(["img{width:100%;height:auto;border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.1);}"]);
 
 // In src/components/styles/index.js, replace your FeatureGrid with this:
 
+// In src/components/styles/index.js, replace your FeatureGrid with this:
+
 const FeatureGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__FeatureGrid"
-})(["display:grid;gap:1.5rem;grid-template-columns:1fr;@media (min-width:600px){grid-template-columns:repeat(2,1fr);}@media (min-width:992px){grid-template-columns:repeat(4,1fr);}"]);
+})(["display:grid;gap:1.5rem;scroll-margin-top:400px;grid-template-columns:1fr;@media (min-width:600px){grid-template-columns:repeat(2,1fr);}@media (min-width:992px){grid-template-columns:repeat(4,1fr);}"]);
 const FeatureCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__FeatureCard"
 })(["background:", ";border-radius:12px;border:1px solid #EAECEF;padding:1.5rem;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,0.03),0 4px 8px rgba(0,0,0,0.05);transition:box-shadow 0.3s ease,transform 0.3s ease;&:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(0,0,0,0.05),0 8px 16px rgba(0,0,0,0.08);}"], COLORS.cardBg);
@@ -8344,6 +8344,11 @@ const ContactDetail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__PrivacyNote"
 })(["font-size:0.875rem;color:", ";margin-top:1rem;text-align:center;"], COLORS.neutralGray);
+// Add this new component to your src/components/styles/index.js
+
+const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__CenteredTextColumn"
+})(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);
 
 /***/ }),
 

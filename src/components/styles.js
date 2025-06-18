@@ -446,9 +446,18 @@ export const StatLabel = styled.p`
 `;
 
 // NOW define StatCard, which can safely reference StatNumber
+// In src/components/styles/index.js, replace your StatCard with this updated version.
+
 export const StatCard = styled.div`
+  /* Flexbox properties for perfect centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Existing styles */
   background: transparent;
-  padding: 1rem;
+  padding: 0.75rem;
   border-top: 3px solid ${COLORS.lightTeal};
   transition: transform 0.3s ease;
 
