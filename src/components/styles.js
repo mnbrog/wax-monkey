@@ -1,6 +1,6 @@
 // File: src/components/styles/index.js
 
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 export const COLORS = {
   darkBlue: "#0A2640",
@@ -8,45 +8,6 @@ export const COLORS = {
   cardBg: "#FFFFFF",
 };
 
-export const GlobalStyles = createGlobalStyle`
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y proximity;
-    height: 100%;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #F7F9FA;
-    color: ${COLORS.darkBlue};
-    line-height: 1.5;
-    min-height: 100%;
-    margin: 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: ${COLORS.teal};
-    border-radius: 4px;
-  }
-`;
 
 export const NavBar = styled.nav`
   position: sticky;
@@ -61,36 +22,7 @@ export const NavBar = styled.nav`
   padding-bottom: 0.5rem;
 `;
 
-export const Hamburger = styled.button`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-  border: none;
-  background: none;
-  cursor: pointer;
 
-  span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: ${COLORS.darkBlue};
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
-`;
-
-export const SubIndicator = styled.span`
-  margin-left: 4px;
-  &::after {
-    content: "\25B6";
-    font-size: 0.75rem;
-  }
-`;
 
 export const LogoWrapper = styled.div`
   margin: 1rem 0 0.5rem;
@@ -231,13 +163,6 @@ export const SectionTitle = styled.h2`
   font-weight: 700;
 `;
 
-export const InfoBox = styled.div`
-  background: ${COLORS.cardBg};
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  margin-top: 1rem;
-`;
 
 export const BulletList = styled.ul`
   margin-left: 1.25rem;
@@ -256,17 +181,7 @@ export const BulletList = styled.ul`
   }
 `;
 
-export const Paragraph = styled.p`
-  margin: 0.75rem 0;
-`;
 
-export const StepList = styled.ol`
-  margin-left: 1.25rem;
-
-  li {
-    margin-bottom: 0.5rem;
-  }
-`;
 
 export const HeroVideo = styled.section`
   position: relative;
@@ -326,21 +241,7 @@ export const HeroButton = styled.a`
   }
 `;
 
-export const ProductGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-`;
 
-export const ProductCard = styled.a`
-  background: ${COLORS.cardBg};
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  text-align: center;
-  font-weight: 500;
-  color: ${COLORS.darkBlue};
-`;
 
 export const ContactForm = styled.form`
   display: flex;
@@ -499,34 +400,6 @@ export const SourceText = styled.p`
   }
 `;
 
-export const AttentionBox = styled.div`
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-  padding: clamp(2rem, 6vw, 4rem);
-  max-width: 800px;
-  margin: 2rem auto 0;
-  border-radius: 16px;
-  background: linear-gradient(145deg, ${COLORS.cardBg} 0%, #FDFEFF 100%);
-  box-shadow: 0 8px 32px rgba(10, 38, 64, 0.1);
-
-  &::before {
-    content: '🛡️';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 250px;
-    color: ${COLORS.darkBlue};
-    opacity: 0.04;
-    z-index: 0;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
-`;
 
 // Add these new components to your src/components/styles/index.js
 
