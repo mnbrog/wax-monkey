@@ -25,6 +25,12 @@ export const NavBar = styled.nav`
   flex-direction: column;
   align-items: center;
   padding-bottom: 0.5rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+  }
 `;
 
 
@@ -43,6 +49,46 @@ export const LogoWrapper = styled.div`
       height: 140px;
     }
   }
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+`;
+
+export const Hamburger = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: ${COLORS.darkBlue};
+    margin: 5px 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -52,6 +98,13 @@ export const NavLinks = styled.ul`
   margin: 0;
   padding: 0.5rem 1rem;
   position: relative;
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+    flex-direction: row;
+    position: static;
+    height: auto;
+  }
 
   > li {
     position: relative;
