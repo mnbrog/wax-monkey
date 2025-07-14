@@ -6,14 +6,18 @@ import { NavBar, NavLinks, LogoWrapper } from "./styles";
 const Nav = ({ active }) => (
   <NavBar>
     <LogoWrapper>
-      <img
-        src="/images/Upright Medical Solutions Logo.png"
-        alt="Upright Medical Solutions"
-      />
+      {/* This link now correctly points to the top of the home page */}
+      <a href="/">
+        <img
+          src="/images/Upright Medical Solutions Logo.png"
+          alt="Upright Medical Solutions"
+        />
+      </a>
     </LogoWrapper>
 
     <NavLinks>
       <li>
+        {/* The "Home" link also points to the top of the home page */}
         <a href="/" className={active === "home" ? "active" : ""}>
           Home
         </a>
@@ -28,12 +32,14 @@ const Nav = ({ active }) => (
         </a>
         <ul className="dropdown-menu">
           <li>
+            {/* This link navigates to the top of the Fall Risk page */}
             <a href="/fall-risk" className={active === "fall-risk" ? "active" : ""}>
               Fall Risk
             </a>
           </li>
           <li>
-            <a href="/Pulse4Pulse/" className={active === "Pulse4Pulse" ? "active" : ""}>
+            {/* This link navigates to the top of the Pulse4Pulse page */}
+            <a href="/Pulse4Pulse" className={active === "pulse4pulse" ? "active" : ""}>
               Pulse4Pulse
             </a>
           </li>
@@ -41,12 +47,14 @@ const Nav = ({ active }) => (
       </li>
 
       <li>
-        <a href="/about" className={active === "about" ? "active" : ""}>
+        {/* This correctly links to the "About" section on the home page */}
+        <a href="/#about" className={active === "about" ? "active" : ""}>
           About
         </a>
       </li>
       <li>
-        <a href="/contact" className={active === "contact" ? "active" : ""}>
+        {/* This correctly links to the "Contact" section on the home page */}
+        <a href="/#contact" className={active === "contact" ? "active" : ""}>
           Contact
         </a>
       </li>

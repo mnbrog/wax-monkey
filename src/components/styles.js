@@ -6,6 +6,11 @@ export const COLORS = {
   darkBlue: "#0A2640",
   teal: "#3FD0C9",
   cardBg: "#FFFFFF",
+  // FIX 1: Added missing color definitions
+  lightTeal: "#A7F3D0",
+  seriousRed: "#EF4444",
+  neutralGray: "#6B7280",
+  lightBg: "#F9FAFB",
 };
 
 
@@ -143,20 +148,14 @@ export const NavLinks = styled.ul`
   }
 `;
 
-// In src/components/styles/index.js, replace your existing Section style with this:
-
 export const Section = styled.section`
   max-width: 1100px;
   margin: 5rem auto;
   padding: 2rem 1.5rem;
-
-  /* This is the magic property that fixes the issue */
-  /* It adds a 200px offset from the top when scrolling to this section's ID */
   scroll-margin-top: 200px; 
 `;
 
 export const SectionTitle = styled.h2`
-  /* Reduced font size for a more compact feel */
   font-size: clamp(1.75rem, 5vw, 2.25rem);
   margin-bottom: 1rem;
   text-align: center;
@@ -193,6 +192,7 @@ export const HeroVideo = styled.section`
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  scroll-margin-top: 200px; /* FIX 2: Added the missing scroll margin */
 `;
 
 export const BackgroundVideo = styled.video`
@@ -273,7 +273,6 @@ export const ContactForm = styled.form`
 // --- STYLES FOR THE "NEED SCREEN" SECTION ---
 
 export const ImpactText = styled.h3`
-  /* Further reduced font size and margin */
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
   line-height: 1.2;
@@ -283,7 +282,6 @@ export const ImpactText = styled.h3`
 
 export const QuoteText = styled.p`
   font-style: italic;
-  /* Further reduced font size and margin */
   font-size: clamp(0.7rem, 1.5vw, 1rem);
   line-height: 1.6;
   color: #334D6E;
@@ -294,7 +292,6 @@ export const QuoteText = styled.p`
 
   &::before, &::after {
     content: '"';
-    /* Further reduced quote mark size */
     font-size: 2rem;
     color: ${COLORS.lightTeal};
     position: absolute;
@@ -318,12 +315,10 @@ export const StatGrid = styled.div`
   display: grid;
   gap: 1.5rem;
   width: 100%;
-  margin: 1.5rem 0; /* Reduced margin */
+  margin: 1.5rem 0;
 
-  /* On larger screens, use 3 columns */
   grid-template-columns: repeat(3, 1fr);
 
-  /* On smaller screens, stack to 1 column for readability */
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -331,7 +326,6 @@ export const StatGrid = styled.div`
 
 // Define StatNumber FIRST to prevent initialization errors
 export const StatNumber = styled.p`
-  /* Further reduced font size */
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
   color: ${COLORS.darkBlue};
@@ -340,23 +334,17 @@ export const StatNumber = styled.p`
 `;
 
 export const StatLabel = styled.p`
-  /* Further reduced font size */
   font-size: 0.85rem;
   color: #334D6E;
   line-height: 1.4;
 `;
 
-// NOW define StatCard, which can safely reference StatNumber
-// In src/components/styles/index.js, replace your StatCard with this updated version.
-
 export const StatCard = styled.div`
-  /* Flexbox properties for perfect centering */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  /* Existing styles */
   background: transparent;
   padding: 0.75rem;
   border-top: 3px solid ${COLORS.lightTeal};
@@ -376,7 +364,6 @@ export const StatCard = styled.div`
 `;
 
 export const BridgeText = styled.p`
-  /* Further reduced font size and margin */
   font-size: clamp(0.7rem, 1.8vw, 1rem);
   font-weight: 500;
   max-width: 550px;
@@ -400,9 +387,6 @@ export const SourceText = styled.p`
   }
 `;
 
-
-// Add these new components to your src/components/styles/index.js
-
 export const TwoColumnLayout = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -416,7 +400,6 @@ export const TwoColumnLayout = styled.div`
 `;
 
 export const LeadParagraph = styled.p`
-  /* Reduced font size and tightened line-height */
   font-size: clamp(1rem, 2.5vw, 1.1rem);
   line-height: 1.6;
   color: #334D6E;
@@ -431,26 +414,18 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
 export const FeatureGrid = styled.div`
   display: grid;
   gap: 1.5rem;
   
-  /* This is the fix. It adds an offset when scrolling to this grid's ID */
-  scroll-margin-top: 400px; /* Adjust this value to match your nav bar's height */
+  scroll-margin-top: 400px;
 
-  /* Mobile First: Defaults to a single column */
   grid-template-columns: 1fr;
 
-  /* Medium Screens (e.g., tablets): Switches to a 2x2 grid */
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Large Screens (e.g., desktops): Switches to a 4-across grid */
   @media (min-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -480,7 +455,7 @@ export const IconWrapper = styled.div`
   border-radius: 50%;
   margin-bottom: 1rem;
   color: ${COLORS.darkBlue};
-  font-size: 1.75rem; // Controls icon size
+  font-size: 1.75rem;
 `;
 
 export const FeatureTitle = styled.h3`
@@ -494,40 +469,33 @@ export const FeatureDescription = styled.p`
   line-height: 1.5;
   color: #334D6E;
 `;
-// Add this new component to your src/components/styles/index.js
 
 export const TextColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   
-  /* Target the SectionTitle (h2) and LeadParagraph (p) inside this column */
-  /* This ensures they are aligned to the left */
   h2, p {
     text-align: center;
   }
 
-  /* Target the HeroButton (a) inside this column */
-  /* This centers the button horizontally within the column */
   a {
     align-self: center;
-    margin-top: 1.5rem; /* Adds some space above the button */
+    margin-top: 1.5rem;
   }
 `;
-// Add these new components to your src/components/styles/index.js
 
 export const MethodologyContainer = styled.div`
   margin-top: 4rem;
 `;
 
+// Find and replace the existing ProcessStepper with this version
+
 export const ProcessStepper = styled.div`
   display: grid;
+  /* This now defaults to 3 columns and will not change on smaller screens */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  
-  @media (max-width: 820px) {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export const ProcessStep = styled.div`
@@ -535,7 +503,6 @@ export const ProcessStep = styled.div`
   position: relative;
   padding: 0 1rem;
 
-  /* Creates the connecting arrow/line on larger screens */
   &:not(:last-child)::after {
     content: '→';
     font-size: 2.5rem;
@@ -579,7 +546,6 @@ export const StepDescription = styled.p`
   line-height: 1.5;
   color: #334D6E;
 `;
-// Add this component to your src/components/styles/index.js file
 
 export const SecondaryButton = styled.a`
   display: inline-block;
@@ -596,7 +562,6 @@ export const SecondaryButton = styled.a`
       border-color: ${COLORS.darkBlue};
   }
 `;
-// Add these new components to your src/components/styles/index.js
 
 export const TabContainer = styled.div`
   display: flex;
@@ -616,7 +581,6 @@ export const TabButton = styled.button`
   position: relative;
   transition: color 0.3s ease;
 
-  /* The active indicator line */
   &::after {
     content: '';
     position: absolute;
@@ -635,7 +599,6 @@ export const TabButton = styled.button`
 `;
 
 export const TabContent = styled.div`
-  /* The animation can be handled with a simple keyframe or a library */
   animation: fadeIn 0.5s ease-in-out;
 
   @keyframes fadeIn {
@@ -652,7 +615,6 @@ export const CTAWrapper = styled.div`
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(10, 38, 64, 0.08);
 `;
-// Add these new components to your src/components/styles/index.js
 
 export const AboutIntroWrapper = styled.div`
   text-align: center;
@@ -670,7 +632,6 @@ export const MissionStatement = styled.h3`
 
 export const TeamGrid = styled.div`
   display: grid;
-  /* On small screens, 1 column. On larger, up to 3. */
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 `;
@@ -716,7 +677,6 @@ export const MemberBio = styled.p`
   line-height: 1.5;
   color: #334D6E;
 `;
-// Add these new components to your src/components/styles/index.js
 
 export const ContactLayout = styled.div`
   display: grid;
@@ -730,7 +690,6 @@ export const ContactLayout = styled.div`
 `;
 
 export const ContactInfo = styled.div`
-  /* This will be the left column for text and contact details */
 `;
 
 export const Subheading = styled.h3`
@@ -771,11 +730,13 @@ export const PrivacyNote = styled.p`
   margin-top: 1rem;
   text-align: center;
 `;
+// Find and replace the existing ProcessStepper with this version
+
 
 export const CenteredTextColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* This horizontally centers all items */
-  text-align: center;   /* This centers all the text */
+  align-items: center;
+  text-align: center;
 `;

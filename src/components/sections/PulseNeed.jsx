@@ -22,7 +22,7 @@ const PulseNeed = () => (
 
     <TwoColumnLayout>
       <ImageWrapper>
-        <img src="../images/cardio-patient.jpg" alt="Patient speaking with a doctor about cardiovascular health" />
+        <img src="../images/cardio-patient.jpg.png" alt="Patient speaking with a doctor about cardiovascular health" />
       </ImageWrapper>
 
       <CenteredTextColumn>

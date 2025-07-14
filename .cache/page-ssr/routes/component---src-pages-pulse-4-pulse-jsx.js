@@ -6807,6 +6807,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/Layout/GlobalStyles.jsx":
+/*!************************************************!*\
+  !*** ./src/components/Layout/GlobalStyles.jsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:50;}html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:#0A2640;line-height:1.5;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:#3FD0C9;border-radius:4px;}"]));
+
+/***/ }),
+
 /***/ "./src/components/Nav.jsx":
 /*!********************************!*\
   !*** ./src/components/Nav.jsx ***!
@@ -6826,10 +6842,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const Nav = ({
   active
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "/"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   src: "/images/Upright Medical Solutions Logo.png",
   alt: "Upright Medical Solutions"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/",
   className: active === "home" ? "active" : ""
 }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -6843,135 +6861,16 @@ const Nav = ({
   href: "/fall-risk",
   className: active === "fall-risk" ? "active" : ""
 }, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/pulse4pulse",
+  href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/about",
+  href: "/#about",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/contact",
+  href: "/#contact",
   className: active === "contact" ? "active" : ""
 }, "Contact"))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
-
-/***/ }),
-
-/***/ "./src/components/sections/About.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/sections/About.jsx ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/About.jsx
-
-
-
-const teamData = [{
-  name: "John Doe",
-  title: "Co-Founder & CEO",
-  bio: "With over 20 years in clinical practice, John founded Upright Medical to bridge the gap between reactive treatment and proactive, preventative care.",
-  photoUrl: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=2787&auto=format&fit=crop"
-}, {
-  name: "Jane Smith",
-  title: "Co-Founder & CTO",
-  bio: "Jane is the architect of our evidence-based platform, dedicated to creating technology that is both powerful for clinicians and simple to use.",
-  photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop"
-}];
-const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
-  as: "h2",
-  style: {
-    fontSize: '2rem',
-    marginBottom: '3rem'
-  }
-}, "Our Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
-  key: index
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
-  src: member.photoUrl,
-  alt: member.name
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
-
-/***/ }),
-
-/***/ "./src/components/sections/Contact.jsx":
-/*!*********************************************!*\
-  !*** ./src/components/sections/Contact.jsx ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-// File: src/components/sections/Contact.jsx
-
-
-
-
-const Contact = ({
-  isPulsePage = false
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "contact"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Get in Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Subheading, null, isPulsePage ? "Let’s Talk Cardiovascular Wellness." : "Let’s Talk Fall Prevention."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactParagraph, null, isPulsePage ? "Learn how our Pulse4Pulse assessment program can benefit your practice and patients. Contact us for a demo, billing details, or to discuss how to implement this turnkey service." : "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#3FD0C9",
-  size: "24"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:info@uprightmedicalsolutions.com"
-}, "info@uprightmedicalsolutions.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaPhoneAlt, {
-  color: "#3FD0C9",
-  size: "24"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "tel:+1-800-555-1234"
-}, "+1 (800) 555-1234"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-  type: "text",
-  name: "name",
-  placeholder: "Full Name",
-  required: true
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-  type: "email",
-  name: "email",
-  placeholder: "Work Email",
-  required: true
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
-  name: "subject",
-  required: true,
-  defaultValue: ""
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "",
-  disabled: true
-}, "I'm interested in..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "Pulse4Pulse Inquiry"
-}, "Pulse4Pulse Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "Fall Risk Inquiry"
-}, "Fall Risk Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "Demo Request"
-}, "Requesting a Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "Pricing Information"
-}, "Pricing Information"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "Partnership"
-}, "Partnership Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-  value: "General Question"
-}, "General Question")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
-  name: "message",
-  rows: "5",
-  placeholder: "Your message..."
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-  type: "submit"
-}, "Send Message"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.PrivacyNote, null, "We respect your privacy and will never share your information."))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
 
 /***/ }),
 
@@ -7105,8 +7004,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/PulseHero.jsx
-
 
 
 const PulseHero = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroVideo, {
@@ -7116,11 +7013,15 @@ const PulseHero = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default(
   loop: true,
   muted: true,
   playsInline: true,
-  poster: "/images/pulse-hero-fallback.jpg" // New poster image
-  ,
-  src: "/videos/pulse-hero-background.mp4" // New video
-  ,
+  poster: "/images/pulse-hero-fallback.jpg",
+  src: "/videos/pfp-hero.mp4",
   type: "video/mp4"
+  // This style crops 15% from the top and 15% from the bottom of the video.
+  // You can change the percentage to adjust the cropping.
+  ,
+  style: {
+    clipPath: 'inset(15% 0 15% 0)'
+  }
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Turnkey Cardiovascular Wellness Assessment \u2013 $0 Cost to Your Practice"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "A comprehensive, in-office cardiovascular screening service provided by Upright Medical, with a trained medical assistant and billing support included."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
   href: "#pulse-need"
 }, "Learn More")));
@@ -7148,7 +7049,7 @@ __webpack_require__.r(__webpack_exports__);
 const PulseNeed = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "pulse-need"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "The Hidden Risk of Cardiovascular Disease"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "../images/cardio-patient.jpg",
+  src: "../images/cardio-patient.jpg.png",
   alt: "Patient speaking with a doctor about cardiovascular health"
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CenteredTextColumn, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "Millions of chronic conditions go undiagnosed, but proactive screening can change that."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Adults with diabetes are undiagnosed (7.2 million Americans).")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "50%"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Of people with peripheral artery disease are asymptomatic.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "60%+"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Of adult patients qualify for this preventive test."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BridgeText, null, "Identifying serious conditions early through proactive medicine is the most effective way to treat them."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
   href: "#pulse-overview"
@@ -7218,7 +7119,7 @@ const PulseProcess = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___defau
   id: "pulse-process"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "How Pulse4Pulse Works"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MethodologyContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStepper, {
   style: {
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+    gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '2rem'
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "Patient Appointment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "Patient arrives for their regular appointment.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "2"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "Intake Form"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "Patient completes a simple intake form to determine eligibility.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "3"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "In-Office Testing"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "Our technician conducts the cardiovascular tests in an exam room.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "Instant Results"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "Results are immediately available for you to review with the patient.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "Follow-Up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "A follow-up visit is scheduled if needed based on the results.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepIcon, null, "6"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepTitle, null, "Billing Handled"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StepDescription, null, "The practice receives reimbursements; we invoice per test.")))));
@@ -7321,7 +7222,12 @@ __webpack_require__.r(__webpack_exports__);
 const COLORS = {
   darkBlue: "#0A2640",
   teal: "#3FD0C9",
-  cardBg: "#FFFFFF"
+  cardBg: "#FFFFFF",
+  // FIX 1: Added missing color definitions
+  lightTeal: "#A7F3D0",
+  seriousRed: "#EF4444",
+  neutralGray: "#6B7280",
+  lightBg: "#F9FAFB"
 };
 const NavBar = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.withConfig({
   displayName: "styles__NavBar"
@@ -7332,9 +7238,6 @@ const LogoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 const NavLinks = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "styles__NavLinks"
 })(["list-style:none;display:flex;gap:1rem;margin:0;padding:0.5rem 1rem;position:relative;> li{position:relative;}a,button{display:block;padding:0.5rem 0.75rem;font-size:1rem;background:none;border:none;text-align:left;cursor:pointer;width:100%;color:", ";transition:color 0.2s ease-in-out,font-weight 0.2s ease-in-out;}a:hover,button:hover{background:#f2f4f5;color:", ";}a.active{color:", ";font-weight:600;text-decoration:underline;}ul{display:none;position:absolute;top:100%;left:0;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);margin:0;padding:0;list-style:none;min-width:200px;z-index:10;}li:hover > ul,li:focus-within > ul{display:block;}ul li{position:relative;white-space:nowrap;}ul li ul{top:0;left:100%;}@media (max-width:768px){flex-direction:column;align-items:flex-start;position:fixed;top:0;left:0;height:100vh;width:260px;transform:translateX(-100%);transition:transform 0.2s ease;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);&.open{transform:translateX(0);}> li{width:100%;}> li > ul{position:static;box-shadow:none;}> li.open > ul{display:block;}ul li ul{position:static;}}"], COLORS.darkBlue, COLORS.teal, COLORS.teal, COLORS.cardBg, COLORS.cardBg);
-
-// In src/components/styles/index.js, replace your existing Section style with this:
-
 const Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__Section"
 })(["max-width:1100px;margin:5rem auto;padding:2rem 1.5rem;scroll-margin-top:200px;"]);
@@ -7346,7 +7249,7 @@ const BulletList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.
 })(["margin-left:1.25rem;li{margin-bottom:0.5rem;position:relative;padding-left:1rem;&::before{content:\"\u2022\";position:absolute;left:0;color:", ";}}"], COLORS.teal);
 const HeroVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__HeroVideo"
-})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;"]);
+})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;scroll-margin-top:200px;"]);
 const BackgroundVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].video.withConfig({
   displayName: "styles__BackgroundVideo"
 })(["position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:1;object-fit:cover;filter:brightness(0.6);"]);
@@ -7381,10 +7284,6 @@ const StatNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.w
 const StatLabel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StatLabel"
 })(["font-size:0.85rem;color:#334D6E;line-height:1.4;"]);
-
-// NOW define StatCard, which can safely reference StatNumber
-// In src/components/styles/index.js, replace your StatCard with this updated version.
-
 const StatCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StatCard"
 })(["display:flex;flex-direction:column;align-items:center;justify-content:center;background:transparent;padding:0.75rem;border-top:3px solid ", ";transition:transform 0.3s ease;&.serious{border-top-color:", ";}&:hover{transform:translateY(-5px);", "{color:", ";}}"], COLORS.lightTeal, COLORS.seriousRed, StatNumber, COLORS.seriousRed);
@@ -7394,9 +7293,6 @@ const BridgeText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.w
 const SourceText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__SourceText"
 })(["font-size:0.5rem;color:", ";margin-top:3rem;a{color:", ";text-decoration:underline;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.neutralGray, COLORS.neutralGray, COLORS.teal);
-
-// Add these new components to your src/components/styles/index.js
-
 const TwoColumnLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TwoColumnLayout"
 })(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem;@media (max-width:768px){grid-template-columns:1fr;}"]);
@@ -7406,11 +7302,6 @@ const LeadParagraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const ImageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ImageWrapper"
 })(["img{width:100%;height:auto;border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.1);}"]);
-
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
 const FeatureGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__FeatureGrid"
 })(["display:grid;gap:1.5rem;scroll-margin-top:400px;grid-template-columns:1fr;@media (min-width:600px){grid-template-columns:repeat(2,1fr);}@media (min-width:992px){grid-template-columns:repeat(4,1fr);}"]);
@@ -7426,19 +7317,18 @@ const FeatureTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h
 const FeatureDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__FeatureDescription"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add this new component to your src/components/styles/index.js
-
 const TextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;h2,p{text-align:center;}a{align-self:center;margin-top:1.5rem;}"]);
-// Add these new components to your src/components/styles/index.js
-
 const MethodologyContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__MethodologyContainer"
 })(["margin-top:4rem;"]);
+
+// Find and replace the existing ProcessStepper with this version
+
 const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ProcessStepper"
-})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;@media (max-width:820px){grid-template-columns:1fr;}"]);
+})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;"]);
 const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ProcessStep"
 })(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-25px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-35px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
@@ -7451,13 +7341,9 @@ const StepTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.w
 const StepDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StepDescription"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add this component to your src/components/styles/index.js file
-
 const SecondaryButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__SecondaryButton"
 })(["display:inline-block;background:transparent;color:", ";padding:0.75rem 1.5rem;border-radius:8px;font-weight:600;border:1px solid ", ";transition:background 0.2s ease,color 0.2s ease,border-color 0.2s ease;&:hover{background:", ";border-color:", ";}"], COLORS.darkBlue, COLORS.neutralGray, COLORS.lightBg, COLORS.darkBlue);
-// Add these new components to your src/components/styles/index.js
-
 const TabContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TabContainer"
 })(["display:flex;justify-content:center;margin-bottom:2.5rem;border-bottom:1px solid #EAECEF;"]);
@@ -7470,8 +7356,6 @@ const TabContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 const CTAWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CTAWrapper"
 })(["text-align:center;margin-top:4rem;padding:3rem 1.5rem;background:", ";border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.08);"], COLORS.cardBg);
-// Add these new components to your src/components/styles/index.js
-
 const AboutIntroWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__AboutIntroWrapper"
 })(["text-align:center;max-width:800px;margin:0 auto 4rem auto;"]);
@@ -7496,8 +7380,6 @@ const MemberTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.
 const MemberBio = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__MemberBio"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add these new components to your src/components/styles/index.js
-
 const ContactLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ContactLayout"
 })(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;@media (max-width:820px){grid-template-columns:1fr;}"]);
@@ -7516,6 +7398,8 @@ const ContactDetail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__PrivacyNote"
 })(["font-size:0.875rem;color:", ";margin-top:1rem;text-align:center;"], COLORS.neutralGray);
+// Find and replace the existing ProcessStepper with this version
+
 const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CenteredTextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);
@@ -7534,18 +7418,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
-/* harmony import */ var _components_sections_PulseHero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/sections/PulseHero */ "./src/components/sections/PulseHero.jsx");
-/* harmony import */ var _components_sections_PulseNeed__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/PulseNeed */ "./src/components/sections/PulseNeed.jsx");
-/* harmony import */ var _components_sections_PulseOverview__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sections/PulseOverview */ "./src/components/sections/PulseOverview.jsx");
-/* harmony import */ var _components_sections_PulseProcess__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/sections/PulseProcess */ "./src/components/sections/PulseProcess.jsx");
-/* harmony import */ var _components_sections_PulseEligibility__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/sections/PulseEligibility */ "./src/components/sections/PulseEligibility.jsx");
-/* harmony import */ var _components_sections_PulseAssessment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/sections/PulseAssessment */ "./src/components/sections/PulseAssessment.jsx");
-/* harmony import */ var _components_sections_PulseBenefits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/sections/PulseBenefits */ "./src/components/sections/PulseBenefits.jsx");
-/* harmony import */ var _components_sections_PulseSpecialties__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/sections/PulseSpecialties */ "./src/components/sections/PulseSpecialties.jsx");
-/* harmony import */ var _components_sections_About__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/sections/About */ "./src/components/sections/About.jsx");
-/* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
-// File: src/pages/Pulse4PulsePage.jsx
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
+/* harmony import */ var _components_sections_PulseHero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/PulseHero */ "./src/components/sections/PulseHero.jsx");
+/* harmony import */ var _components_sections_PulseNeed__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sections/PulseNeed */ "./src/components/sections/PulseNeed.jsx");
+/* harmony import */ var _components_sections_PulseOverview__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/sections/PulseOverview */ "./src/components/sections/PulseOverview.jsx");
+/* harmony import */ var _components_sections_PulseProcess__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/sections/PulseProcess */ "./src/components/sections/PulseProcess.jsx");
+/* harmony import */ var _components_sections_PulseEligibility__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/sections/PulseEligibility */ "./src/components/sections/PulseEligibility.jsx");
+/* harmony import */ var _components_sections_PulseAssessment__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/sections/PulseAssessment */ "./src/components/sections/PulseAssessment.jsx");
+/* harmony import */ var _components_sections_PulseBenefits__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/sections/PulseBenefits */ "./src/components/sections/PulseBenefits.jsx");
+/* harmony import */ var _components_sections_PulseSpecialties__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/sections/PulseSpecialties */ "./src/components/sections/PulseSpecialties.jsx");
+// File: src/pages/pulse4pulse.jsx
 
 
 
@@ -7559,12 +7443,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Pulse4PulsePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
+
+// A simple styled footer for this page
+const Footer = styled_components__WEBPACK_IMPORTED_MODULE_11__["default"].footer.withConfig({
+  displayName: "Pulse4Pulse__Footer"
+})(["text-align:center;padding:2rem;margin-top:4rem;background:#EAECEF;color:#334D6E;"]);
+const Pulse4Pulse = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "pulse4pulse"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseHero__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseNeed__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseOverview__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseProcess__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseEligibility__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseAssessment__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseBenefits__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseSpecialties__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_About__WEBPACK_IMPORTED_MODULE_10__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_11__["default"], {
-  isPulsePage: true
-}));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pulse4PulsePage);
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseHero__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseNeed__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseOverview__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseProcess__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseEligibility__WEBPACK_IMPORTED_MODULE_7__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseAssessment__WEBPACK_IMPORTED_MODULE_8__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseBenefits__WEBPACK_IMPORTED_MODULE_9__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_PulseSpecialties__WEBPACK_IMPORTED_MODULE_10__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved.")));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Pulse4Pulse);
 
 /***/ })
 

@@ -1,470 +1,7 @@
+"use strict";
 exports.id = "component---src-pages-index-js";
 exports.ids = ["component---src-pages-index-js"];
 exports.modules = {
-
-/***/ "./node_modules/countup.js/dist/countUp.umd.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/countup.js/dist/countUp.umd.js ***!
-  \*****************************************************/
-/***/ (function(__unused_webpack_module, exports) {
-
-!function(t,i){ true?i(exports):0}(this,(function(t){"use strict";var i=function(){return i=Object.assign||function(t){for(var i,n=1,s=arguments.length;n<s;n++)for(var e in i=arguments[n])Object.prototype.hasOwnProperty.call(i,e)&&(t[e]=i[e]);return t},i.apply(this,arguments)},n=function(){function t(t,n,s){var e=this;this.endVal=n,this.options=s,this.version="2.9.0",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,useIndianSeparators:!1,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:"",enableScrollSpy:!1,scrollSpyDelay:200,scrollSpyOnce:!1},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.once=!1,this.count=function(t){e.startTime||(e.startTime=t);var i=t-e.startTime;e.remaining=e.duration-i,e.useEasing?e.countDown?e.frameVal=e.startVal-e.easingFn(i,0,e.startVal-e.endVal,e.duration):e.frameVal=e.easingFn(i,e.startVal,e.endVal-e.startVal,e.duration):e.frameVal=e.startVal+(e.endVal-e.startVal)*(i/e.duration);var n=e.countDown?e.frameVal<e.endVal:e.frameVal>e.endVal;e.frameVal=n?e.endVal:e.frameVal,e.frameVal=Number(e.frameVal.toFixed(e.options.decimalPlaces)),e.printValue(e.frameVal),i<e.duration?e.rAF=requestAnimationFrame(e.count):null!==e.finalEndVal?e.update(e.finalEndVal):e.options.onCompleteCallback&&e.options.onCompleteCallback()},this.formatNumber=function(t){var i,n,s,a,o=t<0?"-":"";i=Math.abs(t).toFixed(e.options.decimalPlaces);var r=(i+="").split(".");if(n=r[0],s=r.length>1?e.options.decimal+r[1]:"",e.options.useGrouping){a="";for(var l=3,u=0,h=0,p=n.length;h<p;++h)e.options.useIndianSeparators&&4===h&&(l=2,u=1),0!==h&&u%l==0&&(a=e.options.separator+a),u++,a=n[p-h-1]+a;n=a}return e.options.numerals&&e.options.numerals.length&&(n=n.replace(/[0-9]/g,(function(t){return e.options.numerals[+t]})),s=s.replace(/[0-9]/g,(function(t){return e.options.numerals[+t]}))),o+e.options.prefix+n+s+e.options.suffix},this.easeOutExpo=function(t,i,n,s){return n*(1-Math.pow(2,-10*t/s))*1024/1023+i},this.options=i(i({},this.defaults),s),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.el="string"==typeof t?document.getElementById(t):t,n=null==n?this.parse(this.el.innerHTML):n,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(n),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined","undefined"!=typeof window&&this.options.enableScrollSpy&&(this.error?console.error(this.error,t):(window.onScrollFns=window.onScrollFns||[],window.onScrollFns.push((function(){return e.handleScroll(e)})),window.onscroll=function(){window.onScrollFns.forEach((function(t){return t()}))},this.handleScroll(this)))}return t.prototype.handleScroll=function(t){if(t&&window&&!t.once){var i=window.innerHeight+window.scrollY,n=t.el.getBoundingClientRect(),s=n.top+window.pageYOffset,e=n.top+n.height+window.pageYOffset;e<i&&e>window.scrollY&&t.paused?(t.paused=!1,setTimeout((function(){return t.start()}),t.options.scrollSpyDelay),t.options.scrollSpyOnce&&(t.once=!0)):(window.scrollY>e||s>i)&&!t.paused&&t.reset()}},t.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var i=t-this.startVal;if(Math.abs(i)>this.options.smartEasingThreshold&&this.options.useEasing){this.finalEndVal=t;var n=this.countDown?1:-1;this.endVal=t+n*this.options.smartEasingAmount,this.duration=this.duration/2}else this.endVal=t,this.finalEndVal=null;null!==this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing},t.prototype.start=function(t){this.error||(this.options.onStartCallback&&this.options.onStartCallback(),t&&(this.options.onCompleteCallback=t),this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal))},t.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused},t.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal)},t.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,null==this.finalEndVal&&this.resetDuration(),this.finalEndVal=null,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count))},t.prototype.printValue=function(t){var i;if(this.el){var n=this.formattingFn(t);if(null===(i=this.options.plugin)||void 0===i?void 0:i.render)this.options.plugin.render(this.el,n);else if("INPUT"===this.el.tagName)this.el.value=n;else"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=n:this.el.innerHTML=n}},t.prototype.ensureNumber=function(t){return"number"==typeof t&&!isNaN(t)},t.prototype.validateValue=function(t){var i=Number(t);return this.ensureNumber(i)?i:(this.error="[CountUp] invalid start or end value: ".concat(t),null)},t.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration},t.prototype.parse=function(t){var i=function(t){return t.replace(/([.,'  ])/g,"\\$1")},n=i(this.options.separator),s=i(this.options.decimal),e=t.replace(new RegExp(n,"g"),"").replace(new RegExp(s,"g"),".");return parseFloat(e)},t}();t.CountUp=n}));
-
-
-/***/ }),
-
-/***/ "./node_modules/react-countup/build/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/react-countup/build/index.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-
-var React = __webpack_require__(/*! react */ "react");
-var countup_js = __webpack_require__(/*! countup.js */ "./node_modules/countup.js/dist/countUp.umd.js");
-
-function _iterableToArrayLimit(r, l) {
-  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
-  if (null != t) {
-    var e,
-      n,
-      i,
-      u,
-      a = [],
-      f = !0,
-      o = !1;
-    try {
-      if (i = (t = t.call(r)).next, 0 === l) {
-        if (Object(t) !== t) return;
-        f = !1;
-      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
-    } catch (r) {
-      o = !0, n = r;
-    } finally {
-      try {
-        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
-      } finally {
-        if (o) throw n;
-      }
-    }
-    return a;
-  }
-}
-function ownKeys(e, r) {
-  var t = Object.keys(e);
-  if (Object.getOwnPropertySymbols) {
-    var o = Object.getOwnPropertySymbols(e);
-    r && (o = o.filter(function (r) {
-      return Object.getOwnPropertyDescriptor(e, r).enumerable;
-    })), t.push.apply(t, o);
-  }
-  return t;
-}
-function _objectSpread2(e) {
-  for (var r = 1; r < arguments.length; r++) {
-    var t = null != arguments[r] ? arguments[r] : {};
-    r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
-      _defineProperty(e, r, t[r]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
-      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-    });
-  }
-  return e;
-}
-function _toPrimitive(t, r) {
-  if ("object" != typeof t || !t) return t;
-  var e = t[Symbol.toPrimitive];
-  if (void 0 !== e) {
-    var i = e.call(t, r || "default");
-    if ("object" != typeof i) return i;
-    throw new TypeError("@@toPrimitive must return a primitive value.");
-  }
-  return ("string" === r ? String : Number)(t);
-}
-function _toPropertyKey(t) {
-  var i = _toPrimitive(t, "string");
-  return "symbol" == typeof i ? i : String(i);
-}
-function _defineProperty(obj, key, value) {
-  key = _toPropertyKey(key);
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
-function _extends() {
-  _extends = Object.assign ? Object.assign.bind() : function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-    return target;
-  };
-  return _extends.apply(this, arguments);
-}
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-  return target;
-}
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-  return target;
-}
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-  return arr2;
-}
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-/**
- * Silence SSR Warnings.
- * Borrowed from Formik v2.1.1, Licensed MIT.
- *
- * https://github.com/formium/formik/blob/9316a864478f8fcd4fa99a0735b1d37afdf507dc/LICENSE
- */
-var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? React.useLayoutEffect : React.useEffect;
-
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
-/**
- * Create a stable reference to a callback which is updated after each render is committed.
- * Typed version borrowed from Formik v2.2.1. Licensed MIT.
- *
- * https://github.com/formium/formik/blob/9316a864478f8fcd4fa99a0735b1d37afdf507dc/LICENSE
- */
-function useEventCallback(fn) {
-  var ref = React.useRef(fn);
-
-  // we copy a ref to the callback scoped to the current state/props on each render
-  useIsomorphicLayoutEffect(function () {
-    ref.current = fn;
-  });
-  return React.useCallback(function () {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    return ref.current.apply(void 0, args);
-  }, []);
-}
-
-var createCountUpInstance = function createCountUpInstance(el, props) {
-  var decimal = props.decimal,
-    decimals = props.decimals,
-    duration = props.duration,
-    easingFn = props.easingFn,
-    end = props.end,
-    formattingFn = props.formattingFn,
-    numerals = props.numerals,
-    prefix = props.prefix,
-    separator = props.separator,
-    start = props.start,
-    suffix = props.suffix,
-    useEasing = props.useEasing,
-    useGrouping = props.useGrouping,
-    useIndianSeparators = props.useIndianSeparators,
-    enableScrollSpy = props.enableScrollSpy,
-    scrollSpyDelay = props.scrollSpyDelay,
-    scrollSpyOnce = props.scrollSpyOnce,
-    plugin = props.plugin;
-  return new countup_js.CountUp(el, end, {
-    startVal: start,
-    duration: duration,
-    decimal: decimal,
-    decimalPlaces: decimals,
-    easingFn: easingFn,
-    formattingFn: formattingFn,
-    numerals: numerals,
-    separator: separator,
-    prefix: prefix,
-    suffix: suffix,
-    plugin: plugin,
-    useEasing: useEasing,
-    useIndianSeparators: useIndianSeparators,
-    useGrouping: useGrouping,
-    enableScrollSpy: enableScrollSpy,
-    scrollSpyDelay: scrollSpyDelay,
-    scrollSpyOnce: scrollSpyOnce
-  });
-};
-
-var _excluded$1 = ["ref", "startOnMount", "enableReinitialize", "delay", "onEnd", "onStart", "onPauseResume", "onReset", "onUpdate"];
-var DEFAULTS = {
-  decimal: '.',
-  separator: ',',
-  delay: null,
-  prefix: '',
-  suffix: '',
-  duration: 2,
-  start: 0,
-  decimals: 0,
-  startOnMount: true,
-  enableReinitialize: true,
-  useEasing: true,
-  useGrouping: true,
-  useIndianSeparators: false
-};
-var useCountUp = function useCountUp(props) {
-  var filteredProps = Object.fromEntries(Object.entries(props).filter(function (_ref) {
-    var _ref2 = _slicedToArray(_ref, 2),
-      value = _ref2[1];
-    return value !== undefined;
-  }));
-  var _useMemo = React.useMemo(function () {
-      return _objectSpread2(_objectSpread2({}, DEFAULTS), filteredProps);
-    }, [props]),
-    ref = _useMemo.ref,
-    startOnMount = _useMemo.startOnMount,
-    enableReinitialize = _useMemo.enableReinitialize,
-    delay = _useMemo.delay,
-    onEnd = _useMemo.onEnd,
-    onStart = _useMemo.onStart,
-    onPauseResume = _useMemo.onPauseResume,
-    onReset = _useMemo.onReset,
-    onUpdate = _useMemo.onUpdate,
-    instanceProps = _objectWithoutProperties(_useMemo, _excluded$1);
-  var countUpRef = React.useRef();
-  var timerRef = React.useRef();
-  var isInitializedRef = React.useRef(false);
-  var createInstance = useEventCallback(function () {
-    return createCountUpInstance(typeof ref === 'string' ? ref : ref.current, instanceProps);
-  });
-  var getCountUp = useEventCallback(function (recreate) {
-    var countUp = countUpRef.current;
-    if (countUp && !recreate) {
-      return countUp;
-    }
-    var newCountUp = createInstance();
-    countUpRef.current = newCountUp;
-    return newCountUp;
-  });
-  var start = useEventCallback(function () {
-    var run = function run() {
-      return getCountUp(true).start(function () {
-        onEnd === null || onEnd === void 0 || onEnd({
-          pauseResume: pauseResume,
-          reset: reset,
-          start: restart,
-          update: update
-        });
-      });
-    };
-    if (delay && delay > 0) {
-      timerRef.current = setTimeout(run, delay * 1000);
-    } else {
-      run();
-    }
-    onStart === null || onStart === void 0 || onStart({
-      pauseResume: pauseResume,
-      reset: reset,
-      update: update
-    });
-  });
-  var pauseResume = useEventCallback(function () {
-    getCountUp().pauseResume();
-    onPauseResume === null || onPauseResume === void 0 || onPauseResume({
-      reset: reset,
-      start: restart,
-      update: update
-    });
-  });
-  var reset = useEventCallback(function () {
-    // Quick fix for https://github.com/glennreyes/react-countup/issues/736 - should be investigated
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    if (getCountUp().el) {
-      timerRef.current && clearTimeout(timerRef.current);
-      getCountUp().reset();
-      onReset === null || onReset === void 0 || onReset({
-        pauseResume: pauseResume,
-        start: restart,
-        update: update
-      });
-    }
-  });
-  var update = useEventCallback(function (newEnd) {
-    getCountUp().update(newEnd);
-    onUpdate === null || onUpdate === void 0 || onUpdate({
-      pauseResume: pauseResume,
-      reset: reset,
-      start: restart
-    });
-  });
-  var restart = useEventCallback(function () {
-    reset();
-    start();
-  });
-  var maybeInitialize = useEventCallback(function (shouldReset) {
-    if (startOnMount) {
-      if (shouldReset) {
-        reset();
-      }
-      start();
-    }
-  });
-  React.useEffect(function () {
-    if (!isInitializedRef.current) {
-      isInitializedRef.current = true;
-      maybeInitialize();
-    } else if (enableReinitialize) {
-      maybeInitialize(true);
-    }
-  }, [enableReinitialize, isInitializedRef, maybeInitialize, delay, props.start, props.suffix, props.prefix, props.duration, props.separator, props.decimals, props.decimal, props.formattingFn]);
-  React.useEffect(function () {
-    return function () {
-      reset();
-    };
-  }, [reset]);
-  return {
-    start: restart,
-    pauseResume: pauseResume,
-    reset: reset,
-    update: update,
-    getCountUp: getCountUp
-  };
-};
-
-var _excluded = ["className", "redraw", "containerProps", "children", "style"];
-var CountUp = function CountUp(props) {
-  var className = props.className,
-    redraw = props.redraw,
-    containerProps = props.containerProps,
-    children = props.children,
-    style = props.style,
-    useCountUpProps = _objectWithoutProperties(props, _excluded);
-  var containerRef = React.useRef(null);
-  var isInitializedRef = React.useRef(false);
-  var _useCountUp = useCountUp(_objectSpread2(_objectSpread2({}, useCountUpProps), {}, {
-      ref: containerRef,
-      startOnMount: typeof children !== 'function' || props.delay === 0,
-      // component manually restarts
-      enableReinitialize: false
-    })),
-    start = _useCountUp.start,
-    reset = _useCountUp.reset,
-    updateCountUp = _useCountUp.update,
-    pauseResume = _useCountUp.pauseResume,
-    getCountUp = _useCountUp.getCountUp;
-  var restart = useEventCallback(function () {
-    start();
-  });
-  var update = useEventCallback(function (end) {
-    if (!props.preserveValue) {
-      reset();
-    }
-    updateCountUp(end);
-  });
-  var initializeOnMount = useEventCallback(function () {
-    if (typeof props.children === 'function') {
-      // Warn when user didn't use containerRef at all
-      if (!(containerRef.current instanceof Element)) {
-        console.error("Couldn't find attached element to hook the CountUp instance into! Try to attach \"containerRef\" from the render prop to a an Element, eg. <span ref={containerRef} />.");
-        return;
-      }
-    }
-
-    // unlike the hook, the CountUp component initializes on mount
-    getCountUp();
-  });
-  React.useEffect(function () {
-    initializeOnMount();
-  }, [initializeOnMount]);
-  React.useEffect(function () {
-    if (isInitializedRef.current) {
-      update(props.end);
-    }
-  }, [props.end, update]);
-  var redrawDependencies = redraw && props;
-
-  // if props.redraw, call this effect on every props change
-  React.useEffect(function () {
-    if (redraw && isInitializedRef.current) {
-      restart();
-    }
-  }, [restart, redraw, redrawDependencies]);
-
-  // if not props.redraw, call this effect only when certain props are changed
-  React.useEffect(function () {
-    if (!redraw && isInitializedRef.current) {
-      restart();
-    }
-  }, [restart, redraw, props.start, props.suffix, props.prefix, props.duration, props.separator, props.decimals, props.decimal, props.className, props.formattingFn]);
-  React.useEffect(function () {
-    isInitializedRef.current = true;
-  }, []);
-  if (typeof children === 'function') {
-    // TypeScript forces functional components to return JSX.Element | null.
-    return children({
-      countUpRef: containerRef,
-      start: start,
-      reset: reset,
-      update: updateCountUp,
-      pauseResume: pauseResume,
-      getCountUp: getCountUp
-    });
-  }
-  return /*#__PURE__*/React.createElement("span", _extends({
-    className: className,
-    ref: containerRef,
-    style: style
-  }, containerProps), typeof props.start !== 'undefined' ? getCountUp().formattingFn(props.start) : '');
-};
-
-exports["default"] = CountUp;
-exports.useCountUp = useCountUp;
-
-
-/***/ }),
 
 /***/ "./node_modules/react-icons/fa/index.mjs":
 /*!***********************************************!*\
@@ -472,7 +9,6 @@ exports.useCountUp = useCountUp;
   \***********************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   Fa500Px: () => (/* binding */ Fa500Px),
@@ -6933,7 +6469,6 @@ function FaRegWindowRestore (props) {
   \***************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   GenIcon: () => (/* binding */ GenIcon),
@@ -6999,7 +6534,6 @@ function IconBase(props) {
   \******************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DefaultContext: () => (/* binding */ DefaultContext),
@@ -7024,7 +6558,6 @@ var IconContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext && /*#__PURE_
   \********************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   IconsManifest: () => (/* binding */ IconsManifest)
@@ -7257,7 +6790,6 @@ var IconsManifest = [
   \************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   DefaultContext: () => (/* reexport safe */ _iconContext_mjs__WEBPACK_IMPORTED_MODULE_2__.DefaultContext),
@@ -7275,319 +6807,12 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/react-intersection-observer/dist/index.mjs":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-intersection-observer/dist/index.mjs ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   InView: () => (/* binding */ InView),
-/* harmony export */   defaultFallbackInView: () => (/* binding */ defaultFallbackInView),
-/* harmony export */   observe: () => (/* binding */ observe),
-/* harmony export */   useInView: () => (/* binding */ useInView)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-"use client";
-var __defProp = Object.defineProperty;
-var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
-
-// src/InView.tsx
-
-
-// src/observe.ts
-var observerMap = /* @__PURE__ */ new Map();
-var RootIds = /* @__PURE__ */ new WeakMap();
-var rootId = 0;
-var unsupportedValue = void 0;
-function defaultFallbackInView(inView) {
-  unsupportedValue = inView;
-}
-function getRootId(root) {
-  if (!root) return "0";
-  if (RootIds.has(root)) return RootIds.get(root);
-  rootId += 1;
-  RootIds.set(root, rootId.toString());
-  return RootIds.get(root);
-}
-function optionsToId(options) {
-  return Object.keys(options).sort().filter(
-    (key) => options[key] !== void 0
-  ).map((key) => {
-    return `${key}_${key === "root" ? getRootId(options.root) : options[key]}`;
-  }).toString();
-}
-function createObserver(options) {
-  const id = optionsToId(options);
-  let instance = observerMap.get(id);
-  if (!instance) {
-    const elements = /* @__PURE__ */ new Map();
-    let thresholds;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        var _a;
-        const inView = entry.isIntersecting && thresholds.some((threshold) => entry.intersectionRatio >= threshold);
-        if (options.trackVisibility && typeof entry.isVisible === "undefined") {
-          entry.isVisible = inView;
-        }
-        (_a = elements.get(entry.target)) == null ? void 0 : _a.forEach((callback) => {
-          callback(inView, entry);
-        });
-      });
-    }, options);
-    thresholds = observer.thresholds || (Array.isArray(options.threshold) ? options.threshold : [options.threshold || 0]);
-    instance = {
-      id,
-      observer,
-      elements
-    };
-    observerMap.set(id, instance);
-  }
-  return instance;
-}
-function observe(element, callback, options = {}, fallbackInView = unsupportedValue) {
-  if (typeof window.IntersectionObserver === "undefined" && fallbackInView !== void 0) {
-    const bounds = element.getBoundingClientRect();
-    callback(fallbackInView, {
-      isIntersecting: fallbackInView,
-      target: element,
-      intersectionRatio: typeof options.threshold === "number" ? options.threshold : 0,
-      time: 0,
-      boundingClientRect: bounds,
-      intersectionRect: bounds,
-      rootBounds: bounds
-    });
-    return () => {
-    };
-  }
-  const { id, observer, elements } = createObserver(options);
-  const callbacks = elements.get(element) || [];
-  if (!elements.has(element)) {
-    elements.set(element, callbacks);
-  }
-  callbacks.push(callback);
-  observer.observe(element);
-  return function unobserve() {
-    callbacks.splice(callbacks.indexOf(callback), 1);
-    if (callbacks.length === 0) {
-      elements.delete(element);
-      observer.unobserve(element);
-    }
-    if (elements.size === 0) {
-      observer.disconnect();
-      observerMap.delete(id);
-    }
-  };
-}
-
-// src/InView.tsx
-function isPlainChildren(props) {
-  return typeof props.children !== "function";
-}
-var InView = class extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
-  constructor(props) {
-    super(props);
-    __publicField(this, "node", null);
-    __publicField(this, "_unobserveCb", null);
-    __publicField(this, "handleNode", (node) => {
-      if (this.node) {
-        this.unobserve();
-        if (!node && !this.props.triggerOnce && !this.props.skip) {
-          this.setState({ inView: !!this.props.initialInView, entry: void 0 });
-        }
-      }
-      this.node = node ? node : null;
-      this.observeNode();
-    });
-    __publicField(this, "handleChange", (inView, entry) => {
-      if (inView && this.props.triggerOnce) {
-        this.unobserve();
-      }
-      if (!isPlainChildren(this.props)) {
-        this.setState({ inView, entry });
-      }
-      if (this.props.onChange) {
-        this.props.onChange(inView, entry);
-      }
-    });
-    this.state = {
-      inView: !!props.initialInView,
-      entry: void 0
-    };
-  }
-  componentDidMount() {
-    this.unobserve();
-    this.observeNode();
-  }
-  componentDidUpdate(prevProps) {
-    if (prevProps.rootMargin !== this.props.rootMargin || prevProps.root !== this.props.root || prevProps.threshold !== this.props.threshold || prevProps.skip !== this.props.skip || prevProps.trackVisibility !== this.props.trackVisibility || prevProps.delay !== this.props.delay) {
-      this.unobserve();
-      this.observeNode();
-    }
-  }
-  componentWillUnmount() {
-    this.unobserve();
-  }
-  observeNode() {
-    if (!this.node || this.props.skip) return;
-    const {
-      threshold,
-      root,
-      rootMargin,
-      trackVisibility,
-      delay,
-      fallbackInView
-    } = this.props;
-    this._unobserveCb = observe(
-      this.node,
-      this.handleChange,
-      {
-        threshold,
-        root,
-        rootMargin,
-        // @ts-ignore
-        trackVisibility,
-        // @ts-ignore
-        delay
-      },
-      fallbackInView
-    );
-  }
-  unobserve() {
-    if (this._unobserveCb) {
-      this._unobserveCb();
-      this._unobserveCb = null;
-    }
-  }
-  render() {
-    const { children } = this.props;
-    if (typeof children === "function") {
-      const { inView, entry } = this.state;
-      return children({ inView, entry, ref: this.handleNode });
-    }
-    const {
-      as,
-      triggerOnce,
-      threshold,
-      root,
-      rootMargin,
-      onChange,
-      skip,
-      trackVisibility,
-      delay,
-      initialInView,
-      fallbackInView,
-      ...props
-    } = this.props;
-    return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
-      as || "div",
-      { ref: this.handleNode, ...props },
-      children
-    );
-  }
-};
-
-// src/useInView.tsx
-
-function useInView({
-  threshold,
-  delay,
-  trackVisibility,
-  rootMargin,
-  root,
-  triggerOnce,
-  skip,
-  initialInView,
-  fallbackInView,
-  onChange
-} = {}) {
-  var _a;
-  const [ref, setRef] = react__WEBPACK_IMPORTED_MODULE_0__.useState(null);
-  const callback = react__WEBPACK_IMPORTED_MODULE_0__.useRef(onChange);
-  const [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
-    inView: !!initialInView,
-    entry: void 0
-  });
-  callback.current = onChange;
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(
-    () => {
-      if (skip || !ref) return;
-      let unobserve;
-      unobserve = observe(
-        ref,
-        (inView, entry) => {
-          setState({
-            inView,
-            entry
-          });
-          if (callback.current) callback.current(inView, entry);
-          if (entry.isIntersecting && triggerOnce && unobserve) {
-            unobserve();
-            unobserve = void 0;
-          }
-        },
-        {
-          root,
-          rootMargin,
-          threshold,
-          // @ts-ignore
-          trackVisibility,
-          // @ts-ignore
-          delay
-        },
-        fallbackInView
-      );
-      return () => {
-        if (unobserve) {
-          unobserve();
-        }
-      };
-    },
-    // We break the rule here, because we aren't including the actual `threshold` variable
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [
-      // If the threshold is an array, convert it to a string, so it won't change between renders.
-      Array.isArray(threshold) ? threshold.toString() : threshold,
-      ref,
-      root,
-      rootMargin,
-      triggerOnce,
-      skip,
-      trackVisibility,
-      fallbackInView,
-      delay
-    ]
-  );
-  const entryTarget = (_a = state.entry) == null ? void 0 : _a.target;
-  const previousEntryTarget = react__WEBPACK_IMPORTED_MODULE_0__.useRef(void 0);
-  if (!ref && entryTarget && !triggerOnce && !skip && previousEntryTarget.current !== entryTarget) {
-    previousEntryTarget.current = entryTarget;
-    setState({
-      inView: !!initialInView,
-      entry: void 0
-    });
-  }
-  const result = [setRef, state.inView, state.entry];
-  result.ref = result[0];
-  result.inView = result[1];
-  result.entry = result[2];
-  return result;
-}
-
-//# sourceMappingURL=index.mjs.map
-
-/***/ }),
-
 /***/ "./src/components/Layout/GlobalStyles.jsx":
 /*!************************************************!*\
   !*** ./src/components/Layout/GlobalStyles.jsx ***!
   \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -7604,7 +6829,6 @@ __webpack_require__.r(__webpack_exports__);
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -7618,10 +6842,12 @@ __webpack_require__.r(__webpack_exports__);
 
 const Nav = ({
   active
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "/"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
   src: "/images/Upright Medical Solutions Logo.png",
   alt: "Upright Medical Solutions"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/",
   className: active === "home" ? "active" : ""
 }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -7635,63 +6861,16 @@ const Nav = ({
   href: "/fall-risk",
   className: active === "fall-risk" ? "active" : ""
 }, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/pulse4pulse",
+  href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/about",
+  href: "/#about",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/contact",
+  href: "/#contact",
   className: active === "contact" ? "active" : ""
 }, "Contact"))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
-
-/***/ }),
-
-/***/ "./src/components/sections/About.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/sections/About.jsx ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/About.jsx
-
-
-
-const teamData = [{
-  name: "John Doe",
-  title: "Co-Founder & CEO",
-  bio: "With over 20 years in clinical practice, John founded Upright Medical to bridge the gap between reactive treatment and proactive, preventative care.",
-  photoUrl: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=2787&auto=format&fit=crop"
-}, {
-  name: "Jane Smith",
-  title: "Co-Founder & CTO",
-  bio: "Jane is the architect of our evidence-based platform, dedicated to creating technology that is both powerful for clinicians and simple to use.",
-  photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop"
-}];
-const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
-  as: "h2",
-  style: {
-    fontSize: '2rem',
-    marginBottom: '3rem'
-  }
-}, "Our Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
-  key: index
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
-  src: member.photoUrl,
-  alt: member.name
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
 
@@ -7701,7 +6880,6 @@ const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().cr
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -7769,126 +6947,12 @@ const Contact = ({
 
 /***/ }),
 
-/***/ "./src/components/sections/FraOverview.jsx":
-/*!*************************************************!*\
-  !*** ./src/components/sections/FraOverview.jsx ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-// File: src/components/sections/FraOverview.jsx
-
-
-// Import all the necessary styled components, including TextColumn
-
-
-// Import icons from react-icons
-
-const FraOverview = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "fra-overview"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TextColumn, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "What is Fall Risk Assessment (FRA)?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LeadParagraph, null, "Our Fall Risk Assessment (FRA) program is an evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes through data-driven care."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-  href: "#features-benefits"
-}, "Explore Features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "../images/docimg.png",
-  alt: "Clinician reviewing data on a tablet"
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureGrid, {
-  id: "features-benefits"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaShieldAlt, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureTitle, null, "Mitigate Risk"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureDescription, null, "Proactively identify and address fall risks before they lead to injury, ensuring patient safety.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaSearch, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureTitle, null, "Identify Root Causes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureDescription, null, "Go beyond the surface to pinpoint the specific underlying factors contributing to a patient's fall risk.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaUserEdit, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureTitle, null, "Customize Care Plans"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureDescription, null, "Create tailored plans of care for each patient based on their unique assessment results.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaChartLine, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureTitle, null, "Track Outcomes"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.FeatureDescription, null, "Monitor patient progress and track outcomes over multiple assessments with clear, visual data."))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FraOverview);
-
-/***/ }),
-
-/***/ "./src/components/sections/FraResearch.jsx":
-/*!*************************************************!*\
-  !*** ./src/components/sections/FraResearch.jsx ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-countup */ "./node_modules/react-countup/build/index.js");
-/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-intersection-observer */ "./node_modules/react-intersection-observer/dist/index.mjs");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-// File: src/components/sections/FraResearch.jsx
-
-
-
-
-
-// Import all the necessary styled components
-
-
-// Import icons for the methodology section
-
-const FraResearch = () => {
-  const {
-    ref,
-    inView
-  } = (0,react_intersection_observer__WEBPACK_IMPORTED_MODULE_3__.useInView)({
-    triggerOnce: true,
-    // Only trigger the animation once
-    threshold: 0.1 // Trigger when 10% of the element is visible
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.Section, {
-    id: "fra-research"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.SectionTitle, null, "Evidence-Based & Scientifically Validated"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.LeadParagraph, {
-    style: {
-      textAlign: 'center',
-      maxWidth: '800px',
-      margin: '0 auto 3rem auto'
-    }
-  }, "Our webFCE Fall Risk Assessment (FRA) is built upon a foundation of extensive scientific research to provide the most accurate and reliable screening available."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatGrid, {
-    ref: ref
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatNumber, null, inView ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_countup__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    end: 12,
-    duration: 2.5
-  }) : '0'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatLabel, null, "Core Evaluative Tools")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatNumber, null, inView ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_countup__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    end: 2200,
-    separator: ",",
-    duration: 2.5
-  }) : '0', "+"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatLabel, null, "Fall Risk Studies Examined")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatNumber, null, inView ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_countup__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    end: 12700,
-    separator: ",",
-    duration: 2.5
-  }) : '0', "+"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StatLabel, null, "Population Norms Analyzed"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.MethodologyContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    style: {
-      textAlign: 'center',
-      marginBottom: '3rem'
-    }
-  }, "Our Methodology"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.ProcessStepper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.FaBook, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepTitle, null, "Comprehensive Foundation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepDescription, null, "We synthesized thousands of studies to select 12 core evaluative tools for our assessment.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.FaCalculator, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepTitle, null, "Advanced Algorithms"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepDescription, null, "Each measurement is combined via complex mathematical algorithms to determine an accurate, unified risk score.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.ProcessStep, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepIcon, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_4__.FaChartBar, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepTitle, null, "Predictive Power"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.StepDescription, null, "The final result predicts the statistical probability of a fall over a 12-month period for diverse populations.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: {
-      textAlign: 'center',
-      marginTop: '4rem'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.SecondaryButton, {
-    href: "#contact"
-  }, "Request a Whitepaper")));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FraResearch);
-
-/***/ }),
-
 /***/ "./src/components/sections/Hero.jsx":
 /*!******************************************!*\
   !*** ./src/components/sections/Hero.jsx ***!
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -7916,143 +6980,12 @@ const HeroSection = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___defaul
 
 /***/ }),
 
-/***/ "./src/components/sections/NeedScreen.jsx":
-/*!************************************************!*\
-  !*** ./src/components/sections/NeedScreen.jsx ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/NeedScreen.jsx
-
-
-// Import all the necessary styled components, including the new CenteredTextColumn
-
-const NeedScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().forwardRef((props, ref) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "need-screen",
-  ref: ref
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "The Unseen Risk in Plain Sight"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImageWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "../images/FRA.jpg",
-  alt: "Caring healthcare professional assisting a senior patient"
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CenteredTextColumn, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ImpactText, null, "For older adults, falls are a critical threat."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.QuoteText, null, "It\u2019s not just about preventing a fall; it\u2019s about preserving independence and ensuring peace of mind for the entire family."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 4"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Seniors experience a fall each year.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "1 in 5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Falls result in a serious injury like a broken bone or head trauma.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatCard, {
-  className: "serious"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatNumber, null, "#1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.StatLabel, null, "Leading cause of injury-related death among older adults."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BridgeText, null, "Understanding the risk is the first step. The next is taking decisive, evidence-based action to prevent it."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-  href: "#fra-overview"
-}, "See How We Can Help"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SourceText, null, "All statistics sourced from the Centers for Disease Control and Prevention (CDC). ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "https://www.cdc.gov/falls/data-research/index.html",
-  target: "_blank",
-  rel: "noopener noreferrer"
-}, "Learn more."))))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NeedScreen);
-
-/***/ }),
-
-/***/ "./src/components/sections/WhoWeHelp.jsx":
-/*!***********************************************!*\
-  !*** ./src/components/sections/WhoWeHelp.jsx ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-icons/fa */ "./node_modules/react-icons/fa/index.mjs");
-// File: src/components/sections/WhoWeHelp.jsx
-
-
-// Import all the necessary styled components
-
-
-// Import icons for each profile
-
-
-// Define the content for our tabs in an array for clean code
-const whoWeHelpData = [{
-  id: 'providers',
-  title: 'Healthcare Providers',
-  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaUserMd, null),
-  description: "Our platform provides vital fall-prevention solutions to thousands of Physicians and Healthcare clinics across the United States, enabling superior patient care and new revenue opportunities.",
-  benefits: ["Implement an evidence-based screening protocol.", "Create new service lines for your practice.", "Improve patient outcomes and satisfaction.", "Utilize detailed reporting for better care coordination."]
-}, {
-  id: 'seniors',
-  title: 'Senior Patients (65+)',
-  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaUserFriends, null),
-  description: "Our primary focus is the +65 population. We provide the tools to help seniors maintain their independence and safety by proactively identifying and managing fall risks.",
-  benefits: ["Gain a clear understanding of your personal fall risk.", "Receive a customized plan to improve balance and strength.", "Maintain independence and confidence in daily activities.", "Share clear, understandable results with family and doctors."]
-}, {
-  id: 'at-risk',
-  title: 'At-Risk Populations',
-  icon: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaHeartbeat, null),
-  description: "There is a growing need for introducing a Fall Risk plan of care for patients with underlying conditions (neurological, vestibular, etc.) that can contribute to falls at any age.",
-  benefits: ["Address fall risks associated with specific medical conditions.", "Integrate fall prevention into post-operative rehabilitation.", "Manage risks related to medication side effects.", "Provide a proactive layer of care for complex patients."]
-}];
-const WhoWeHelp = () => {
-  const {
-    0: activeTab,
-    1: setActiveTab
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(whoWeHelpData[0].id);
-  const activeContent = whoWeHelpData.find(tab => tab.id === activeTab);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-    id: "who-we-help"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Who We Help"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabContainer, null, whoWeHelpData.map(tab => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabButton, {
-    key: tab.id,
-    active: activeTab === tab.id,
-    onClick: () => setActiveTab(tab.id)
-  }, tab.title))), activeContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TabContent, {
-    key: activeContent.id
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TwoColumnLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center'
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.IconWrapper, {
-    style: {
-      marginBottom: '1.5rem'
-    }
-  }, activeContent.icon), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LeadParagraph, null, activeContent.description)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    style: {
-      marginBottom: '1rem'
-    }
-  }, "Key Benefits:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BulletList, null, activeContent.benefits.map((benefit, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    key: index
-  }, benefit)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CTAWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    style: {
-      marginBottom: '1rem'
-    }
-  }, "Ready to Enhance Patient Care?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    style: {
-      maxWidth: '600px',
-      margin: '0 auto 1.5rem auto'
-    }
-  }, "We would welcome the opportunity to discuss the value this Fall Risk program could bring to your practice."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-    href: "#contact"
-  }, "Schedule a Consultation")));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WhoWeHelp);
-
-/***/ }),
-
 /***/ "./src/components/styles.js":
 /*!**********************************!*\
   !*** ./src/components/styles.js ***!
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AboutIntroWrapper: () => (/* binding */ AboutIntroWrapper),
@@ -8118,7 +7051,12 @@ __webpack_require__.r(__webpack_exports__);
 const COLORS = {
   darkBlue: "#0A2640",
   teal: "#3FD0C9",
-  cardBg: "#FFFFFF"
+  cardBg: "#FFFFFF",
+  // FIX 1: Added missing color definitions
+  lightTeal: "#A7F3D0",
+  seriousRed: "#EF4444",
+  neutralGray: "#6B7280",
+  lightBg: "#F9FAFB"
 };
 const NavBar = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.withConfig({
   displayName: "styles__NavBar"
@@ -8129,9 +7067,6 @@ const LogoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 const NavLinks = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "styles__NavLinks"
 })(["list-style:none;display:flex;gap:1rem;margin:0;padding:0.5rem 1rem;position:relative;> li{position:relative;}a,button{display:block;padding:0.5rem 0.75rem;font-size:1rem;background:none;border:none;text-align:left;cursor:pointer;width:100%;color:", ";transition:color 0.2s ease-in-out,font-weight 0.2s ease-in-out;}a:hover,button:hover{background:#f2f4f5;color:", ";}a.active{color:", ";font-weight:600;text-decoration:underline;}ul{display:none;position:absolute;top:100%;left:0;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);margin:0;padding:0;list-style:none;min-width:200px;z-index:10;}li:hover > ul,li:focus-within > ul{display:block;}ul li{position:relative;white-space:nowrap;}ul li ul{top:0;left:100%;}@media (max-width:768px){flex-direction:column;align-items:flex-start;position:fixed;top:0;left:0;height:100vh;width:260px;transform:translateX(-100%);transition:transform 0.2s ease;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);&.open{transform:translateX(0);}> li{width:100%;}> li > ul{position:static;box-shadow:none;}> li.open > ul{display:block;}ul li ul{position:static;}}"], COLORS.darkBlue, COLORS.teal, COLORS.teal, COLORS.cardBg, COLORS.cardBg);
-
-// In src/components/styles/index.js, replace your existing Section style with this:
-
 const Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__Section"
 })(["max-width:1100px;margin:5rem auto;padding:2rem 1.5rem;scroll-margin-top:200px;"]);
@@ -8143,7 +7078,7 @@ const BulletList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.
 })(["margin-left:1.25rem;li{margin-bottom:0.5rem;position:relative;padding-left:1rem;&::before{content:\"\u2022\";position:absolute;left:0;color:", ";}}"], COLORS.teal);
 const HeroVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__HeroVideo"
-})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;"]);
+})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;scroll-margin-top:200px;"]);
 const BackgroundVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].video.withConfig({
   displayName: "styles__BackgroundVideo"
 })(["position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:1;object-fit:cover;filter:brightness(0.6);"]);
@@ -8178,10 +7113,6 @@ const StatNumber = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.w
 const StatLabel = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StatLabel"
 })(["font-size:0.85rem;color:#334D6E;line-height:1.4;"]);
-
-// NOW define StatCard, which can safely reference StatNumber
-// In src/components/styles/index.js, replace your StatCard with this updated version.
-
 const StatCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StatCard"
 })(["display:flex;flex-direction:column;align-items:center;justify-content:center;background:transparent;padding:0.75rem;border-top:3px solid ", ";transition:transform 0.3s ease;&.serious{border-top-color:", ";}&:hover{transform:translateY(-5px);", "{color:", ";}}"], COLORS.lightTeal, COLORS.seriousRed, StatNumber, COLORS.seriousRed);
@@ -8191,9 +7122,6 @@ const BridgeText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.w
 const SourceText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__SourceText"
 })(["font-size:0.5rem;color:", ";margin-top:3rem;a{color:", ";text-decoration:underline;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.neutralGray, COLORS.neutralGray, COLORS.teal);
-
-// Add these new components to your src/components/styles/index.js
-
 const TwoColumnLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TwoColumnLayout"
 })(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-bottom:4rem;@media (max-width:768px){grid-template-columns:1fr;}"]);
@@ -8203,11 +7131,6 @@ const LeadParagraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const ImageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ImageWrapper"
 })(["img{width:100%;height:auto;border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.1);}"]);
-
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
-// In src/components/styles/index.js, replace your FeatureGrid with this:
-
 const FeatureGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__FeatureGrid"
 })(["display:grid;gap:1.5rem;scroll-margin-top:400px;grid-template-columns:1fr;@media (min-width:600px){grid-template-columns:repeat(2,1fr);}@media (min-width:992px){grid-template-columns:repeat(4,1fr);}"]);
@@ -8223,19 +7146,18 @@ const FeatureTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h
 const FeatureDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__FeatureDescription"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add this new component to your src/components/styles/index.js
-
 const TextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;h2,p{text-align:center;}a{align-self:center;margin-top:1.5rem;}"]);
-// Add these new components to your src/components/styles/index.js
-
 const MethodologyContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__MethodologyContainer"
 })(["margin-top:4rem;"]);
+
+// Find and replace the existing ProcessStepper with this version
+
 const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ProcessStepper"
-})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;@media (max-width:820px){grid-template-columns:1fr;}"]);
+})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;"]);
 const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ProcessStep"
 })(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-25px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-35px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
@@ -8248,13 +7170,9 @@ const StepTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h3.w
 const StepDescription = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__StepDescription"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add this component to your src/components/styles/index.js file
-
 const SecondaryButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__SecondaryButton"
 })(["display:inline-block;background:transparent;color:", ";padding:0.75rem 1.5rem;border-radius:8px;font-weight:600;border:1px solid ", ";transition:background 0.2s ease,color 0.2s ease,border-color 0.2s ease;&:hover{background:", ";border-color:", ";}"], COLORS.darkBlue, COLORS.neutralGray, COLORS.lightBg, COLORS.darkBlue);
-// Add these new components to your src/components/styles/index.js
-
 const TabContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__TabContainer"
 })(["display:flex;justify-content:center;margin-bottom:2.5rem;border-bottom:1px solid #EAECEF;"]);
@@ -8267,8 +7185,6 @@ const TabContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div
 const CTAWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CTAWrapper"
 })(["text-align:center;margin-top:4rem;padding:3rem 1.5rem;background:", ";border-radius:16px;box-shadow:0 8px 32px rgba(10,38,64,0.08);"], COLORS.cardBg);
-// Add these new components to your src/components/styles/index.js
-
 const AboutIntroWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__AboutIntroWrapper"
 })(["text-align:center;max-width:800px;margin:0 auto 4rem auto;"]);
@@ -8293,8 +7209,6 @@ const MemberTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.
 const MemberBio = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__MemberBio"
 })(["font-size:0.95rem;line-height:1.5;color:#334D6E;"]);
-// Add these new components to your src/components/styles/index.js
-
 const ContactLayout = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__ContactLayout"
 })(["display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;@media (max-width:820px){grid-template-columns:1fr;}"]);
@@ -8313,91 +7227,11 @@ const ContactDetail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__PrivacyNote"
 })(["font-size:0.875rem;color:", ";margin-top:1rem;text-align:center;"], COLORS.neutralGray);
+// Find and replace the existing ProcessStepper with this version
+
 const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CenteredTextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);
-
-/***/ }),
-
-/***/ "./src/pages/fall-risk.js":
-/*!********************************!*\
-  !*** ./src/pages/fall-risk.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
-/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
-/* harmony import */ var _components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Hero */ "./src/components/sections/Hero.jsx");
-/* harmony import */ var _components_sections_NeedScreen__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sections/NeedScreen */ "./src/components/sections/NeedScreen.jsx");
-/* harmony import */ var _components_sections_FraOverview__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/sections/FraOverview */ "./src/components/sections/FraOverview.jsx");
-/* harmony import */ var _components_sections_FraResearch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/sections/FraResearch */ "./src/components/sections/FraResearch.jsx");
-/* harmony import */ var _components_sections_WhoWeHelp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/sections/WhoWeHelp */ "./src/components/sections/WhoWeHelp.jsx");
-/* harmony import */ var _components_sections_About__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/sections/About */ "./src/components/sections/About.jsx");
-/* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
-// File: src/pages/fall-risk.js
-
-
-
-
-
-
-
-
-
-
-
-const FallRiskPage = () => {
-  const {
-    0: activeSection,
-    1: setActiveSection
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("hero");
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const ids = ["hero", "need-screen", "fra-overview", "fra-research", "who-we-help", "about", "contact"];
-    const observerOptions = {
-      root: null,
-      rootMargin: "-40% 0px -60% 0px",
-      threshold: 0
-    };
-    const observerCallback = entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    ids.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    active: activeSection
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    id: "hero"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_NeedScreen__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: "need-screen"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_FraOverview__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    id: "fra-overview"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_FraResearch__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    id: "fra-research"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_WhoWeHelp__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    id: "who-we-help"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_About__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    id: "about"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    id: "contact"
-  }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FallRiskPage);
 
 /***/ }),
 
@@ -8407,19 +7241,60 @@ const FallRiskPage = () => {
   \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fall_risk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fall-risk */ "./src/pages/fall-risk.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
+/* harmony import */ var _components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Hero */ "./src/components/sections/Hero.jsx");
+/* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
+/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
+// File: src/pages/index.jsx
 
 
-function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fall_risk__WEBPACK_IMPORTED_MODULE_1__["default"], null);
-}
+
+
+
+
+
+
+
+// Styled-components for the product section
+const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
+  displayName: "pages__ProductGrid"
+})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;"]);
+const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
+  displayName: "pages__ProductCard"
+})(["background:#FFFFFF;border-radius:12px;border:1px solid #EAECEF;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;&:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}"]);
+const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h3.withConfig({
+  displayName: "pages__ProductTitle"
+})(["font-size:1.5rem;font-weight:600;margin-bottom:1rem;"]);
+const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p.withConfig({
+  displayName: "pages__ProductDescription"
+})(["font-size:1rem;line-height:1.6;color:#334D6E;margin-bottom:2rem;"]);
+
+// A simple styled footer for this page
+const Footer = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].footer.withConfig({
+  displayName: "pages__Footer"
+})(["text-align:center;padding:2rem;margin-top:4rem;background:#EAECEF;color:#334D6E;"]);
+const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  active: "home"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.Section, {
+  id: "products"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
+  href: "/fall-risk"
+}, "Learn More")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Pulse4Pulse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "A turnkey cardiovascular wellness assessment service provided at no cost to your practice, complete with staff and billing support.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
+  href: "/Pulse4Pulse"
+}, "Learn More")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.Section, {
+  id: "about"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, null, "About Upright Medical"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
+  href: "/about"
+}, "Meet The Team"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved.")));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
 /***/ })
 

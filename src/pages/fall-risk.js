@@ -1,85 +1,39 @@
-// File: src/pages/fall-risk.js
+// File: src/pages/fall-risk.jsx
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+import styled from "styled-components";
 import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
-
 import HeroSection from "../components/sections/Hero";
 import NeedScreen from "../components/sections/NeedScreen";
 import FraOverview from "../components/sections/FraOverview";
 import FraResearch from "../components/sections/FraResearch";
 import WhoWeHelp from "../components/sections/WhoWeHelp";
-import About from "../components/sections/About";
-import Contact from "../components/sections/Contact";
 
-const FallRiskPage = () => {
-  const [activeSection, setActiveSection] = useState("hero");
+// A simple styled footer for this page
+const Footer = styled.footer`
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  background: #EAECEF;
+  color: #334D6E;
+`;
 
-  useEffect(() => {
-    const ids = [
-      "hero",
-      "need-screen",
-      "fra-overview",
-      "fra-research",
-      "who-we-help",
-      "about",
-      "contact",
-    ];
-
-    const observerOptions = {
-      root: null,
-      rootMargin: "-40% 0px -60% 0px",
-      threshold: 0,
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <>
-      {/* 1) Global CSS + resets */}
-      <GlobalStyles />
-
-      {/* 2) Top navigation bar (passes activeSection so Nav can highlight the correct link) */}
-      <Nav active={activeSection} />
-
-      {/* 3) Each “section” has its own component. Make sure each has the matching id. */}
-
-      {/* ───────────── Hero / Introduction ───────────── */}
-      <HeroSection id="hero" />
-
-      {/* ───────────── Need to Screen ───────────── */}
-      <NeedScreen id="need-screen" />
-
-      {/* ───────────── What is FRA ───────────── */}
-      <FraOverview id="fra-overview" />
-
-      {/* ───────────── FRA Research ───────────── */}
-      <FraResearch id="fra-research" />
-
-      {/* ───────────── Who We Help ───────────── */}
-      <WhoWeHelp id="who-we-help" />
-
-      {/* ───────────── About ───────────── */}
-      <About id="about" />
-
-      {/* ───────────── Contact ───────────── */}
-      <Contact id="contact" />
-    </>
-  );
-};
+const FallRiskPage = () => (
+  <>
+    <GlobalStyles />
+    <Nav active="fall-risk" />
+    <main>
+      <HeroSection />
+      <NeedScreen />
+      <FraOverview />
+      <FraResearch />
+      <WhoWeHelp />
+    </main>
+    <Footer>
+      <p>&copy; {new Date().getFullYear()} Upright Medical Solutions. All Rights Reserved.</p>
+    </Footer>
+  </>
+);
 
 export default FallRiskPage;

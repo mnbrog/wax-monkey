@@ -1,7 +1,8 @@
 // File: src/pages/pulse4pulse.jsx
 
 import React from "react";
-import GlobalStyles from "../components/Layout/GlobalStyles"; // Import GlobalStyles
+import styled from "styled-components";
+import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
 import PulseHero from "../components/sections/PulseHero";
 import PulseNeed from "../components/sections/PulseNeed";
@@ -11,15 +12,19 @@ import PulseEligibility from "../components/sections/PulseEligibility";
 import PulseAssessment from "../components/sections/PulseAssessment";
 import PulseBenefits from "../components/sections/PulseBenefits";
 import PulseSpecialties from "../components/sections/PulseSpecialties";
-import About from "../components/sections/About";
-import Contact from "../components/sections/Contact";
-import Footer from "../components/Footer";
 
-// Reuse the shared footer styling
+// A simple styled footer for this page
+const Footer = styled.footer`
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  background: #EAECEF;
+  color: #334D6E;
+`;
 
 const Pulse4Pulse = () => (
   <>
-    <GlobalStyles /> {/* This component injects all global styles */}
+    <GlobalStyles />
     <Nav active="pulse4pulse" />
     <main>
       <PulseHero />
@@ -30,10 +35,10 @@ const Pulse4Pulse = () => (
       <PulseAssessment />
       <PulseBenefits />
       <PulseSpecialties />
-      <About />
-      <Contact isPulsePage={true} />
     </main>
-    <Footer />
+    <Footer>
+      <p>&copy; {new Date().getFullYear()} Upright Medical Solutions. All Rights Reserved.</p>
+    </Footer>
   </>
 );
 

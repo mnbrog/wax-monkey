@@ -17,7 +17,8 @@ const PulseProcess = () => (
   <Section id="pulse-process">
     <SectionTitle>How Pulse4Pulse Works</SectionTitle>
     <MethodologyContainer>
-      <ProcessStepper style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem' }}>
+      {/* This inline style now enforces a 3-column grid */}
+      <ProcessStepper style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
         <ProcessStep>
           <StepIcon>1</StepIcon>
           <StepTitle>Patient Appointment</StepTitle>
