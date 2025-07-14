@@ -1,7 +1,6 @@
 // File: src/components/sections/Contact.jsx
 
 import React from "react";
-// Import all the necessary styled components
 import {
   Section,
   SectionTitle,
@@ -13,19 +12,22 @@ import {
   ContactForm,
   PrivacyNote
 } from "../styles";
-
-// Import icons for contact details
 import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 
-const Contact = () => (
+const Contact = ({ isPulsePage = false }) => (
   <Section id="contact">
     <SectionTitle>Get in Touch</SectionTitle>
 
     <ContactLayout>
       <ContactInfo>
-        <Subheading>Let’s Talk Fall Prevention.</Subheading>
+        <Subheading>
+            {isPulsePage ? "Let’s Talk Cardiovascular Wellness." : "Let’s Talk Fall Prevention."}
+        </Subheading>
         <ContactParagraph>
-          Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion.
+            {isPulsePage 
+                ? "Learn how our Pulse4Pulse assessment program can benefit your practice and patients. Contact us for a demo, billing details, or to discuss how to implement this turnkey service."
+                : "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."
+            }
         </ContactParagraph>
 
         <ContactDetail>
@@ -43,9 +45,10 @@ const Contact = () => (
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Work Email" required />
         
-        {/* Added a dropdown for better lead qualification */}
-        <select name="subject" required>
-          <option value="" disabled selected>I'm interested in...</option>
+        <select name="subject" required defaultValue="">
+          <option value="" disabled>I'm interested in...</option>
+          <option value="Pulse4Pulse Inquiry">Pulse4Pulse Inquiry</option>
+          <option value="Fall Risk Inquiry">Fall Risk Inquiry</option>
           <option value="Demo Request">Requesting a Demo</option>
           <option value="Pricing Information">Pricing Information</option>
           <option value="Partnership">Partnership Inquiry</option>

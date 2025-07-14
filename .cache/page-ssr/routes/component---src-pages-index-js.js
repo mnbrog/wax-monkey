@@ -7622,25 +7622,26 @@ const Nav = ({
   src: "/images/Upright Medical Solutions Logo.png",
   alt: "Upright Medical Solutions"
 })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#hero",
-  className: active === "hero" ? "active" : ""
-}, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#need-screen",
-  className: active === "need-screen" ? "active" : ""
-}, "Need to Screen")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#fra-overview",
-  className: active === "fra-overview" ? "active" : ""
-}, "What is FRA?")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#fra-research",
-  className: active === "fra-research" ? "active" : ""
-}, "FRA Research")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#who-we-help",
-  className: active === "who-we-help" ? "active" : ""
-}, "Who We Help")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#about",
+  href: "/",
+  className: active === "home" ? "active" : ""
+}, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+  className: "dropdown"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "#",
+  className: `dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`
+}, "Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+  className: "dropdown-menu"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "/fall-risk",
+  className: active === "fall-risk" ? "active" : ""
+}, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "/pulse4pulse",
+  className: active === "pulse4pulse" ? "active" : ""
+}, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+  href: "/about",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#contact",
+  href: "/contact",
   className: active === "contact" ? "active" : ""
 }, "Contact"))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
@@ -7664,33 +7665,32 @@ __webpack_require__.r(__webpack_exports__);
 // File: src/components/sections/About.jsx
 
 
-// Import all the necessary styled components
 
-
-// --- Create your team data here ---
 const teamData = [{
   name: "John Doe",
   title: "Co-Founder & CEO",
   bio: "With over 20 years in clinical practice, John founded Upright Medical to bridge the gap between reactive treatment and proactive, preventative care.",
-  // Replace with actual image paths
   photoUrl: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=2787&auto=format&fit=crop"
 }, {
   name: "Jane Smith",
   title: "Co-Founder & CTO",
   bio: "Jane is the architect of our evidence-based platform, dedicated to creating technology that is both powerful for clinicians and simple to use.",
   photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop"
-}
-// Add more team members here if you like
-];
+}];
 const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower healthcare providers with innovative, value-based solutions that significantly reduce patient falls, enhance safety, and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
   as: "h2",
   style: {
     fontSize: '2rem',
     marginBottom: '3rem'
   }
-}));
+}, "Our Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
+  key: index
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
+  src: member.photoUrl,
+  alt: member.name
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
@@ -7713,14 +7713,13 @@ __webpack_require__.r(__webpack_exports__);
 // File: src/components/sections/Contact.jsx
 
 
-// Import all the necessary styled components
 
 
-// Import icons for contact details
-
-const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
+const Contact = ({
+  isPulsePage = false
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
   id: "contact"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Get in Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Subheading, null, "Let\u2019s Talk Fall Prevention."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactParagraph, null, "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Get in Touch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactLayout, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Subheading, null, isPulsePage ? "Let’s Talk Cardiovascular Wellness." : "Let’s Talk Fall Prevention."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactParagraph, null, isPulsePage ? "Learn how our Pulse4Pulse assessment program can benefit your practice and patients. Contact us for a demo, billing details, or to discuss how to implement this turnkey service." : "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
   color: "#3FD0C9",
   size: "24"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -7742,12 +7741,16 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
   required: true
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("select", {
   name: "subject",
-  required: true
+  required: true,
+  defaultValue: ""
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
   value: "",
-  disabled: true,
-  selected: true
+  disabled: true
 }, "I'm interested in..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "Pulse4Pulse Inquiry"
+}, "Pulse4Pulse Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  value: "Fall Risk Inquiry"
+}, "Fall Risk Inquiry"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
   value: "Demo Request"
 }, "Requesting a Demo"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
   value: "Pricing Information"
@@ -8053,7 +8056,6 @@ const WhoWeHelp = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AboutIntroWrapper: () => (/* binding */ AboutIntroWrapper),
-/* harmony export */   AttentionBox: () => (/* binding */ AttentionBox),
 /* harmony export */   BackgroundVideo: () => (/* binding */ BackgroundVideo),
 /* harmony export */   BridgeText: () => (/* binding */ BridgeText),
 /* harmony export */   BulletList: () => (/* binding */ BulletList),
@@ -8069,15 +8071,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FeatureDescription: () => (/* binding */ FeatureDescription),
 /* harmony export */   FeatureGrid: () => (/* binding */ FeatureGrid),
 /* harmony export */   FeatureTitle: () => (/* binding */ FeatureTitle),
-/* harmony export */   GlobalStyles: () => (/* binding */ GlobalStyles),
-/* harmony export */   Hamburger: () => (/* binding */ Hamburger),
 /* harmony export */   HeroButton: () => (/* binding */ HeroButton),
 /* harmony export */   HeroContent: () => (/* binding */ HeroContent),
 /* harmony export */   HeroVideo: () => (/* binding */ HeroVideo),
 /* harmony export */   IconWrapper: () => (/* binding */ IconWrapper),
 /* harmony export */   ImageWrapper: () => (/* binding */ ImageWrapper),
 /* harmony export */   ImpactText: () => (/* binding */ ImpactText),
-/* harmony export */   InfoBox: () => (/* binding */ InfoBox),
 /* harmony export */   LeadParagraph: () => (/* binding */ LeadParagraph),
 /* harmony export */   LogoWrapper: () => (/* binding */ LogoWrapper),
 /* harmony export */   MemberBio: () => (/* binding */ MemberBio),
@@ -8088,12 +8087,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   MissionStatement: () => (/* binding */ MissionStatement),
 /* harmony export */   NavBar: () => (/* binding */ NavBar),
 /* harmony export */   NavLinks: () => (/* binding */ NavLinks),
-/* harmony export */   Paragraph: () => (/* binding */ Paragraph),
 /* harmony export */   PrivacyNote: () => (/* binding */ PrivacyNote),
 /* harmony export */   ProcessStep: () => (/* binding */ ProcessStep),
 /* harmony export */   ProcessStepper: () => (/* binding */ ProcessStepper),
-/* harmony export */   ProductCard: () => (/* binding */ ProductCard),
-/* harmony export */   ProductGrid: () => (/* binding */ ProductGrid),
 /* harmony export */   QuoteText: () => (/* binding */ QuoteText),
 /* harmony export */   SecondaryButton: () => (/* binding */ SecondaryButton),
 /* harmony export */   Section: () => (/* binding */ Section),
@@ -8105,9 +8101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   StatNumber: () => (/* binding */ StatNumber),
 /* harmony export */   StepDescription: () => (/* binding */ StepDescription),
 /* harmony export */   StepIcon: () => (/* binding */ StepIcon),
-/* harmony export */   StepList: () => (/* binding */ StepList),
 /* harmony export */   StepTitle: () => (/* binding */ StepTitle),
-/* harmony export */   SubIndicator: () => (/* binding */ SubIndicator),
 /* harmony export */   Subheading: () => (/* binding */ Subheading),
 /* harmony export */   TabButton: () => (/* binding */ TabButton),
 /* harmony export */   TabContainer: () => (/* binding */ TabContainer),
@@ -8126,16 +8120,9 @@ const COLORS = {
   teal: "#3FD0C9",
   cardBg: "#FFFFFF"
 };
-const GlobalStyles = (0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;scroll-snap-type:y proximity;height:100%;}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:", ";line-height:1.5;min-height:100%;margin:0;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:", ";border-radius:4px;}"], COLORS.darkBlue, COLORS.teal);
 const NavBar = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].nav.withConfig({
   displayName: "styles__NavBar"
 })(["position:sticky;top:0;width:100%;background:", ";box-shadow:0 2px 6px rgba(0,0,0,0.1);z-index:200;display:flex;flex-direction:column;align-items:center;padding-bottom:0.5rem;"], COLORS.cardBg);
-const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].button.withConfig({
-  displayName: "styles__Hamburger"
-})(["position:absolute;top:1rem;right:1rem;display:none;flex-direction:column;gap:4px;border:none;background:none;cursor:pointer;span{display:block;width:24px;height:2px;background:", ";}@media (max-width:768px){display:flex;}"], COLORS.darkBlue);
-const SubIndicator = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span.withConfig({
-  displayName: "styles__SubIndicator"
-})(["null"]);
 const LogoWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__LogoWrapper"
 })(["margin:1rem 0 0.5rem;img{display:block;height:100px;width:auto;}@media (min-width:600px){img{height:140px;}}"]);
@@ -8151,18 +8138,9 @@ const Section = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].sectio
 const SectionTitle = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].h2.withConfig({
   displayName: "styles__SectionTitle"
 })(["font-size:clamp(1.75rem,5vw,2.25rem);margin-bottom:1rem;text-align:center;font-weight:700;"]);
-const InfoBox = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__InfoBox"
-})(["background:", ";border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);padding:1.5rem;margin-top:1rem;"], COLORS.cardBg);
 const BulletList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.withConfig({
   displayName: "styles__BulletList"
 })(["margin-left:1.25rem;li{margin-bottom:0.5rem;position:relative;padding-left:1rem;&::before{content:\"\u2022\";position:absolute;left:0;color:", ";}}"], COLORS.teal);
-const Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
-  displayName: "styles__Paragraph"
-})(["margin:0.75rem 0;"]);
-const StepList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ol.withConfig({
-  displayName: "styles__StepList"
-})(["margin-left:1.25rem;li{margin-bottom:0.5rem;}"]);
 const HeroVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__HeroVideo"
 })(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;"]);
@@ -8175,12 +8153,6 @@ const HeroContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 const HeroButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__HeroButton"
 })(["background:", ";color:#ffffff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;transition:background 0.2s ease-in-out;&:hover{background:#64ffda;}"], COLORS.teal);
-const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__ProductGrid"
-})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;"]);
-const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
-  displayName: "styles__ProductCard"
-})(["background:", ";border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.1);padding:1rem;text-align:center;font-weight:500;color:", ";"], COLORS.cardBg, COLORS.darkBlue);
 const ContactForm = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form.withConfig({
   displayName: "styles__ContactForm"
 })(["display:flex;flex-direction:column;gap:0.75rem;max-width:400px;margin:0 auto;input,textarea{padding:0.5rem;border:1px solid #ccc;border-radius:4px;}button{background:", ";color:#fff;padding:0.5rem 1rem;border:none;border-radius:4px;cursor:pointer;font-weight:600;}"], COLORS.teal);
@@ -8219,9 +8191,6 @@ const BridgeText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.w
 const SourceText = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__SourceText"
 })(["font-size:0.5rem;color:", ";margin-top:3rem;a{color:", ";text-decoration:underline;transition:color 0.2s ease;&:hover{color:", ";}}"], COLORS.neutralGray, COLORS.neutralGray, COLORS.teal);
-const AttentionBox = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__AttentionBox"
-})(["position:relative;overflow:hidden;text-align:center;padding:clamp(2rem,6vw,4rem);max-width:800px;margin:2rem auto 0;border-radius:16px;background:linear-gradient(145deg,", " 0%,#FDFEFF 100%);box-shadow:0 8px 32px rgba(10,38,64,0.1);&::before{content:'\uD83D\uDEE1\uFE0F';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:250px;color:", ";opacity:0.04;z-index:0;}> *{position:relative;z-index:1;}"], COLORS.cardBg, COLORS.darkBlue);
 
 // Add these new components to your src/components/styles/index.js
 
@@ -8344,8 +8313,6 @@ const ContactDetail = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.withConfig({
   displayName: "styles__PrivacyNote"
 })(["font-size:0.875rem;color:", ";margin-top:1rem;text-align:center;"], COLORS.neutralGray);
-// Add this new component to your src/components/styles/index.js
-
 const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CenteredTextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);

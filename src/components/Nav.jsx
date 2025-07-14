@@ -11,39 +11,42 @@ const Nav = ({ active }) => (
         alt="Upright Medical Solutions"
       />
     </LogoWrapper>
+
     <NavLinks>
       <li>
-        <a href="#hero" className={active === "hero" ? "active" : ""}>
+        <a href="/" className={active === "home" ? "active" : ""}>
           Home
         </a>
       </li>
-      <li>
-        <a href="#need-screen" className={active === "need-screen" ? "active" : ""}>
-          Need to Screen
+
+      <li className="dropdown">
+        <a
+          href="#"
+          className={`dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`}
+        >
+          Products
         </a>
+        <ul className="dropdown-menu">
+          <li>
+            <a href="/fall-risk" className={active === "fall-risk" ? "active" : ""}>
+              Fall Risk
+            </a>
+          </li>
+          <li>
+            <a href="/Pulse4Pulse/" className={active === "Pulse4Pulse" ? "active" : ""}>
+              Pulse4Pulse
+            </a>
+          </li>
+        </ul>
       </li>
+
       <li>
-        <a href="#fra-overview" className={active === "fra-overview" ? "active" : ""}>
-          What is FRA?
-        </a>
-      </li>
-      <li>
-        <a href="#fra-research" className={active === "fra-research" ? "active" : ""}>
-          FRA Research
-        </a>
-      </li>
-      <li>
-        <a href="#who-we-help" className={active === "who-we-help" ? "active" : ""}>
-          Who We Help
-        </a>
-      </li>
-      <li>
-        <a href="#about" className={active === "about" ? "active" : ""}>
+        <a href="/about" className={active === "about" ? "active" : ""}>
           About
         </a>
       </li>
       <li>
-        <a href="#contact" className={active === "contact" ? "active" : ""}>
+        <a href="/contact" className={active === "contact" ? "active" : ""}>
           Contact
         </a>
       </li>

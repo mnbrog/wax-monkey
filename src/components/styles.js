@@ -771,7 +771,6 @@ export const PrivacyNote = styled.p`
   margin-top: 1rem;
   text-align: center;
 `;
-// Add this new component to your src/components/styles/index.js
 
 export const CenteredTextColumn = styled.div`
   display: flex;
