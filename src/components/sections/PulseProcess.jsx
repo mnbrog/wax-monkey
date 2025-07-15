@@ -1,5 +1,3 @@
-// File: src/components/sections/PulseProcess.jsx
-
 import React from "react";
 import {
   Section,
@@ -17,49 +15,37 @@ const PulseProcess = () => (
   <Section id="pulse-process">
     <SectionTitle>How Pulse4Pulse Works</SectionTitle>
     <MethodologyContainer>
-      {/* This inline style now enforces a 3-column grid */}
-      <ProcessStepper style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem' }}>
+      {/* Responsive grid: auto-fit columns with min width and flexible layout */}
+      <ProcessStepper style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
         <ProcessStep>
-          <StepIcon>1</StepIcon>
+          <StepIcon><FaSignInAlt size="1.5em" /></StepIcon>
           <StepTitle>Patient Appointment</StepTitle>
-          <StepDescription>
-            Patient arrives for their regular appointment.
-          </StepDescription>
+          <StepDescription>Patient arrives for their regular appointment.</StepDescription>
         </ProcessStep>
         <ProcessStep>
-          <StepIcon>2</StepIcon>
+          <StepIcon><FaClipboardList size="1.5em" /></StepIcon>
           <StepTitle>Intake Form</StepTitle>
-          <StepDescription>
-            Patient completes a simple intake form to determine eligibility.
-          </StepDescription>
+          <StepDescription>Patient completes a simple intake form to determine eligibility.</StepDescription>
         </ProcessStep>
         <ProcessStep>
-          <StepIcon>3</StepIcon>
+          <StepIcon><FaProcedures size="1.5em" /></StepIcon>
           <StepTitle>In-Office Testing</StepTitle>
-          <StepDescription>
-            Our technician conducts the cardiovascular tests in an exam room.
-          </StepDescription>
+          <StepDescription>Our technician conducts the cardiovascular tests in an exam room.</StepDescription>
         </ProcessStep>
         <ProcessStep>
-          <StepIcon>4</StepIcon>
+          <StepIcon><FaChartLine size="1.5em" /></StepIcon>
           <StepTitle>Instant Results</StepTitle>
-          <StepDescription>
-            Results are immediately available for you to review with the patient.
-          </StepDescription>
+          <StepDescription>Results are immediately available for you to review with the patient.</StepDescription>
         </ProcessStep>
         <ProcessStep>
-          <StepIcon>5</StepIcon>
+          <StepIcon><FaCalendarCheck size="1.5em" /></StepIcon>
           <StepTitle>Follow-Up</StepTitle>
-          <StepDescription>
-            A follow-up visit is scheduled if needed based on the results.
-          </StepDescription>
+          <StepDescription>A follow-up visit is scheduled if needed based on the results.</StepDescription>
         </ProcessStep>
         <ProcessStep>
-          <StepIcon>6</StepIcon>
+          <StepIcon><FaFileSignature size="1.5em" /></StepIcon>
           <StepTitle>Billing Handled</StepTitle>
-          <StepDescription>
-            The practice receives reimbursements; we invoice per test.
-          </StepDescription>
+          <StepDescription>The practice receives reimbursements; we invoice per test.</StepDescription>
         </ProcessStep>
       </ProcessStepper>
     </MethodologyContainer>

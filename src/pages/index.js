@@ -1,17 +1,17 @@
-// File: src/pages/index.jsx
-
 import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
-import HeroSection from "../components/sections/Hero";
 import Contact from "../components/sections/Contact";
 import {
   Section,
   SectionTitle,
   AboutIntroWrapper,
   MissionStatement,
-  HeroButton
+  HeroButton,
+  HeroVideo,
+  BackgroundVideo,
+  HeroContent
 } from "../components/styles";
 
 // Styled-components for the product section
@@ -67,7 +67,42 @@ const HomePage = () => (
     <GlobalStyles />
     <Nav active="home" />
     <main>
-      <HeroSection />
+      {/* Hero Video Section */}
+      <HeroVideo id="intro">
+        <BackgroundVideo
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/images/hero-fallback.jpg"
+          src="/videos/mainhero.mp4"
+          type="video/mp4"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'top',
+            width: '100%',
+            height: '100%',
+            clipPath: 'inset(0 0 10% 0)',
+            WebkitClipPath: 'inset(0 0 10% 0)'
+          }}
+        />
+        <HeroContent>
+          <AboutIntroWrapper>
+            <SectionTitle style={{ color: '#fff' }}>
+              Upright Medical Solutions
+            </SectionTitle>
+            <MissionStatement style={{ color: '#fff' }}>
+              Empowering providers with innovative, value-based solutions—from fall prevention to cardiovascular wellness—that improve patient outcomes and preserve independence.
+            </MissionStatement>
+            <HeroButton
+              href="#products"
+              style={{ color: '#fff', borderColor: '#fff' }}
+            >
+              Explore Our Solutions
+            </HeroButton>
+          </AboutIntroWrapper>
+        </HeroContent>
+      </HeroVideo>
 
       {/* Products Section */}
       <Section id="products">
@@ -93,17 +128,6 @@ const HomePage = () => (
             <HeroButton href="/Pulse4Pulse">Learn More</HeroButton>
           </ProductCard>
         </ProductGrid>
-      </Section>
-
-      {/* About Section */}
-      <Section id="about">
-        <AboutIntroWrapper>
-          <SectionTitle>About Upright Medical</SectionTitle>
-          <MissionStatement>
-            Our mission is to empower providers with innovative, value-based solutions – from fall prevention to cardiovascular wellness – that improve patient outcomes and preserve independence.
-          </MissionStatement>
-          <HeroButton href="/about">Meet The Team</HeroButton>
-        </AboutIntroWrapper>
       </Section>
 
       {/* Contact Section */}

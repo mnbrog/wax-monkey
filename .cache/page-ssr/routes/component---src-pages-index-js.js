@@ -6864,7 +6864,7 @@ const Nav = ({
   href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/#about",
+  href: "/",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/#contact",
@@ -6944,39 +6944,6 @@ const Contact = ({
   type: "submit"
 }, "Send Message"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.PrivacyNote, null, "We respect your privacy and will never share your information."))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
-
-/***/ }),
-
-/***/ "./src/components/sections/Hero.jsx":
-/*!******************************************!*\
-  !*** ./src/components/sections/Hero.jsx ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/Hero.jsx
-
-
-const HeroSection = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroVideo, {
-  id: "hero"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.BackgroundVideo, {
-  autoPlay: true,
-  loop: true,
-  muted: true,
-  playsInline: true,
-  poster: "/images/clinic-background-fallback.jpg",
-  src: "/videos/clinic-background.mp4",
-  type: "video/mp4"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Innovative Health & Safety Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Predict Risk. Prevent Falls."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-  href: "#contact"
-}, "Get a Demo")));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSection);
 
 /***/ }),
 
@@ -7247,15 +7214,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
 /* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
-/* harmony import */ var _components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Hero */ "./src/components/sections/Hero.jsx");
-/* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
-/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
-// File: src/pages/index.jsx
-
-
+/* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
+/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
 
 
 
@@ -7264,36 +7227,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Styled-components for the product section
-const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
+const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "pages__ProductGrid"
 })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;"]);
-const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
+const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
   displayName: "pages__ProductCard"
 })(["background:#FFFFFF;border-radius:12px;border:1px solid #EAECEF;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;&:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}"]);
-const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h3.withConfig({
+const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].h3.withConfig({
   displayName: "pages__ProductTitle"
 })(["font-size:1.5rem;font-weight:600;margin-bottom:1rem;"]);
-const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p.withConfig({
+const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].p.withConfig({
   displayName: "pages__ProductDescription"
 })(["font-size:1rem;line-height:1.6;color:#334D6E;margin-bottom:2rem;"]);
 
 // A simple styled footer for this page
-const Footer = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].footer.withConfig({
+const Footer = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].footer.withConfig({
   displayName: "pages__Footer"
 })(["text-align:center;padding:2rem;margin-top:4rem;background:#EAECEF;color:#334D6E;"]);
 const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "home"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Hero__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.Section, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroVideo, {
+  id: "intro"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.BackgroundVideo, {
+  autoPlay: true,
+  loop: true,
+  muted: true,
+  playsInline: true,
+  poster: "/images/hero-fallback.jpg",
+  src: "/videos/mainhero.mp4",
+  type: "video/mp4",
+  style: {
+    objectFit: 'cover',
+    width: '100%',
+    height: '100%'
+  }
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, null, "Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.MissionStatement, null, "Empowering providers with innovative, value-based solutions\u2014from fall prevention to cardiovascular wellness\u2014that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
+  href: "#products"
+}, "Explore Our Solutions")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.Section, {
   id: "products"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
   href: "/fall-risk"
-}, "Learn More")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Pulse4Pulse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "A turnkey cardiovascular wellness assessment service provided at no cost to your practice, complete with staff and billing support.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
+}, "Learn More")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Pulse4Pulse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "A turnkey cardiovascular wellness assessment service provided at no cost to your practice, complete with staff and billing support.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
   href: "/Pulse4Pulse"
-}, "Learn More")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.Section, {
-  id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, null, "About Upright Medical"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
-  href: "/about"
-}, "Meet The Team"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved.")));
+}, "Learn More")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved.")));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
 /***/ })

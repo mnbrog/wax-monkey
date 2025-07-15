@@ -6887,7 +6887,7 @@ const Nav = ({
   href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/#about",
+  href: "/",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/#contact",

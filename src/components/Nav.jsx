@@ -48,7 +48,7 @@ const Nav = ({ active }) => (
 
       <li>
         {/* This correctly links to the "About" section on the home page */}
-        <a href="/#about" className={active === "about" ? "active" : ""}>
+        <a href="/" className={active === "about" ? "active" : ""}>
           About
         </a>
       </li>
