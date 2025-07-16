@@ -54,7 +54,7 @@ const AboutPage = () => (
       />
       <Heading>About Upright Medical Solutions</Heading>
       <Paragraph>
-        With over <strong>50 years of healthcare experience</strong> Upright Medical Solutions has grown nationwide led by a dedicated team of experts, providing providing clinicians
+        With over <strong>50 years of healthcare experience</strong> Upright Medical Solutions has grown nationwide led by a dedicated team of experts, providing clinicians
 ranging from single-practicing physicians to
 healthcare systems with the tools needed to optimize
 patient care.
