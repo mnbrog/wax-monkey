@@ -6864,7 +6864,7 @@ const Nav = ({
   href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/",
+  href: "/about",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/#contact",
@@ -7258,11 +7258,26 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   type: "video/mp4",
   style: {
     objectFit: 'cover',
+    objectPosition: 'top',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    clipPath: 'inset(0 0 10% 0)',
+    WebkitClipPath: 'inset(0 0 10% 0)'
   }
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, null, "Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.MissionStatement, null, "Empowering providers with innovative, value-based solutions\u2014from fall prevention to cardiovascular wellness\u2014that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
-  href: "#products"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, {
+  style: {
+    color: '#fff'
+  }
+}, "Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.MissionStatement, {
+  style: {
+    color: '#fff'
+  }
+}, "Empowering providers with innovative, value-based solutions\u2014from fall prevention to cardiovascular wellness\u2014that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
+  href: "#products",
+  style: {
+    color: '#fff',
+    borderColor: '#fff'
+  }
 }, "Explore Our Solutions")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.Section, {
   id: "products"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {

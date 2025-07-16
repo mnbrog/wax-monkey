@@ -83,59 +83,13 @@ const Nav = ({
   href: "/Pulse4Pulse",
   className: active === "pulse4pulse" ? "active" : ""
 }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/",
+  href: "/about",
   className: active === "about" ? "active" : ""
 }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "/#contact",
   className: active === "contact" ? "active" : ""
 }, "Contact"))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
-
-/***/ }),
-
-/***/ "./src/components/sections/About.jsx":
-/*!*******************************************!*\
-  !*** ./src/components/sections/About.jsx ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
-// File: src/components/sections/About.jsx
-
-
-
-const teamData = [{
-  name: "John Doe",
-  title: "Co-Founder & CEO",
-  bio: "With over 20 years in clinical practice, John founded Upright Medical to bridge the gap between reactive treatment and proactive, preventative care.",
-  photoUrl: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=2787&auto=format&fit=crop"
-}, {
-  name: "Jane Smith",
-  title: "Co-Founder & CTO",
-  bio: "Jane is the architect of our evidence-based platform, dedicated to creating technology that is both powerful for clinicians and simple to use.",
-  photoUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop"
-}];
-const About = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
-  id: "about"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MissionStatement, null, "Our mission is to empower providers with innovative, value-based solutions \u2013 from fall prevention to cardiovascular wellness \u2013 that improve patient outcomes and preserve independence.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, {
-  as: "h2",
-  style: {
-    fontSize: '2rem',
-    marginBottom: '3rem'
-  }
-}, "Our Team"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamGrid, null, teamData.map((member, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.TeamMemberCard, {
-  key: index
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberPhoto, {
-  src: member.photoUrl,
-  alt: member.name
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberName, null, member.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberTitle, null, member.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.MemberBio, null, member.bio)))));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (About);
 
 /***/ }),
 
@@ -406,23 +360,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
 /* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
-/* harmony import */ var _components_sections_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/About */ "./src/components/sections/About.jsx");
-/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.jsx");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.jsx");
 
 
 
 
 
 
-const Main = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].main.withConfig({
+// Page wrapper to ensure white background across all devices
+const PageWrapper = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div.withConfig({
+  displayName: "about__PageWrapper"
+})(["background-color:#ffffff;min-height:100vh;display:flex;flex-direction:column;"]);
+const Main = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].main.withConfig({
   displayName: "about__Main"
-})(["padding-top:2rem;"]);
+})(["width:90%;max-width:800px;margin:2rem auto;padding:1rem;text-align:center;line-height:1.6;background-color:#ffffff;"]);
+const Logo = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].img.withConfig({
+  displayName: "about__Logo"
+})(["width:80%;max-width:200px;height:auto;margin:2rem auto;display:block;"]);
+const Heading = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].h1.withConfig({
+  displayName: "about__Heading"
+})(["font-size:clamp(2rem,5vw,2.5rem);margin-bottom:1rem;color:#000000;"]);
+const Paragraph = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].p.withConfig({
+  displayName: "about__Paragraph"
+})(["font-size:clamp(1rem,2.5vw,1.125rem);margin-bottom:1.5rem;color:#333333;"]);
 const AboutPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "about"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Main, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_About__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Main, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Logo, {
+  src: "/images/Upright Medical Solutions Logo.png",
+  alt: "Upright Medical Solutions Logo"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Heading, null, "About Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Paragraph, null, "With over ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "50 years of healthcare experience"), " Upright Medical Solutions has grown nationwide led by a dedicated team of experts, providing providing clinicians ranging from single-practicing physicians to healthcare systems with the tools needed to optimize patient care."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Paragraph, null, "Our mission is simple: to empower healthier communities by putting patients at the heart of every decision.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], null));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AboutPage);
 
 /***/ })
