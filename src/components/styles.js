@@ -23,7 +23,6 @@ export const device = {
   desktop: "(min-width: 1024px)",
 };
 
-
 export const NavBar = styled.nav`
   position: sticky;
   top: 0;
@@ -32,8 +31,8 @@ export const NavBar = styled.nav`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 200;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5rem 1rem;
 
   /* Tablet layout wraps nav items */
@@ -41,8 +40,6 @@ export const NavBar = styled.nav`
     flex-wrap: wrap;
   }
 `;
-
-
 
 export const LogoWrapper = styled.div`
   margin: 1rem 0 0.5rem;
@@ -206,7 +203,6 @@ export const SectionTitle = styled.h2`
   font-weight: 700;
 `;
 
-
 export const BulletList = styled.ul`
   margin-left: 1.25rem;
 
@@ -223,8 +219,6 @@ export const BulletList = styled.ul`
     }
   }
 `;
-
-
 
 export const HeroVideo = styled.section`
   position: relative;
@@ -313,8 +307,6 @@ export const HeroButton = styled.a`
   }
 `;
 
-
-
 export const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -339,8 +331,6 @@ export const ContactForm = styled.form`
     font-weight: 600;
   }
 `;
-
-
 
 // --- STYLES FOR THE "NEED SCREEN" SECTION ---
 
@@ -381,8 +371,6 @@ export const QuoteText = styled.p`
   }
 `;
 
-
-// Recommended responsive 3-column grid
 export const StatGrid = styled.div`
   display: grid;
   gap: 1.5rem;
@@ -396,7 +384,6 @@ export const StatGrid = styled.div`
   }
 `;
 
-// Define StatNumber FIRST to prevent initialization errors
 export const StatNumber = styled.p`
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
@@ -489,9 +476,7 @@ export const ImageWrapper = styled.div`
 export const FeatureGrid = styled.div`
   display: grid;
   gap: 1.5rem;
-  
   scroll-margin-top: 400px;
-
   grid-template-columns: 1fr;
 
   @media ${device.tablet} {
@@ -511,7 +496,7 @@ export const FeatureCard = styled.div`
   text-align: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.08);
@@ -546,7 +531,7 @@ export const TextColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+
   h2, p {
     text-align: center;
   }
@@ -560,8 +545,6 @@ export const TextColumn = styled.div`
 export const MethodologyContainer = styled.div`
   margin-top: 4rem;
 `;
-
-// Find and replace the existing ProcessStepper with this version
 
 export const ProcessStepper = styled.div`
   display: grid;
@@ -638,8 +621,8 @@ export const SecondaryButton = styled.a`
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-      background: ${COLORS.lightBg};
-      border-color: ${COLORS.darkBlue};
+    background: ${COLORS.lightBg};
+    border-color: ${COLORS.darkBlue};
   }
 `;
 
@@ -775,8 +758,7 @@ export const ContactLayout = styled.div`
   }
 `;
 
-export const ContactInfo = styled.div`
-`;
+export const ContactInfo = styled.div``;
 
 export const Subheading = styled.h3`
   font-size: 1.75rem;
@@ -816,8 +798,6 @@ export const PrivacyNote = styled.p`
   margin-top: 1rem;
   text-align: center;
 `;
-// Find and replace the existing ProcessStepper with this version
-
 
 export const CenteredTextColumn = styled.div`
   display: flex;
