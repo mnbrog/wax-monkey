@@ -6842,7 +6842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:50;}html{scroll-behavior:smooth;}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:#0A2640;line-height:1.5;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:#3FD0C9;border-radius:4px;}"]));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,styled_components__WEBPACK_IMPORTED_MODULE_0__.createGlobalStyle)(["*,*::before,*::after{box-sizing:border-box;margin:0;padding:50;}html{}body{font-family:'Inter',sans-serif;background:#F7F9FA;color:#0A2640;line-height:1.5;}a{text-decoration:none;color:inherit;}ul{list-style:none;}::-webkit-scrollbar{width:8px;}::-webkit-scrollbar-thumb{background-color:#3FD0C9;border-radius:4px;}"]));
 
 /***/ }),
 
@@ -6933,12 +6933,7 @@ const Contact = ({
   size: "24"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "mailto:info@uprightmedicalsolutions.com"
-}, "info@uprightmedicalsolutions.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactDetail, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaPhoneAlt, {
-  color: "#3FD0C9",
-  size: "24"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "tel:+1-800-555-1234"
-}, "+1 (800) 555-1234"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+}, "info@uprightmedicalsolutions.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
   type: "text",
   name: "name",
   placeholder: "Full Name",
@@ -7084,7 +7079,7 @@ const BackgroundVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"
 })(["position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:1;object-fit:cover;filter:brightness(0.6);"]);
 const HeroButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__HeroButton"
-})(["background:", ";color:#ffffff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;transition:background 0.2s ease-in-out;&:hover{background:#64ffda;}"], COLORS.teal);
+})(["background:", ";color:#ffffff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;transition:background 0.2s ease-in-out;display:inline-block;margin-top:2rem;&:hover{background:#64ffda;}"], COLORS.teal);
 const ContactForm = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].form.withConfig({
   displayName: "styles__ContactForm"
 })(["display:flex;flex-direction:column;gap:0.75rem;max-width:400px;margin:0 auto;input,textarea{padding:0.5rem;border:1px solid #ccc;border-radius:4px;}button{background:", ";color:#fff;padding:0.5rem 1rem;border:none;border-radius:4px;cursor:pointer;font-weight:600;}"], COLORS.teal);

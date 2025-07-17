@@ -34,11 +34,6 @@ const Contact = ({ isPulsePage = false }) => (
           <FaEnvelope color="#3FD0C9" size="24" />
           <a href="mailto:info@uprightmedicalsolutions.com">info@uprightmedicalsolutions.com</a>
         </ContactDetail>
-
-        <ContactDetail>
-          <FaPhoneAlt color="#3FD0C9" size="24" />
-          <a href="tel:+1-800-555-1234">+1 (800) 555-1234</a>
-        </ContactDetail>
       </ContactInfo>
       
       <ContactForm>

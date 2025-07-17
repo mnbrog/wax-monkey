@@ -8,10 +8,6 @@ export default createGlobalStyle`
     padding: 50;
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     font-family: 'Inter', sans-serif;
     background: #F7F9FA;
