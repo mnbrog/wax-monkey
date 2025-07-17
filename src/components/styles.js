@@ -13,16 +13,6 @@ export const COLORS = {
   lightBg: "#F9FAFB",
 };
 
-// Responsive breakpoints
-// Mobile: < 640px
-// Tablet: 640px – 1023px
-// Desktop: >= 1024px
-export const device = {
-  mobile: "(max-width: 639px)",
-  tablet: "(min-width: 640px) and (max-width: 1023px)",
-  desktop: "(min-width: 1024px)",
-};
-
 
 export const NavBar = styled.nav`
   position: sticky;
@@ -32,14 +22,9 @@ export const NavBar = styled.nav`
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 200;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-
-  /* Tablet layout wraps nav items */
-  @media ${device.tablet} {
-    flex-wrap: wrap;
-  }
+  padding-bottom: 0.5rem;
 `;
 
 
@@ -57,22 +42,6 @@ export const LogoWrapper = styled.div`
     img {
       height: 140px;
     }
-  }
-`;
-
-// Button for mobile nav toggle
-export const HamburgerButton = styled.button`
-  background: none;
-  border: none;
-  display: none;
-  cursor: pointer;
-
-  @media ${device.mobile} {
-    display: block;
-  }
-
-  &:focus {
-    outline: 2px solid ${COLORS.teal};
   }
 `;
 
@@ -143,8 +112,7 @@ export const NavLinks = styled.ul`
     left: 100%;
   }
 
-  /* Mobile slide-out menu */
-  @media ${device.mobile} {
+  @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     position: fixed;
@@ -183,18 +151,8 @@ export const NavLinks = styled.ul`
 export const Section = styled.section`
   max-width: 1100px;
   margin: 5rem auto;
-  padding: 2rem;
-  scroll-margin-top: 200px;
-
-  /* Adjust padding on tablet */
-  @media ${device.tablet} {
-    padding: 1.5rem;
-  }
-
-  /* Mobile gets the smallest padding */
-  @media ${device.mobile} {
-    padding: 1rem;
-  }
+  padding: 2rem 1.5rem;
+  scroll-margin-top: 200px; 
 `;
 
 export const SectionTitle = styled.h2`
@@ -464,11 +422,11 @@ export const FeatureGrid = styled.div`
 
   grid-template-columns: 1fr;
 
-  @media ${device.tablet} {
+  @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media ${device.desktop} {
+  @media (min-width: 992px) {
     grid-template-columns: repeat(4, 1fr);
   }
 `;
@@ -535,17 +493,9 @@ export const MethodologyContainer = styled.div`
 
 export const ProcessStepper = styled.div`
   display: grid;
-  /* Desktop shows 3 columns; stack on smaller devices */
+  /* This now defaults to 3 columns and will not change on smaller screens */
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-
-  @media ${device.tablet} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media ${device.mobile} {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export const ProcessStep = styled.div`
@@ -684,11 +634,6 @@ export const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-
-  /* Ensure single column on small screens */
-  @media ${device.mobile} {
-    grid-template-columns: 1fr;
-  }
 `;
 
 export const TeamMemberCard = styled.div`
@@ -739,8 +684,7 @@ export const ContactLayout = styled.div`
   gap: 3rem;
   margin-top: 3rem;
 
-  /* Stack columns on mobile */
-  @media ${device.mobile} {
+  @media (max-width: 820px) {
     grid-template-columns: 1fr;
   }
 `;
