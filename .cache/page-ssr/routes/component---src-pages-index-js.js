@@ -6807,6 +6807,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/Footer.jsx":
+/*!***********************************!*\
+  !*** ./src/components/Footer.jsx ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+
+
+const FooterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].footer.withConfig({
+  displayName: "Footer__FooterWrapper"
+})(["text-align:center;padding:2rem;margin-top:4rem;background:#EAECEF;color:#334D6E;"]);
+const Footer = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved."));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+/***/ }),
+
 /***/ "./src/components/Layout/GlobalStyles.jsx":
 /*!************************************************!*\
   !*** ./src/components/Layout/GlobalStyles.jsx ***!
@@ -6836,40 +6859,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles */ "./src/components/styles.js");
-// File: src/components/Nav.jsx
-
 
 
 const Nav = ({
   active
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "/images/Upright Medical Solutions Logo.png",
-  alt: "Upright Medical Solutions"
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/",
-  className: active === "home" ? "active" : ""
-}, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-  className: "dropdown"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#",
-  className: `dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`
-}, "Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-  className: "dropdown-menu"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/fall-risk",
-  className: active === "fall-risk" ? "active" : ""
-}, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/Pulse4Pulse",
-  className: active === "pulse4pulse" ? "active" : ""
-}, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/about",
-  className: active === "about" ? "active" : ""
-}, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/#contact",
-  className: active === "contact" ? "active" : ""
-}, "Contact"))));
+}) => {
+  const {
+    0: isOpen,
+    1: setIsOpen
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "/images/Upright Medical Solutions Logo.png",
+    alt: "Upright Medical Solutions"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Hamburger, {
+    onClick: () => setIsOpen(!isOpen)
+  }, isOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CloseIcon, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, {
+    className: isOpen ? "open" : ""
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/",
+    className: active === "home" ? "active" : ""
+  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "dropdown"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#",
+    className: `dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`
+  }, "Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+    className: "dropdown-menu"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/fall-risk",
+    className: active === "fall-risk" ? "active" : ""
+  }, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/Pulse4Pulse",
+    className: active === "pulse4pulse" ? "active" : ""
+  }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/about",
+    className: active === "about" ? "active" : ""
+  }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/#contact",
+    className: active === "contact" ? "active" : ""
+  }, "Contact"))));
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
 
 /***/ }),
@@ -6962,6 +6993,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   COLORS: () => (/* binding */ COLORS),
 /* harmony export */   CTAWrapper: () => (/* binding */ CTAWrapper),
 /* harmony export */   CenteredTextColumn: () => (/* binding */ CenteredTextColumn),
+/* harmony export */   CloseIcon: () => (/* binding */ CloseIcon),
 /* harmony export */   ContactDetail: () => (/* binding */ ContactDetail),
 /* harmony export */   ContactForm: () => (/* binding */ ContactForm),
 /* harmony export */   ContactInfo: () => (/* binding */ ContactInfo),
@@ -6971,6 +7003,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FeatureDescription: () => (/* binding */ FeatureDescription),
 /* harmony export */   FeatureGrid: () => (/* binding */ FeatureGrid),
 /* harmony export */   FeatureTitle: () => (/* binding */ FeatureTitle),
+/* harmony export */   Hamburger: () => (/* binding */ Hamburger),
 /* harmony export */   HeroButton: () => (/* binding */ HeroButton),
 /* harmony export */   HeroContent: () => (/* binding */ HeroContent),
 /* harmony export */   HeroVideo: () => (/* binding */ HeroVideo),
@@ -7045,13 +7078,10 @@ const BulletList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.
 })(["margin-left:1.25rem;li{margin-bottom:0.5rem;position:relative;padding-left:1rem;&::before{content:\"\u2022\";position:absolute;left:0;color:", ";}}"], COLORS.teal);
 const HeroVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__HeroVideo"
-})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;scroll-margin-top:200px;"]);
+})(["position:relative;height:70vh;min-height:450px;overflow:hidden;display:flex;align-items:center;justify-content:center;@media (max-width:768px){height:auto;min-height:0;padding:6rem 1rem;}"]);
 const BackgroundVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].video.withConfig({
   displayName: "styles__BackgroundVideo"
 })(["position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:1;object-fit:cover;filter:brightness(0.6);"]);
-const HeroContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__HeroContent"
-})(["position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;color:#ffffff;h1{font-size:clamp(2.5rem,6vw,3.5rem);margin-bottom:1rem;}p{font-size:clamp(1.125rem,3vw,1.5rem);margin-bottom:1.5rem;}"]);
 const HeroButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__HeroButton"
 })(["background:", ";color:#ffffff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;transition:background 0.2s ease-in-out;&:hover{background:#64ffda;}"], COLORS.teal);
@@ -7122,12 +7152,6 @@ const MethodologyContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["def
 
 // Find and replace the existing ProcessStepper with this version
 
-const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__ProcessStepper"
-})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;"]);
-const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__ProcessStep"
-})(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-25px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-35px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
 const StepIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StepIcon"
 })(["display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;background-color:", ";border-radius:50%;margin-bottom:1rem;color:", ";font-size:2rem;box-shadow:0 4px 12px rgba(10,38,64,0.2);"], COLORS.darkBlue, COLORS.cardBg);
@@ -7199,6 +7223,34 @@ const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.
 const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CenteredTextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);
+// ... (existing styles)
+
+const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__Hamburger"
+})(["display:none;cursor:pointer;padding:0.5rem;z-index:201;div{width:25px;height:3px;background-color:", ";margin:4px 0;transition:0.4s;}@media (max-width:768px){display:block;}"], COLORS.darkBlue);
+const CloseIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__CloseIcon"
+})(["&::before,&::after{content:\"\";position:absolute;width:25px;height:3px;background-color:", ";}&::before{transform:rotate(45deg);}&::after{transform:rotate(-45deg);}"], COLORS.darkBlue);
+
+// ... (rest of the styles)
+// ... (existing styles)
+
+const HeroContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__HeroContent"
+})(["position:relative;z-index:2;color:#ffffff;max-width:950px;margin:0 auto;padding:0 1rem;text-align:center;h2{font-size:clamp(2.25rem,6vw,3.5rem);margin-bottom:1rem;}h3{font-size:clamp(1.1rem,4vw,1.35rem);font-weight:500;line-height:1.6;max-width:800px;margin:0 auto 2rem auto;}"]);
+// ... (existing styles)
+
+// Find and replace the existing ProcessStepper with this version
+const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ProcessStepper"
+})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;"]);
+const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ProcessStep"
+})(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-40px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-50px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
+
+// ... (rest of the styles)
+
+// ... (rest of the styles)
 
 /***/ }),
 
@@ -7214,11 +7266,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
 /* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
 /* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
-/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
+/* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.jsx");
+/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
+// File: src/pages/index.js
+
+
 
 
 
@@ -7227,64 +7283,51 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Styled-components for the product section
-const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "pages__ProductGrid"
 })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;"]);
-const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div.withConfig({
+const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].div.withConfig({
   displayName: "pages__ProductCard"
 })(["background:#FFFFFF;border-radius:12px;border:1px solid #EAECEF;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;&:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}"]);
-const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].h3.withConfig({
+const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].h3.withConfig({
   displayName: "pages__ProductTitle"
 })(["font-size:1.5rem;font-weight:600;margin-bottom:1rem;"]);
-const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].p.withConfig({
+const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_6__["default"].p.withConfig({
   displayName: "pages__ProductDescription"
 })(["font-size:1rem;line-height:1.6;color:#334D6E;margin-bottom:2rem;"]);
-
-// A simple styled footer for this page
-const Footer = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].footer.withConfig({
-  displayName: "pages__Footer"
-})(["text-align:center;padding:2rem;margin-top:4rem;background:#EAECEF;color:#334D6E;"]);
 const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "home"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroVideo, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroVideo, {
   id: "intro"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.BackgroundVideo, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.BackgroundVideo, {
   autoPlay: true,
   loop: true,
   muted: true,
   playsInline: true,
   poster: "/images/hero-fallback.jpg",
-  src: "/videos/mainhero.mp4",
-  type: "video/mp4",
-  style: {
-    objectFit: 'cover',
-    objectPosition: 'top',
-    width: '100%',
-    height: '100%',
-    clipPath: 'inset(0 0 10% 0)',
-    WebkitClipPath: 'inset(0 0 10% 0)'
-  }
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, {
+  src: "../videos/mainhero.mp4",
+  type: "video/mp4"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, {
   style: {
     color: '#fff'
   }
-}, "Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.MissionStatement, {
+}, "Upright Medical Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.MissionStatement, {
   style: {
     color: '#fff'
   }
-}, "Empowering providers with innovative, value-based solutions\u2014from fall prevention to cardiovascular wellness\u2014that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
+}, "Empowering providers with innovative, value-based solutions\u2014from fall prevention to cardiovascular wellness\u2014that improve patient outcomes and preserve independence."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
   href: "#products",
   style: {
     color: '#fff',
     borderColor: '#fff'
   }
-}, "Explore Our Solutions")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.Section, {
+}, "Explore Our Solutions")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.Section, {
   id: "products"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.SectionTitle, null, "Our Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Fall Risk Assessment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "An evidence-based platform that empowers clinicians to mitigate fall risks, identify underlying factors, and improve patient outcomes.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
   href: "/fall-risk"
-}, "Learn More")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Pulse4Pulse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "A turnkey cardiovascular wellness assessment service provided at no cost to your practice, complete with staff and billing support.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_4__.HeroButton, {
+}, "Learn More")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Pulse4Pulse"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "A turnkey cardiovascular wellness assessment service provided at no cost to your practice, complete with staff and billing support.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_5__.HeroButton, {
   href: "/Pulse4Pulse"
-}, "Learn More")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "\xA9 ", new Date().getFullYear(), " Upright Medical Solutions. All Rights Reserved.")));
+}, "Learn More")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
 /***/ })

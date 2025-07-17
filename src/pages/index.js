@@ -1,8 +1,11 @@
+// File: src/pages/index.js
+
 import React from "react";
 import styled from "styled-components";
 import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
 import Contact from "../components/sections/Contact";
+import Footer from "../components/Footer";
 import {
   Section,
   SectionTitle,
@@ -53,15 +56,6 @@ const ProductDescription = styled.p`
   margin-bottom: 2rem;
 `;
 
-// A simple styled footer for this page
-const Footer = styled.footer`
-  text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
-  background: #EAECEF;
-  color: #334D6E;
-`;
-
 const HomePage = () => (
   <>
     <GlobalStyles />
@@ -75,16 +69,8 @@ const HomePage = () => (
           muted
           playsInline
           poster="/images/hero-fallback.jpg"
-          src="/videos/mainhero.mp4"
+          src="../videos/mainhero.mp4"
           type="video/mp4"
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'top',
-            width: '100%',
-            height: '100%',
-            clipPath: 'inset(0 0 10% 0)',
-            WebkitClipPath: 'inset(0 0 10% 0)'
-          }}
         />
         <HeroContent>
           <AboutIntroWrapper>
@@ -133,9 +119,7 @@ const HomePage = () => (
       {/* Contact Section */}
       <Contact />
     </main>
-    <Footer>
-      <p>&copy; {new Date().getFullYear()} Upright Medical Solutions. All Rights Reserved.</p>
-    </Footer>
+    <Footer />
   </>
 );
 

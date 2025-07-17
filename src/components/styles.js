@@ -184,15 +184,18 @@ export const BulletList = styled.ul`
 
 export const HeroVideo = styled.section`
   position: relative;
-  height: 60vh;
-  min-height: 400px;
+  height: 70vh; /* A bit more height */
+  min-height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  scroll-margin-top: 200px; /* FIX 2: Added the missing scroll margin */
+  
+  @media (max-width: 768px) {
+    height: auto; /* Let height be determined by content */
+    min-height: 0;
+    padding: 6rem 1rem; /* Add vertical padding for content */
+  }
 `;
 
 export const BackgroundVideo = styled.video`
@@ -218,6 +221,9 @@ export const HeroButton = styled.a`
   border-radius: 4px;
   font-weight: 600;
   transition: background 0.2s ease-in-out;
+  display: inline-block;
+  margin-top: 2rem; /* push button lower */
+
 
   &:hover {
     background: #64ffda;
@@ -743,25 +749,23 @@ export const CloseIcon = styled.div`
 export const HeroContent = styled.div`
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   color: #ffffff;
+  max-width: 950px;
+  margin: 0 auto;
   padding: 0 1rem;
-  max-width: 90%;
+  text-align: center;
 
-  h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+  h2 { /* Targets the SectionTitle */
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
     margin-bottom: 1rem;
-    margin-top: 3rem;
-    text-align: center;
   }
 
-  p {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    margin-bottom: 1.5rem;
+  h3 { /* Targets the MissionStatement */
+    font-size: clamp(1.1rem, 4vw, 1.35rem);
+    font-weight: 500; /* Ensure this is not too bold */
+    line-height: 1.6;
     max-width: 800px;
-    text-align: center;
+    margin: 0 auto 2rem auto; /* Center and provide bottom margin */
   }
 `;
 // ... (existing styles)

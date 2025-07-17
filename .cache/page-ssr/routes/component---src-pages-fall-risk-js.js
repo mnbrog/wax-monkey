@@ -7612,40 +7612,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles */ "./src/components/styles.js");
-// File: src/components/Nav.jsx
-
 
 
 const Nav = ({
   active
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-  src: "/images/Upright Medical Solutions Logo.png",
-  alt: "Upright Medical Solutions"
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/",
-  className: active === "home" ? "active" : ""
-}, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-  className: "dropdown"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#",
-  className: `dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`
-}, "Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-  className: "dropdown-menu"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/fall-risk",
-  className: active === "fall-risk" ? "active" : ""
-}, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/Pulse4Pulse",
-  className: active === "pulse4pulse" ? "active" : ""
-}, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/about",
-  className: active === "about" ? "active" : ""
-}, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "/#contact",
-  className: active === "contact" ? "active" : ""
-}, "Contact"))));
+}) => {
+  const {
+    0: isOpen,
+    1: setIsOpen
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavBar, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.LogoWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    src: "/images/Upright Medical Solutions Logo.png",
+    alt: "Upright Medical Solutions"
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Hamburger, {
+    onClick: () => setIsOpen(!isOpen)
+  }, isOpen ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.CloseIcon, null) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.NavLinks, {
+    className: isOpen ? "open" : ""
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/",
+    className: active === "home" ? "active" : ""
+  }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+    className: "dropdown"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "#",
+    className: `dropdown-toggle ${active === "fall-risk" || active === "pulse4pulse" ? "active" : ""}`
+  }, "Products"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+    className: "dropdown-menu"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/fall-risk",
+    className: active === "fall-risk" ? "active" : ""
+  }, "Fall Risk")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/Pulse4Pulse",
+    className: active === "pulse4pulse" ? "active" : ""
+  }, "Pulse4Pulse")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/about",
+    className: active === "about" ? "active" : ""
+  }, "About")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "/#contact",
+    className: active === "contact" ? "active" : ""
+  }, "Contact"))));
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Nav);
 
 /***/ }),
@@ -7756,7 +7764,7 @@ const FraResearch = () => {
       marginTop: '4rem'
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_2__.SecondaryButton, {
-    href: "#contact"
+    href: "/#contact"
   }, "Request a Whitepaper")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FraResearch);
@@ -7791,8 +7799,8 @@ const HeroSection = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___defaul
   src: "/videos/clinic-background.mp4",
   type: "video/mp4"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Innovative Health & Safety Solutions"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Predict Risk. Prevent Falls."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-  href: "#contact"
-}, "Get a Demo")));
+  href: "#need-screen"
+}, "Learn  More")));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSection);
 
 /***/ }),
@@ -7920,7 +7928,7 @@ const WhoWeHelp = () => {
       margin: '0 auto 1.5rem auto'
     }
   }, "We would welcome the opportunity to discuss the value this Fall Risk program could bring to your practice."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
-    href: "#contact"
+    href: "/#contact"
   }, "Schedule a Consultation")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WhoWeHelp);
@@ -7943,6 +7951,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   COLORS: () => (/* binding */ COLORS),
 /* harmony export */   CTAWrapper: () => (/* binding */ CTAWrapper),
 /* harmony export */   CenteredTextColumn: () => (/* binding */ CenteredTextColumn),
+/* harmony export */   CloseIcon: () => (/* binding */ CloseIcon),
 /* harmony export */   ContactDetail: () => (/* binding */ ContactDetail),
 /* harmony export */   ContactForm: () => (/* binding */ ContactForm),
 /* harmony export */   ContactInfo: () => (/* binding */ ContactInfo),
@@ -7952,6 +7961,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FeatureDescription: () => (/* binding */ FeatureDescription),
 /* harmony export */   FeatureGrid: () => (/* binding */ FeatureGrid),
 /* harmony export */   FeatureTitle: () => (/* binding */ FeatureTitle),
+/* harmony export */   Hamburger: () => (/* binding */ Hamburger),
 /* harmony export */   HeroButton: () => (/* binding */ HeroButton),
 /* harmony export */   HeroContent: () => (/* binding */ HeroContent),
 /* harmony export */   HeroVideo: () => (/* binding */ HeroVideo),
@@ -8026,13 +8036,10 @@ const BulletList = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].ul.
 })(["margin-left:1.25rem;li{margin-bottom:0.5rem;position:relative;padding-left:1rem;&::before{content:\"\u2022\";position:absolute;left:0;color:", ";}}"], COLORS.teal);
 const HeroVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].section.withConfig({
   displayName: "styles__HeroVideo"
-})(["position:relative;height:60vh;min-height:400px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;scroll-margin-top:200px;"]);
+})(["position:relative;height:70vh;min-height:450px;overflow:hidden;display:flex;align-items:center;justify-content:center;@media (max-width:768px){height:auto;min-height:0;padding:6rem 1rem;}"]);
 const BackgroundVideo = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].video.withConfig({
   displayName: "styles__BackgroundVideo"
 })(["position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:1;object-fit:cover;filter:brightness(0.6);"]);
-const HeroContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__HeroContent"
-})(["position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;color:#ffffff;h1{font-size:clamp(2.5rem,6vw,3.5rem);margin-bottom:1rem;}p{font-size:clamp(1.125rem,3vw,1.5rem);margin-bottom:1.5rem;}"]);
 const HeroButton = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].a.withConfig({
   displayName: "styles__HeroButton"
 })(["background:", ";color:#ffffff;padding:0.75rem 1.5rem;border-radius:4px;font-weight:600;transition:background 0.2s ease-in-out;&:hover{background:#64ffda;}"], COLORS.teal);
@@ -8103,12 +8110,6 @@ const MethodologyContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["def
 
 // Find and replace the existing ProcessStepper with this version
 
-const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__ProcessStepper"
-})(["display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;"]);
-const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
-  displayName: "styles__ProcessStep"
-})(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-25px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-35px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
 const StepIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__StepIcon"
 })(["display:inline-flex;align-items:center;justify-content:center;width:70px;height:70px;background-color:", ";border-radius:50%;margin-bottom:1rem;color:", ";font-size:2rem;box-shadow:0 4px 12px rgba(10,38,64,0.2);"], COLORS.darkBlue, COLORS.cardBg);
@@ -8180,6 +8181,34 @@ const PrivacyNote = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].p.
 const CenteredTextColumn = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
   displayName: "styles__CenteredTextColumn"
 })(["display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;"]);
+// ... (existing styles)
+
+const Hamburger = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__Hamburger"
+})(["display:none;cursor:pointer;padding:0.5rem;z-index:201;div{width:25px;height:3px;background-color:", ";margin:4px 0;transition:0.4s;}@media (max-width:768px){display:block;}"], COLORS.darkBlue);
+const CloseIcon = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__CloseIcon"
+})(["&::before,&::after{content:\"\";position:absolute;width:25px;height:3px;background-color:", ";}&::before{transform:rotate(45deg);}&::after{transform:rotate(-45deg);}"], COLORS.darkBlue);
+
+// ... (rest of the styles)
+// ... (existing styles)
+
+const HeroContent = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__HeroContent"
+})(["position:relative;z-index:2;color:#ffffff;max-width:950px;margin:0 auto;padding:0 1rem;text-align:center;h2{font-size:clamp(2.25rem,6vw,3.5rem);margin-bottom:1rem;}h3{font-size:clamp(1.1rem,4vw,1.35rem);font-weight:500;line-height:1.6;max-width:800px;margin:0 auto 2rem auto;}"]);
+// ... (existing styles)
+
+// Find and replace the existing ProcessStepper with this version
+const ProcessStepper = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ProcessStepper"
+})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;"]);
+const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div.withConfig({
+  displayName: "styles__ProcessStep"
+})(["text-align:center;position:relative;padding:0 1rem;&:not(:last-child)::after{content:'\u2192';font-size:2.5rem;color:", ";position:absolute;top:30px;right:-40px;@media (max-width:820px){content:'\u2193';top:auto;bottom:-50px;left:50%;transform:translateX(-50%);}}"], COLORS.lightTeal);
+
+// ... (rest of the styles)
+
+// ... (rest of the styles)
 
 /***/ }),
 
