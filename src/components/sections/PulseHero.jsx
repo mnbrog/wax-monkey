@@ -8,7 +8,7 @@ const PulseHero = () => (
       loop
       muted
       playsInline
-      poster="/images/pulse-hero-fallback.jpg"
+      poster="/images/heropfpfallback.jpg"
       src="/videos/heropfp.mp4" 
       type="video/mp4"
      
