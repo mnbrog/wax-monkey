@@ -17,7 +17,7 @@ const HeroSection = () => (
     <HeroContent>
       <h1>Innovative Health &amp; Safety Solutions</h1>
       <p>Predict Risk. Prevent Falls.</p>
-      <HeroButton href="#contact">Get a Demo</HeroButton>
+      <HeroButton href="#need-screen">Learn  More</HeroButton>
     </HeroContent>
   </HeroVideo>
 );

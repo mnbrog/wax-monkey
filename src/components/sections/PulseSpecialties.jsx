@@ -14,7 +14,7 @@ const PulseSpecialties = () => (
       <LeadParagraph>
         Pulse4Pulse is ideal for use in cardiology, primary care, endocrinology, neurology, pain management, geriatrics, and many other specialties to uncover underlying contributors to patient conditions.
       </LeadParagraph>
-      <HeroButton href="#contact">Contact Us</HeroButton>
+      <HeroButton href="/#contact">Contact Us</HeroButton>
     </CTAWrapper>
   </Section>
 );

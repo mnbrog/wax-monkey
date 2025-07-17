@@ -209,24 +209,7 @@ export const BackgroundVideo = styled.video`
   filter: brightness(0.6);
 `;
 
-export const HeroContent = styled.div`
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
 
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: clamp(1.125rem, 3vw, 1.5rem);
-    margin-bottom: 1.5rem;
-  }
-`;
 
 export const HeroButton = styled.a`
   background: ${COLORS.teal};
@@ -491,35 +474,7 @@ export const MethodologyContainer = styled.div`
 
 // Find and replace the existing ProcessStepper with this version
 
-export const ProcessStepper = styled.div`
-  display: grid;
-  /* This now defaults to 3 columns and will not change on smaller screens */
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-`;
 
-export const ProcessStep = styled.div`
-  text-align: center;
-  position: relative;
-  padding: 0 1rem;
-
-  &:not(:last-child)::after {
-    content: '→';
-    font-size: 2.5rem;
-    color: ${COLORS.lightTeal};
-    position: absolute;
-    top: 30px;
-    right: -25px;
-
-    @media (max-width: 820px) {
-      content: '↓';
-      top: auto;
-      bottom: -35px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-`;
 
 export const StepIcon = styled.div`
   display: inline-flex;
@@ -740,3 +695,108 @@ export const CenteredTextColumn = styled.div`
   align-items: center;
   text-align: center;
 `;
+// ... (existing styles)
+
+
+
+export const Hamburger = styled.div`
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 201;
+
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: ${COLORS.darkBlue};
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const CloseIcon = styled.div`
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: ${COLORS.darkBlue};
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+`;
+
+// ... (rest of the styles)
+// ... (existing styles)
+
+export const HeroContent = styled.div`
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  padding: 0 1rem;
+  max-width: 90%;
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    text-align: center;
+  }
+`;
+// ... (existing styles)
+
+// Find and replace the existing ProcessStepper with this version
+export const ProcessStepper = styled.div`
+  display: grid;
+  /* This now defaults to a responsive grid and will adjust on smaller screens */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem; /* Increased gap for more space */
+`;
+
+export const ProcessStep = styled.div`
+  text-align: center;
+  position: relative;
+  padding: 0 1rem;
+
+  &:not(:last-child)::after {
+    content: '→';
+    font-size: 2.5rem;
+    color: ${COLORS.lightTeal};
+    position: absolute;
+    top: 30px;
+    right: -40px; /* Increased space for the right arrow */
+
+    @media (max-width: 820px) {
+      content: '↓';
+      top: auto;
+      bottom: -50px; /* Increased space for the down arrow */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+`;
+
+// ... (rest of the styles)
+
+// ... (rest of the styles)

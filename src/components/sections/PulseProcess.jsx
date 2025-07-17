@@ -15,8 +15,8 @@ const PulseProcess = () => (
   <Section id="pulse-process">
     <SectionTitle>How Pulse4Pulse Works</SectionTitle>
     <MethodologyContainer>
-      {/* Responsive grid: auto-fit columns with min width and flexible layout */}
-      <ProcessStepper style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
+      {/* Responsive grid with styles now in styles.js */}
+      <ProcessStepper>
         <ProcessStep>
           <StepIcon><FaSignInAlt size="1.5em" /></StepIcon>
           <StepTitle>Patient Appointment</StepTitle>
