@@ -6933,7 +6933,15 @@ const Contact = ({
   size: "24"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
   href: "mailto:info@uprightmedicalsolutions.com"
-}, "info@uprightmedicalsolutions.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+}, "info@uprightmedicalsolutions.com"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, {
+  name: "contact-form",
+  method: "POST",
+  "data-netlify": "true"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  type: "hidden",
+  name: "form-name",
+  value: "contact-form"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
   type: "text",
   name: "name",
   placeholder: "Full Name",
