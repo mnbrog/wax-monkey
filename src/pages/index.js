@@ -58,6 +58,7 @@ const ProductDescription = styled.p`
 
 const HomePage = () => (
   <>
+  <meta name="google-site-verification" content="YNZP5SDN7XocdqXz-pA1QKWTgdSgxo_Z8CGbZFCEx_E" />
     <GlobalStyles />
     <Nav active="home" />
     <main>
