@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /draft-preview/
+
+Sitemap: https://uprightmedicalsolutions.com/sitemap.xml
