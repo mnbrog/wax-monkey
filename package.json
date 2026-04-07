@@ -1,5 +1,5 @@
 {
-  "name": "upright-medical",
+  "name": "wax-monkey",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -13,8 +13,8 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "develop": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
+    "develop": "npx gatsby develop",
+    "build": "npx gatsby build",
+    "serve": "npx gatsby serve"
   }
 }
