@@ -13,8 +13,8 @@
     "styled-components": "^5.0.0"
   },
   "scripts": {
-    "develop": "npx gatsby develop",
-    "build": "npx gatsby build",
-    "serve": "npx gatsby serve"
-  }
+  "develop": "node ./node_modules/gatsby/cli.js develop",
+  "build": "node ./node_modules/gatsby/cli.js build",
+  "serve": "node ./node_modules/gatsby/cli.js serve"
+}
 }
