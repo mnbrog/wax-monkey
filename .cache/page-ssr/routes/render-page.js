@@ -46,6 +46,12 @@ var plugins = [{
     "disableVendorPrefixes": false
   }
 }, {
+  name: 'default-site-plugin',
+  plugin: __webpack_require__(/*! ./gatsby-ssr.js */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}, {
   name: 'partytown',
   plugin: __webpack_require__(/*! ./node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js */ "./node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js"),
   options: {
@@ -394,6 +400,59 @@ HTML.propTypes = {
   preBodyComponents: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().array),
   body: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string),
   postBodyComponents: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().array)
+};
+
+/***/ }),
+
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+const React = __webpack_require__(/*! react */ "react");
+exports.onRenderBody = ({
+  setHeadComponents,
+  setPreBodyComponents
+}) => {
+  setHeadComponents([/*#__PURE__*/React.createElement("script", {
+    key: "gtm-script",
+    dangerouslySetInnerHTML: {
+      __html: `
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WGJP69ZR');
+        `
+    }
+  }), /*#__PURE__*/React.createElement(React.Fragment, {
+    key: "gtag"
+  }, /*#__PURE__*/React.createElement("script", {
+    async: true,
+    src: "https://www.googletagmanager.com/gtag/js?id=G-PRRKEY5NP8"
+  }), /*#__PURE__*/React.createElement("script", {
+    dangerouslySetInnerHTML: {
+      __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PRRKEY5NP8');
+        `
+    }
+  }))]);
+  setPreBodyComponents([/*#__PURE__*/React.createElement("noscript", {
+    key: "gtm-noscript"
+  }, /*#__PURE__*/React.createElement("iframe", {
+    src: "https://www.googletagmanager.com/ns.html?id=GTM-WGJP69ZR",
+    height: "0",
+    width: "0",
+    style: {
+      display: "none",
+      visibility: "hidden"
+    }
+  }))]);
 };
 
 /***/ }),
@@ -6433,24 +6492,24 @@ module.exports = require("crypto");
 /***/ }),
 
 /***/ "react":
-/*!***********************************************************************************!*\
-  !*** external "C:\\Users\\mnbro\\upright-medical\\node_modules\\react\\index.js" ***!
-  \***********************************************************************************/
+/*!******************************************************************************!*\
+  !*** external "C:\\Users\\mnbro\\wax-monkey\\node_modules\\react\\index.js" ***!
+  \******************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\mnbro\\upright-medical\\node_modules\\react\\index.js");
+module.exports = require("C:\\Users\\mnbro\\wax-monkey\\node_modules\\react\\index.js");
 
 /***/ }),
 
 /***/ "react-dom/server":
-/*!****************************************************************************************!*\
-  !*** external "C:\\Users\\mnbro\\upright-medical\\node_modules\\react-dom\\server.js" ***!
-  \****************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** external "C:\\Users\\mnbro\\wax-monkey\\node_modules\\react-dom\\server.js" ***!
+  \***********************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("C:\\Users\\mnbro\\upright-medical\\node_modules\\react-dom\\server.js");
+module.exports = require("C:\\Users\\mnbro\\wax-monkey\\node_modules\\react-dom\\server.js");
 
 /***/ }),
 

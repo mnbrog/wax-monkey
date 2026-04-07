@@ -9,8 +9,8 @@ const Nav = ({ active }) => {
       <LogoWrapper>
         <a href="/">
           <img
-            src="/images/Upright Medical Solutions Logo.png"
-            alt="Upright Medical Solutions"
+            src="/images/wax-monkey-logo.jpg"
+            alt="Wax Monkey Logo"
           />
         </a>
       </LogoWrapper>
@@ -25,42 +25,27 @@ const Nav = ({ active }) => {
             Home
           </a>
         </li>
-        <li className="dropdown">
-          <a
-            href="#"
-            className={`dropdown-toggle ${
-              active === "fall-risk" || active === "pulse4pulse" ? "active" : ""
-            }`}
-          >
-            Products
+
+        <li>
+          <a href="https://bnds.us/kcehy8" className={active === "shows" ? "active" : ""}>
+            Shows
           </a>
-          <ul className="dropdown-menu">
-            <li>
-              <a
-                href="/fall-risk"
-                className={active === "fall-risk" ? "active" : ""}
-              >
-                Fall Risk
-              </a>
-            </li>
-            <li>
-              <a
-                href="/Pulse4Pulse"
-                className={active === "pulse4pulse" ? "active" : ""}
-              >
-                Pulse4Pulse
-              </a>
-            </li>
-          </ul>
         </li>
+
         <li>
           <a href="/about" className={active === "about" ? "active" : ""}>
             About
           </a>
         </li>
+
         <li>
-          <a href="/#contact" className={active === "contact" ? "active" : ""}>
-            Contact
+          <a href="https://www.bonfire.com/store/wax-monkey/" className={active === "merch" ? "active" : ""}>
+            Merch
+          </a>
+        </li>
+                <li>
+          <a href="/contact" className={active === "booking" ? "active" : ""}>
+            Booking
           </a>
         </li>
       </NavLinks>

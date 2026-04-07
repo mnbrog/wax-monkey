@@ -23,17 +23,23 @@ const Main = styled.main`
 `;
 
 const Logo = styled.img`
-  width: 80%;
-  max-width: 200px;
+  width: 100%;
+  max-width: 800px;
   height: auto;
-  margin: 2rem auto;
+  margin: 0rem auto;
   display: block;
 `;
 
 const Heading = styled.h1`
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
   margin-bottom: 1rem;
+  
+  font-family: "Cooper Black", serif;
+  font-style: italic;
+  font-weight: 700;
+
   color: #000000;
+  letter-spacing: 0.5px;
 `;
 
 const Paragraph = styled.p`
@@ -49,18 +55,12 @@ const AboutPage = () => (
     <Main>
       {/* Logo */}
       <Logo
-        src="/images/Upright Medical Solutions Logo.png"
-        alt="Upright Medical Solutions Logo"
+        src="/images/Porch+pic.jpg"
+        alt="Wax Monkey Logo"
       />
-      <Heading>About Upright Medical Solutions</Heading>
+      <Heading>About Us</Heading>
       <Paragraph>
-        With over <strong>50 years of healthcare experience</strong>, Upright Medical Solutions has grown nationwide led by a dedicated team of experts, providing clinicians
-ranging from single-practicing physicians to
-healthcare systems with the tools needed to optimize
-patient care.
-      </Paragraph>
-      <Paragraph>
-        Our mission is simple: to empower healthier communities by putting patients at the heart of every decision.
+        Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birmingham, AL. The members first started jamming together in high school before officially forming the band in 2023 while attending their freshman year at the University of Alabama. Rooted in the spirit of musical exploration, Wax Monkey draws inspiration from legends such as The Grateful Dead, Phish, The Allman Brothers Band and many more — blending aspects of southern rock, psychedelic rock, and improvisational jams.
       </Paragraph>
     </Main>
     <Footer />

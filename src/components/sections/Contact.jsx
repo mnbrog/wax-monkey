@@ -1,5 +1,3 @@
-// File: src/components/sections/Contact.jsx
-
 import React from "react";
 import {
   Section,
@@ -9,62 +7,108 @@ import {
   Subheading,
   ContactParagraph,
   ContactDetail,
-  ContactForm, // Note: This styled component should be a <form> tag
+  ContactForm,
   PrivacyNote
 } from "../styles";
-import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope } from "react-icons/fa";
 
-const Contact = ({ isPulsePage = false }) => (
+const Contact = () => (
   <Section id="contact">
-    <SectionTitle>Get in Touch</SectionTitle>
+    <SectionTitle>Book Wax Monkey</SectionTitle>
 
-    <ContactLayout>
-      <ContactInfo>
-        <Subheading>
-            {isPulsePage ? "Let’s Talk Cardiovascular Wellness." : "Let’s Talk Fall Prevention."}
-        </Subheading>
+    <ContactLayout style={{ justifyContent: "center" }}>
+      <ContactInfo style={{ textAlign: "center", maxWidth: "700px" }}>
+        
+        <Subheading>Booking & Inquiries</Subheading>
+
         <ContactParagraph>
-            {isPulsePage
-                ? "Learn how our Pulse4Pulse assessment program can benefit your practice and patients. Contact us for a demo, billing details, or to discuss how to implement this turnkey service."
-                : "Interested in learning more about how our Fall Risk Assessment program can benefit your practice and patients? Contact us for a demo, pricing information, or a partnership discussion."
-            }
+          Looking to book Wax Monkey for a show, event, or venue? Fill out the form below and we’ll get back to you.
         </ContactParagraph>
 
-        <ContactDetail>
-          <FaEnvelope color="#3FD0C9" size="24" />
-          <a href="mailto:info@uprightmedicalsolutions.com">info@uprightmedicalsolutions.com</a>
-        </ContactDetail>
+       <ContactDetail style={{ justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
+  
+  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+    <FaEnvelope color="#6321ee" size="20" />
+    <a href="mailto:waxmonkeyband@gmail.com">
+      waxmonkeyband@gmail.com
+    </a>
+  </div>
+
+  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
+    <FaEnvelope color="#6321ee" size="20" />
+    <a href="mailto:luke@atlas-touring.com">
+      luke@atlas-touring.com
+    </a>
+  </div>
+
+  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
+    <FaEnvelope color="#6321ee" size="20" />
+    <a href="mailto:garrett@atlas-touring.com">
+      garrett@atlas-touring.com
+    </a>
+  </div>
+
+</ContactDetail>
       </ContactInfo>
-      
-      {/* This is now a real form that Netlify can process.
-        I've used "contact-form" as the name, which is how it will appear in your Netlify dashboard.
-      */}
-      <ContactForm 
-        name="contact-form" 
-        method="POST" 
+
+      <ContactForm
+        name="booking-form"
+        method="POST"
         data-netlify="true"
+        style={{ maxWidth: "700px", margin: "0 auto" }}
       >
-        {/* This hidden input is required for JavaScript-rendered forms */}
-        <input type="hidden" name="form-name" value="contact-form" />
-        
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="email" name="email" placeholder="Work Email" required />
-        
-        <select name="subject" required defaultValue="">
-          <option value="" disabled>I'm interested in...</option>
-          <option value="Pulse4Pulse Inquiry">Pulse4Pulse Inquiry</option>
-          <option value="Fall Risk Inquiry">Fall Risk Inquiry</option>
-          <option value="Demo Request">Requesting a Demo</option>
-          <option value="Pricing Information">Pricing Information</option>
-          <option value="Partnership">Partnership Inquiry</option>
-          <option value="General Question">General Question</option>
+        <input type="hidden" name="form-name" value="booking-form" />
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        />
+
+        <input
+          type="text"
+          name="venue"
+          placeholder="Venue / Event Name"
+          required
+        />
+
+        <input
+          type="text"
+          name="location"
+          placeholder="City, State"
+        />
+
+        <input
+          type="date"
+          name="date"
+        />
+
+        <select name="inquiry" required defaultValue="">
+          <option value="" disabled>Type of Inquiry</option>
+          <option value="Booking">Booking</option>
+          <option value="Private Event">Private Event</option>
+          <option value="Festival">Festival</option>
+          <option value="General">General Question</option>
         </select>
 
-        <textarea name="message" rows="5" placeholder="Your message..."></textarea>
-        <button type="submit">Send Message</button>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Tell us about the event..."
+        />
+
+        <button type="submit">Submit Booking Request</button>
 
         <PrivacyNote>
-          We respect your privacy and will never share your information.
+          We’ll get back to you as soon as possible.
         </PrivacyNote>
       </ContactForm>
     </ContactLayout>

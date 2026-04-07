@@ -1,18 +1,14 @@
-// File: src/components/styles/index.js
-
 import styled from "styled-components";
 
 export const COLORS = {
-  darkBlue: "#0A2640",
-  teal: "#3FD0C9",
+  darkBlue: "#0a2640",
+  teal: "#6321ee",
   cardBg: "#FFFFFF",
-  // FIX 1: Added missing color definitions
   lightTeal: "#A7F3D0",
   seriousRed: "#EF4444",
   neutralGray: "#6B7280",
   lightBg: "#F9FAFB",
 };
-
 
 export const NavBar = styled.nav`
   position: sticky;
@@ -26,8 +22,6 @@ export const NavBar = styled.nav`
   align-items: center;
   padding-bottom: 0.5rem;
 `;
-
-
 
 export const LogoWrapper = styled.div`
   margin: 1rem 0 0.5rem;
@@ -69,6 +63,10 @@ export const NavLinks = styled.ul`
     width: 100%;
     color: ${COLORS.darkBlue};
     transition: color 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+    font-family: "Cooper Black", serif;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
 
   a:hover,
@@ -152,16 +150,17 @@ export const Section = styled.section`
   max-width: 1100px;
   margin: 5rem auto;
   padding: 2rem 1.5rem;
-  scroll-margin-top: 200px; 
+  scroll-margin-top: 200px;
 `;
 
 export const SectionTitle = styled.h2`
   font-size: clamp(1.75rem, 5vw, 2.25rem);
   margin-bottom: 1rem;
   text-align: center;
+  font-family: "Cooper Black", serif;
+  font-style: italic;
   font-weight: 700;
 `;
-
 
 export const BulletList = styled.ul`
   margin-left: 1.25rem;
@@ -180,21 +179,19 @@ export const BulletList = styled.ul`
   }
 `;
 
-
-
 export const HeroVideo = styled.section`
   position: relative;
-  height: 70vh; /* A bit more height */
+  height: 70vh;
   min-height: 450px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   @media (max-width: 768px) {
-    height: auto; /* Let height be determined by content */
+    height: auto;
     min-height: 0;
-    padding: 6rem 1rem; /* Add vertical padding for content */
+    padding: 6rem 1rem;
   }
 `;
 
@@ -212,8 +209,6 @@ export const BackgroundVideo = styled.video`
   filter: brightness(0.6);
 `;
 
-
-
 export const HeroButton = styled.a`
   background: ${COLORS.teal};
   color: #ffffff;
@@ -222,15 +217,12 @@ export const HeroButton = styled.a`
   font-weight: 600;
   transition: background 0.2s ease-in-out;
   display: inline-block;
-  margin-top: 2rem; /* push button lower */
-
+  margin-top: 2rem;
 
   &:hover {
     background: #64ffda;
   }
 `;
-
-
 
 export const ContactForm = styled.form`
   display: flex;
@@ -257,10 +249,6 @@ export const ContactForm = styled.form`
   }
 `;
 
-
-
-// --- STYLES FOR THE "NEED SCREEN" SECTION ---
-
 export const ImpactText = styled.h3`
   font-size: clamp(1.25rem, 3vw, 2rem);
   font-weight: 700;
@@ -279,7 +267,8 @@ export const QuoteText = styled.p`
   position: relative;
   padding: 0 1rem;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: '"';
     font-size: 2rem;
     color: ${COLORS.lightTeal};
@@ -298,14 +287,11 @@ export const QuoteText = styled.p`
   }
 `;
 
-
-// Recommended responsive 3-column grid
 export const StatGrid = styled.div`
   display: grid;
   gap: 1.5rem;
   width: 100%;
   margin: 1.5rem 0;
-
   grid-template-columns: repeat(3, 1fr);
 
   @media (max-width: 768px) {
@@ -313,12 +299,11 @@ export const StatGrid = styled.div`
   }
 `;
 
-// Define StatNumber FIRST to prevent initialization errors
 export const StatNumber = styled.p`
   font-size: clamp(1.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
   color: ${COLORS.darkBlue};
-  line-height: .7;
+  line-height: 0.7;
   transition: color 0.3s ease-in-out;
 `;
 
@@ -333,7 +318,6 @@ export const StatCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   background: transparent;
   padding: 0.75rem;
   border-top: 3px solid ${COLORS.lightTeal};
@@ -394,6 +378,7 @@ export const LeadParagraph = styled.p`
   color: #334D6E;
   margin-bottom: 1.5rem;
 `;
+
 export const ImageWrapper = styled.div`
   img {
     width: 100%;
@@ -406,9 +391,7 @@ export const ImageWrapper = styled.div`
 export const FeatureGrid = styled.div`
   display: grid;
   gap: 1.5rem;
-  
   scroll-margin-top: 400px;
-
   grid-template-columns: 1fr;
 
   @media (min-width: 600px) {
@@ -428,10 +411,10 @@ export const FeatureCard = styled.div`
   text-align: center;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 8px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 8px 16px rgba(0, 0, 0, 0.08);
   }
 `;
 
@@ -463,8 +446,9 @@ export const TextColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  h2, p {
+
+  h2,
+  p {
     text-align: center;
   }
 
@@ -477,10 +461,6 @@ export const TextColumn = styled.div`
 export const MethodologyContainer = styled.div`
   margin-top: 4rem;
 `;
-
-// Find and replace the existing ProcessStepper with this version
-
-
 
 export const StepIcon = styled.div`
   display: inline-flex;
@@ -519,8 +499,8 @@ export const SecondaryButton = styled.a`
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
   &:hover {
-      background: ${COLORS.lightBg};
-      border-color: ${COLORS.darkBlue};
+    background: ${COLORS.lightBg};
+    border-color: ${COLORS.darkBlue};
   }
 `;
 
@@ -535,7 +515,7 @@ export const TabButton = styled.button`
   padding: 1rem 1.5rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: ${props => props.active ? COLORS.darkBlue : COLORS.neutralGray};
+  color: ${(props) => (props.active ? COLORS.darkBlue : COLORS.neutralGray)};
   background: none;
   border: none;
   cursor: pointer;
@@ -543,14 +523,14 @@ export const TabButton = styled.button`
   transition: color 0.3s ease;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -1px;
     left: 0;
     right: 0;
     height: 3px;
     background-color: ${COLORS.teal};
-    transform: ${props => props.active ? 'scaleX(1)' : 'scaleX(0)'};
+    transform: ${(props) => (props.active ? "scaleX(1)" : "scaleX(0)")};
     transition: transform 0.3s ease-in-out;
   }
 
@@ -563,8 +543,14 @@ export const TabContent = styled.div`
   animation: fadeIn 0.5s ease-in-out;
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
 
@@ -602,12 +588,12 @@ export const TeamMemberCard = styled.div`
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 `;
 
@@ -650,8 +636,7 @@ export const ContactLayout = styled.div`
   }
 `;
 
-export const ContactInfo = styled.div`
-`;
+export const ContactInfo = styled.div``;
 
 export const Subheading = styled.h3`
   font-size: 1.75rem;
@@ -691,8 +676,6 @@ export const PrivacyNote = styled.p`
   margin-top: 1rem;
   text-align: center;
 `;
-// Find and replace the existing ProcessStepper with this version
-
 
 export const CenteredTextColumn = styled.div`
   display: flex;
@@ -701,9 +684,6 @@ export const CenteredTextColumn = styled.div`
   align-items: center;
   text-align: center;
 `;
-// ... (existing styles)
-
-
 
 export const Hamburger = styled.div`
   display: none;
@@ -725,10 +705,16 @@ export const Hamburger = styled.div`
 `;
 
 export const CloseIcon = styled.div`
+  position: relative;
+  width: 25px;
+  height: 25px;
+
   &::before,
   &::after {
     content: "";
     position: absolute;
+    top: 11px;
+    left: 0;
     width: 25px;
     height: 3px;
     background-color: ${COLORS.darkBlue};
@@ -743,9 +729,6 @@ export const CloseIcon = styled.div`
   }
 `;
 
-// ... (rest of the styles)
-// ... (existing styles)
-
 export const HeroContent = styled.div`
   position: relative;
   z-index: 2;
@@ -755,27 +738,24 @@ export const HeroContent = styled.div`
   padding: 0 1rem;
   text-align: center;
 
-  h2 { /* Targets the SectionTitle */
+  h2 {
     font-size: clamp(2.25rem, 6vw, 3.5rem);
     margin-bottom: 1rem;
   }
 
-  h3 { /* Targets the MissionStatement */
+  h3 {
     font-size: clamp(1.1rem, 4vw, 1.35rem);
-    font-weight: 500; /* Ensure this is not too bold */
+    font-weight: 500;
     line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto 2rem auto; /* Center and provide bottom margin */
+    margin: 0 auto 2rem auto;
   }
 `;
-// ... (existing styles)
 
-// Find and replace the existing ProcessStepper with this version
 export const ProcessStepper = styled.div`
   display: grid;
-  /* This now defaults to a responsive grid and will adjust on smaller screens */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem; /* Increased gap for more space */
+  gap: 3rem;
 `;
 
 export const ProcessStep = styled.div`
@@ -784,23 +764,19 @@ export const ProcessStep = styled.div`
   padding: 0 1rem;
 
   &:not(:last-child)::after {
-    content: '→';
+    content: "→";
     font-size: 2.5rem;
     color: ${COLORS.lightTeal};
     position: absolute;
     top: 30px;
-    right: -40px; /* Increased space for the right arrow */
+    right: -40px;
 
     @media (max-width: 820px) {
-      content: '↓';
+      content: "↓";
       top: auto;
-      bottom: -50px; /* Increased space for the down arrow */
+      bottom: -50px;
       left: 50%;
       transform: translateX(-50%);
     }
   }
 `;
-
-// ... (rest of the styles)
-
-// ... (rest of the styles)
