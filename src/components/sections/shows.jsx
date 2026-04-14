@@ -190,7 +190,7 @@ const Shows = () => {
                       <VenueWrap>
                         <VenueTop>
                           <VenueName>{show.venue}</VenueName>
-                          {show.featured && <Badge>Featured</Badge>}
+                          {show.featured && <Badge>Low Tickets</Badge>}
                         </VenueTop>
 
                         <CityState>
