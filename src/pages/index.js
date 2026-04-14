@@ -4,6 +4,7 @@ import GlobalStyles from "../components/Layout/GlobalStyles";
 import Nav from "../components/Nav";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/Footer";
+import Shows from "../components/sections/shows";
 import {
   Section,
   SectionTitle,
@@ -76,7 +77,6 @@ const EmbedWrapper = styled.div`
   }
 `;
 
-/* 🔥 TikTok Embed */
 const TikTokEmbed = () => {
   useEffect(() => {
     const existingScript = document.querySelector(
@@ -114,7 +114,6 @@ const TikTokEmbed = () => {
   );
 };
 
-/* 🔥 Instagram Iframely Embed */
 const InstagramEmbed = () => {
   useEffect(() => {
     const existingScript = document.querySelector(
@@ -161,7 +160,7 @@ const HomePage = () => (
           muted
           playsInline
           poster="/images/porch+pic.jpg"
-          src="https://youtu.be/ivRSnX2bd_c"
+          src="/videos/hero-wm.mp4"
           type="video/mp4"
         />
         <HeroContent>
@@ -189,7 +188,6 @@ const HomePage = () => (
         <SectionTitle>Follow Us</SectionTitle>
 
         <ProductGrid>
-          {/* INSTAGRAM */}
           <ProductCard>
             <div>
               <ProductTitle>Instagram</ProductTitle>
@@ -210,7 +208,7 @@ const HomePage = () => (
               View Instagram
             </HeroButton>
           </ProductCard>
-{/* YOUTUBE */}
+
           <ProductCard>
             <div>
               <ProductTitle>YouTube</ProductTitle>
@@ -237,8 +235,7 @@ const HomePage = () => (
               View YouTube
             </HeroButton>
           </ProductCard>
-          
-          {/* TIKTOK */}
+
           <ProductCard>
             <div>
               <ProductTitle>TikTok</ProductTitle>
@@ -259,10 +256,10 @@ const HomePage = () => (
               View TikTok
             </HeroButton>
           </ProductCard>
-
-          
         </ProductGrid>
       </Section>
+
+      <Shows />
 
       <Contact />
     </main>

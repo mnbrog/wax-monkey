@@ -27,7 +27,7 @@ const Nav = ({ active }) => {
         </li>
 
         <li>
-          <a href="https://bnds.us/kcehy8" className={active === "shows" ? "active" : ""}>
+          <a href="/shows" className={active === "shows" ? "active" : ""}>
             Shows
           </a>
         </li>
