@@ -6824,7 +6824,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const FooterWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].footer.withConfig({
   displayName: "Footer__FooterWrapper"
-})(["text-align:center;padding:3rem 1.5rem;margin-top:4rem;background:#0A2640;color:#ffffff;"]);
+})(["text-align:center;padding:3rem 1.5rem;margin-top:4rem;background:#0a2640;color:#ffffff;"]);
 const FooterContent = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Footer__FooterContent"
 })(["max-width:1000px;margin:0 auto;"]);
@@ -6848,23 +6848,47 @@ const Text = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withCon
 })(["margin:0.25rem 0;color:#cbd5e1;"]);
 const Socials = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({
   displayName: "Footer__Socials"
-})(["display:flex;justify-content:center;gap:1.25rem;a{font-size:1.5rem;color:#ffffff;transition:transform 0.2s ease,color 0.2s ease;&:hover{transform:scale(1.2);color:#3FD0C9;}}"]);
+})(["display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;"]);
+const SocialLink = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].a.withConfig({
+  displayName: "Footer__SocialLink"
+})(["width:52px;height:52px;border-radius:999px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);display:inline-flex;align-items:center;justify-content:center;color:#ffffff;transition:transform 0.2s ease,background 0.2s ease,color 0.2s ease;&:hover{transform:translateY(-2px) scale(1.06);background:#3fd0c9;color:#0a2640;}svg{width:24px;height:24px;display:block;fill:currentColor;}"]);
 const FooterBottom = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].p.withConfig({
   displayName: "Footer__FooterBottom"
 })(["margin-top:2rem;font-size:0.85rem;color:#94a3b8;"]);
-const Footer = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Wax Monkey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchText, null, "Hoodies, Tie Dyes, and More!!!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Row, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Follow Us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Socials, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#",
+const InstagramIcon = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+  viewBox: "0 0 24 24",
+  "aria-hidden": "true"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+  d: "M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8Z"
+}));
+const TikTokIcon = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+  viewBox: "0 0 24 24",
+  "aria-hidden": "true"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+  d: "M14.6 2h2.45c.2 1.7 1.2 3.2 2.75 4.05v2.5a7.15 7.15 0 0 1-3.45-1V14.3a5.3 5.3 0 1 1-5.3-5.3c.35 0 .7.03 1.05.1v2.55a2.7 2.7 0 1 0 1.5 2.45V2Z"
+}));
+const YouTubeIcon = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
+  viewBox: "0 0 24 24",
+  "aria-hidden": "true"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("path", {
+  d: "M21.58 7.19a2.99 2.99 0 0 0-2.1-2.11C17.6 4.5 12 4.5 12 4.5s-5.6 0-7.48.58A2.99 2.99 0 0 0 2.42 7.2 31.3 31.3 0 0 0 2 12a31.3 31.3 0 0 0 .42 4.81 2.99 2.99 0 0 0 2.1 2.11c1.88.58 7.48.58 7.48.58s5.6 0 7.48-.58a2.99 2.99 0 0 0 2.1-2.11c.28-1.59.42-3.2.42-4.81s-.14-3.22-.42-4.81ZM10.2 15.1V8.9l5.4 3.1-5.4 3.1Z"
+}));
+const Footer = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Wax Monkey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchText, null, "Hoodies, Tie Dyes, and More!!!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Row, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Follow Us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Socials, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SocialLink, {
+  href: "https://www.instagram.com/waxmonkey",
   target: "_blank",
-  rel: "noreferrer"
-}, "\uD83D\uDCF8"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#",
+  rel: "noreferrer",
+  "aria-label": "Wax Monkey Instagram"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InstagramIcon, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SocialLink, {
+  href: "https://www.tiktok.com/@waxmonkeyband",
   target: "_blank",
-  rel: "noreferrer"
-}, "\uD83C\uDFB5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "#",
+  rel: "noreferrer",
+  "aria-label": "Wax Monkey TikTok"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TikTokIcon, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(SocialLink, {
+  href: "https://www.youtube.com/@waxmonkeyband",
   target: "_blank",
-  rel: "noreferrer"
-}, "\u25B6\uFE0F"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Booking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "luke@atlas-touring.com"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "garrett@atlas-touring.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Location"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "Based out of Tuscaloosa, AL"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterBottom, null, "\xA9 ", new Date().getFullYear(), " Wax Monkey. All Rights Reserved.")));
+  rel: "noreferrer",
+  "aria-label": "Wax Monkey YouTube"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(YouTubeIcon, null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Booking"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "luke@atlas-touring.com"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "garrett@atlas-touring.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Section, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Label, null, "Location"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Text, null, "Based out of Tuscaloosa, AL"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(FooterBottom, null, "\xA9 ", new Date().getFullYear(), " Wax Monkey. All Rights Reserved.")));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
 
 /***/ }),
@@ -7063,6 +7087,73 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
   type: "submit"
 }, "Submit Booking Request"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.PrivacyNote, null, "We\u2019ll get back to you as soon as possible."))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Contact);
+
+/***/ }),
+
+/***/ "./src/components/sections/Merch.jsx":
+/*!*******************************************!*\
+  !*** ./src/components/sections/Merch.jsx ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles */ "./src/components/styles.js");
+/* harmony import */ var _data_merch_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data/merch.json */ "./src/data/merch.json");
+
+
+
+
+const MerchIntro = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p.withConfig({
+  displayName: "Merch__MerchIntro"
+})(["max-width:700px;margin:1rem auto 0;text-align:center;color:#334d6e;font-size:1.05rem;line-height:1.7;"]);
+const MerchGrid = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "Merch__MerchGrid"
+})(["display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3rem;"]);
+const MerchCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "Merch__MerchCard"
+})(["background:#ffffff;border-radius:16px;border:1px solid #eaecef;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.06);transition:transform 0.25s ease,box-shadow 0.25s ease;display:flex;flex-direction:column;&:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,0.1);}"]);
+const ImageWrap = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "Merch__ImageWrap"
+})(["width:100%;aspect-ratio:4 / 4;overflow:hidden;background:#f8fafc;"]);
+const MerchImage = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].img.withConfig({
+  displayName: "Merch__MerchImage"
+})(["width:100%;height:100%;object-fit:cover;display:block;"]);
+const MerchBody = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "Merch__MerchBody"
+})(["padding:1.25rem;display:flex;flex-direction:column;gap:0.85rem;flex:1;"]);
+const Tag = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span.withConfig({
+  displayName: "Merch__Tag"
+})(["display:inline-flex;align-items:center;align-self:flex-start;padding:0.35rem 0.7rem;border-radius:999px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#0a2640;background:rgba(63,208,201,0.16);border:1px solid rgba(63,208,201,0.32);"]);
+const MerchTitle = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].h3.withConfig({
+  displayName: "Merch__MerchTitle"
+})(["margin:0;font-size:1.35rem;font-family:\"Cooper Black\",serif;font-style:italic;font-weight:700;color:#0a2640;"]);
+const MerchPrice = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p.withConfig({
+  displayName: "Merch__MerchPrice"
+})(["margin:0;color:#334d6e;font-size:1rem;font-weight:600;"]);
+const MerchActions = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "Merch__MerchActions"
+})(["margin-top:auto;padding-top:0.5rem;"]);
+const Merch = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
+    id: "merch"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Merch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchIntro, null, "Rep Wax Monkey with fresh merch from the official store."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchGrid, null, _data_merch_json__WEBPACK_IMPORTED_MODULE_2__.map((item, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchCard, {
+    key: `${item.title}-${index}`
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ImageWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchImage, {
+    src: item.image,
+    alt: item.title
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchBody, null, item.tag && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Tag, null, item.tag), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchTitle, null, item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchPrice, null, item.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MerchActions, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
+    href: item.link,
+    target: "_blank",
+    rel: "noreferrer"
+  }, "Shop Now")))))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Merch);
 
 /***/ }),
 
@@ -7427,6 +7518,16 @@ const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
 
 /***/ }),
 
+/***/ "./src/data/merch.json":
+/*!*****************************!*\
+  !*** ./src/data/merch.json ***!
+  \*****************************/
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('[{"title":"Wax Monkey Classic Tee","image":"/images/merch/wax-monkey-tee.jpg","price":"$30+","tag":"Best Seller","link":"https://www.bonfire.com/store/wax-monkey/"},{"title":"Wax Monkey Hoodie","image":"/images/merch/wax-monkey-hoodie.jpg","price":"$55+","tag":"Cozy Pick","link":"https://www.bonfire.com/store/wax-monkey/"},{"title":"Wax Monkey Tie Dye","image":"/images/merch/wax-monkey-tiedye.jpg","price":"$35+","tag":"Fan Favorite","link":"https://www.bonfire.com/store/wax-monkey/"}]');
+
+/***/ }),
+
 /***/ "./src/data/shows.json":
 /*!*****************************!*\
   !*** ./src/data/shows.json ***!
@@ -7449,13 +7550,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
 /* harmony import */ var _components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout/GlobalStyles */ "./src/components/Layout/GlobalStyles.jsx");
 /* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Nav */ "./src/components/Nav.jsx");
 /* harmony import */ var _components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/sections/Contact */ "./src/components/sections/Contact.jsx");
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Footer */ "./src/components/Footer.jsx");
 /* harmony import */ var _components_sections_shows__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/sections/shows */ "./src/components/sections/shows.jsx");
-/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
+/* harmony import */ var _components_sections_Merch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/sections/Merch */ "./src/components/sections/Merch.jsx");
+/* harmony import */ var _components_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/styles */ "./src/components/styles.js");
 
 
 
@@ -7464,19 +7566,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+
+const ProductGrid = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
   displayName: "pages__ProductGrid"
 })(["display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin-top:3rem;"]);
-const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+const ProductCard = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
   displayName: "pages__ProductCard"
 })(["background:#ffffff;border-radius:12px;border:1px solid #eaecef;padding:2rem;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;&:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}"]);
-const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].h3.withConfig({
+const ProductTitle = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h3.withConfig({
   displayName: "pages__ProductTitle"
 })(["font-size:1.5rem;margin-bottom:1rem;font-family:\"Cooper Black\",serif;font-style:italic;font-weight:700;color:#0a2640;"]);
-const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].p.withConfig({
+const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p.withConfig({
   displayName: "pages__ProductDescription"
 })(["font-size:1rem;line-height:1.6;color:#334d6e;margin-bottom:1.5rem;"]);
-const EmbedWrapper = styled_components__WEBPACK_IMPORTED_MODULE_7__["default"].div.withConfig({
+const EmbedWrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
   displayName: "pages__EmbedWrapper"
 })(["width:100%;overflow:hidden;border-radius:12px;margin:1rem 0 1.5rem;background:#f8fafc;iframe{width:100%;border:0;display:block;}.tiktok-embed{margin:0 auto !important;min-width:100% !important;max-width:100% !important;}"]);
 const TikTokEmbed = () => {
@@ -7534,9 +7637,9 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   content: "YNZP5SDN7XocdqXz-pA1QKWTgdSgxo_Z8CGbZFCEx_E"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "home"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroVideo, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroVideo, {
   id: "intro"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.BackgroundVideo, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.BackgroundVideo, {
   autoPlay: true,
   loop: true,
   muted: true,
@@ -7544,23 +7647,23 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   poster: "/images/porch+pic.jpg",
   src: "/videos/hero-wm.mp4",
   type: "video/mp4"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.SectionTitle, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.SectionTitle, {
   style: {
     color: "#fff"
   }
-}, "Wax Monkey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.MissionStatement, {
+}, "Wax Monkey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.MissionStatement, {
   style: {
     color: "#fff"
   }
-}, "A 5-piece jam band from Birmingham, Alabama blending southern rock, psychedelic sound, and improvisational jams."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroButton, {
+}, "A 5-piece jam band from Birmingham, Alabama blending southern rock, psychedelic sound, and improvisational jams."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "#products",
   style: {
     color: "#fff",
     borderColor: "#fff"
   }
-}, "Follow Us")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_shows__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.Section, {
+}, "Follow Us")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_shows__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.Section, {
   id: "products"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.SectionTitle, null, "Follow Us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Latest reel from Wax Monkey."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InstagramEmbed, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroButton, {
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.SectionTitle, null, "Follow Us"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "Instagram"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Latest reel from Wax Monkey."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InstagramEmbed, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.instagram.com/waxmonkey",
   target: "_blank",
   rel: "noreferrer"
@@ -7570,15 +7673,15 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   title: "Wax Monkey YouTube",
   allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
   allowFullScreen: true
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroButton, {
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.youtube.com/@waxmonkeyband",
   target: "_blank",
   rel: "noreferrer"
-}, "View YouTube")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "TikTok"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Short jams and live clips."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TikTokEmbed, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_6__.HeroButton, {
+}, "View YouTube")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "TikTok"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Short jams and live clips."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TikTokEmbed, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.tiktok.com/@waxmonkeyband",
   target: "_blank",
   rel: "noreferrer"
-}, "View TikTok")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+}, "View TikTok")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Merch__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_Contact__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Footer__WEBPACK_IMPORTED_MODULE_4__["default"], null));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);
 
 /***/ })

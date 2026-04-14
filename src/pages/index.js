@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Contact from "../components/sections/Contact";
 import Footer from "../components/Footer";
 import Shows from "../components/sections/shows";
+import Merch from "../components/sections/Merch";
 import {
   Section,
   SectionTitle,
@@ -261,7 +262,7 @@ const HomePage = () => (
         </ProductGrid>
       </Section>
 
-
+<Merch />
       <Contact />
     </main>
 

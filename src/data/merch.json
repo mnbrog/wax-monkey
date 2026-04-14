@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Wax Monkey Tie Dye",
+    "image": "/images/tiedie.jpg",
+    "price": "$32.99",
+    "tag": "Best Seller",
+    "link": "https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=adebdd85-9381-4443-b4d8-bc082edba303"
+  },
+  {
+    "title": "Wax Monkey Hoodie",
+    "image": "/images/hoodie.jpg",
+    "price": "$39.99",
+    "tag": "Cozy Pick",
+    "link": "https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=0d740304-caed-4523-9662-ec5f86c44f6e"
+  },
+  {
+    "title": "Wax Monkey T-Shirt",
+    "image": "/images/tshirt.jpg",
+    "price": "$32.99",
+    "tag": "Fan Favorite",
+    "link": "https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=17aa4d4d-796d-4c58-8119-c96fa6e47e6b"
+  }]
