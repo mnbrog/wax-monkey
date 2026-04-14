@@ -1,11 +1,143 @@
 import React from "react";
-import shows from "../data/shows.json";
+import styled from "styled-components";
+import { Section, SectionTitle, HeroButton } from "../styles";
+import shows from "../../data/shows.json";
+
+const ShowsWrapper = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+`;
+
+const MonthGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+`;
+
+const MonthHeading = styled.h3`
+  font-size: 2rem;
+  font-family: "Cooper Black", serif;
+  font-style: italic;
+  font-weight: 700;
+  color: #0a2640;
+  margin: 0;
+`;
+
+const ShowsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+const ShowCard = styled.div`
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #eaecef;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const ShowInfo = styled.div`
+  display: grid;
+  grid-template-columns: 120px 130px 1fr;
+  gap: 1rem;
+  width: 100%;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const InfoBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const InfoLabel = styled.span`
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #7a8ca5;
+  margin-bottom: 0.35rem;
+`;
+
+const InfoValue = styled.span`
+  font-size: 1rem;
+  color: #0a2640;
+  font-weight: 600;
+`;
+
+const VenueWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const VenueTop = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+`;
+
+const VenueName = styled.h4`
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0a2640;
+`;
+
+const CityState = styled.p`
+  margin: 0.35rem 0 0;
+  font-size: 1rem;
+  color: #334d6e;
+`;
+
+const Badge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a5a00;
+  background: rgba(245, 179, 1, 0.14);
+  border: 1px solid rgba(245, 179, 1, 0.28);
+`;
+
+const TicketButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  text-decoration: none;
+  pointer-events: ${({ $disabled }) => ($disabled ? "none" : "auto")};
+  opacity: ${({ $disabled }) => ($disabled ? 0.6 : 1)};
+`;
 
 const formatDate = (dateString) => {
   const date = new Date(`${dateString}T12:00:00`);
   return date.toLocaleDateString("en-US", {
     month: "short",
-    day: "numeric"
+    day: "numeric",
   });
 };
 
@@ -13,108 +145,79 @@ const getMonthLabel = (dateString) => {
   const date = new Date(`${dateString}T12:00:00`);
   return date.toLocaleDateString("en-US", {
     month: "long",
-    year: "numeric"
+    year: "numeric",
   });
 };
 
 const groupedShows = shows.reduce((acc, show) => {
   const month = getMonthLabel(show.date);
+
   if (!acc[month]) {
     acc[month] = [];
   }
+
   acc[month].push(show);
   return acc;
 }, {});
 
-export default function Shows() {
+const Shows = () => {
   return (
-    <section className="bg-black text-white py-20 px-6 md:px-10">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <p className="text-sm uppercase tracking-[0.35em] text-zinc-400 mb-3">
-            Wax Monkey
-          </p>
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight">
-            Upcoming Shows
-          </h2>
-          <div className="mt-4 h-px w-full bg-zinc-800" />
-        </div>
+    <Section id="shows">
+      <SectionTitle>Shows</SectionTitle>
 
-        <div className="space-y-14">
-          {Object.entries(groupedShows).map(([month, monthShows]) => (
-            <div key={month}>
-              <h3 className="text-2xl md:text-3xl font-medium text-zinc-100 mb-6">
-                {month}
-              </h3>
+      <ShowsWrapper>
+        {Object.entries(groupedShows).map(([month, monthShows]) => (
+          <MonthGroup key={month}>
+            <MonthHeading>{month}</MonthHeading>
 
-              <div className="space-y-3">
-                {monthShows.map((show, index) => (
-                  <div
-                    key={`${show.date}-${show.city}-${show.venue}-${index}`}
-                    className="group rounded-2xl border border-zinc-800 bg-zinc-950/80 px-5 py-5 transition-all duration-300 hover:border-zinc-600 hover:bg-zinc-900"
-                  >
-                    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                      <div className="grid grid-cols-1 sm:grid-cols-[120px_120px_1fr] gap-4 items-center w-full">
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
-                            Date
-                          </p>
-                          <p className="mt-1 text-lg font-semibold text-white">
-                            {formatDate(show.date)}
-                          </p>
-                        </div>
+            <ShowsList>
+              {monthShows.map((show, index) => {
+                const hasTicketLink = Boolean(show.ticketLink);
 
-                        <div>
-                          <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
-                            Day
-                          </p>
-                          <p className="mt-1 text-base text-zinc-200">
-                            {show.day}
-                          </p>
-                        </div>
+                return (
+                  <ShowCard key={`${show.date}-${show.city}-${show.venue}-${index}`}>
+                    <ShowInfo>
+                      <InfoBlock>
+                        <InfoLabel>Date</InfoLabel>
+                        <InfoValue>{formatDate(show.date)}</InfoValue>
+                      </InfoBlock>
 
-                        <div>
-                          <div className="flex items-center gap-3 flex-wrap">
-                            <p className="text-xl md:text-2xl font-semibold text-white">
-                              {show.venue}
-                            </p>
+                      <InfoBlock>
+                        <InfoLabel>Day</InfoLabel>
+                        <InfoValue>{show.day}</InfoValue>
+                      </InfoBlock>
 
-                            {show.featured && (
-                              <span className="inline-flex items-center rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.2em] text-amber-300">
-                                Special
-                              </span>
-                            )}
-                          </div>
+                      <VenueWrap>
+                        <VenueTop>
+                          <VenueName>{show.venue}</VenueName>
+                          {show.featured && <Badge>Featured</Badge>}
+                        </VenueTop>
 
-                          <p className="mt-1 text-sm md:text-base text-zinc-400">
-                            {show.city}, {show.state}
-                          </p>
-                        </div>
-                      </div>
+                        <CityState>
+                          {show.city}, {show.state}
+                        </CityState>
+                      </VenueWrap>
+                    </ShowInfo>
 
-                      <a
-                        href={show.ticketLink || "#"}
-                        target={show.ticketLink ? "_blank" : undefined}
-                        rel={show.ticketLink ? "noreferrer" : undefined}
-                        className={`inline-flex items-center justify-center rounded-full px-5 py-2 text-sm font-medium transition ${
-                          show.ticketLink
-                            ? "border border-white/15 bg-white text-black hover:bg-zinc-200"
-                            : "cursor-default border border-zinc-700 bg-zinc-900 text-zinc-500"
-                        }`}
-                        onClick={(e) => {
-                          if (!show.ticketLink) e.preventDefault();
-                        }}
-                      >
-                        {show.ticketLink ? "Tickets" : "Tickets Soon"}
-                      </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+                    <TicketButton
+                      href={hasTicketLink ? show.ticketLink : "#"}
+                      target={hasTicketLink ? "_blank" : undefined}
+                      rel={hasTicketLink ? "noreferrer" : undefined}
+                      $disabled={!hasTicketLink}
+                    >
+                      <HeroButton as="span">
+                        {hasTicketLink ? "Tickets" : "Tickets Soon"}
+                      </HeroButton>
+                    </TicketButton>
+                  </ShowCard>
+                );
+              })}
+            </ShowsList>
+          </MonthGroup>
+        ))}
+      </ShowsWrapper>
+    </Section>
   );
-}
+};
+
+export default Shows;
