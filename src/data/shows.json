@@ -5,7 +5,7 @@
     "city": "Jacksonville",
     "state": "FL",
     "venue": "The Blue Jay",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -14,7 +14,7 @@
     "city": "Charleston",
     "state": "SC",
     "venue": "The Pour House Deck",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -23,7 +23,7 @@
     "city": "Wilmington",
     "state": "NC",
     "venue": "Bowstring",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -41,7 +41,7 @@
     "city": "Roanoke",
     "state": "VA",
     "venue": "Martin's Downtown",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -50,7 +50,7 @@
     "city": "Boone",
     "state": "NC",
     "venue": "Boone Saloon",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -68,7 +68,7 @@
     "city": "Roanoke",
     "state": "VA",
     "venue": "NokeFest",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -131,7 +131,7 @@
     "city": "Norfolk",
     "state": "VA",
     "venue": "The Annex",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -158,7 +158,7 @@
     "city": "Hyannis",
     "state": "MA",
     "venue": "Neptune's",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -203,7 +203,7 @@
     "city": "New York City",
     "state": "NY",
     "venue": "Berlin",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -302,7 +302,7 @@
     "city": "Steamboat",
     "state": "CO",
     "venue": "Schmiggity's",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -311,7 +311,7 @@
     "city": "Denver",
     "state": "CO",
     "venue": "Cervantes' Other Side",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -320,7 +320,7 @@
     "city": "Littleton",
     "state": "CO",
     "venue": "Farm House Music Series",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -347,7 +347,7 @@
     "city": "Fort Collins",
     "state": "CO",
     "venue": "Aggie Theatre",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -356,7 +356,7 @@
     "city": "Boulder",
     "state": "CO",
     "venue": "Fox Theatre",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -365,7 +365,7 @@
     "city": "Eagle",
     "state": "CO",
     "venue": "Moes BBQ",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   },
   {
@@ -374,7 +374,7 @@
     "city": "Telluride",
     "state": "CO",
     "venue": "The Alibi",
-    "featured": true,
+    "featured": false,
     "ticketLink": ""
   }
 ]
