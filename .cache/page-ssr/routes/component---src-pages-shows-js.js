@@ -193,7 +193,7 @@ const ShowCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.w
 })(["background:#ffffff;border-radius:14px;border:1px solid #eaecef;padding:1.25rem 1.5rem;box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.25s ease,box-shadow 0.25s ease;display:flex;justify-content:space-between;align-items:center;gap:1rem;&:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.08);}@media (max-width:900px){flex-direction:column;align-items:flex-start;}"]);
 const ShowInfo = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "shows__ShowInfo"
-})(["display:grid;grid-template-columns:120px 130px 1fr;gap:1rem;width:100%;@media (max-width:900px){grid-template-columns:1fr;}"]);
+})(["display:grid;grid-template-columns:150px 1fr;gap:1rem;width:100%;@media (max-width:900px){grid-template-columns:1fr;}"]);
 const InfoBlock = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "shows__InfoBlock"
 })(["display:flex;flex-direction:column;"]);
@@ -202,7 +202,7 @@ const InfoLabel = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span
 })(["font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;color:#7a8ca5;margin-bottom:0.35rem;"]);
 const InfoValue = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span.withConfig({
   displayName: "shows__InfoValue"
-})(["font-size:1rem;color:#0a2640;font-weight:600;"]);
+})(["font-size:1rem;color:#0a2640;font-weight:600;letter-spacing:0.02em;"]);
 const VenueWrap = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "shows__VenueWrap"
 })(["display:flex;flex-direction:column;"]);
@@ -241,9 +241,7 @@ const getMonthLabel = dateString => {
 };
 const groupedShows = _data_shows_json__WEBPACK_IMPORTED_MODULE_2__.reduce((acc, show) => {
   const month = getMonthLabel(show.date);
-  if (!acc[month]) {
-    acc[month] = [];
-  }
+  if (!acc[month]) acc[month] = [];
   acc[month].push(show);
   return acc;
 }, {});
@@ -256,7 +254,15 @@ const Shows = () => {
     const hasTicketLink = Boolean(show.ticketLink);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowCard, {
       key: `${show.date}-${show.city}-${show.venue}-${index}`
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoBlock, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoLabel, null, "Date"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoValue, null, show.day, " ", formatDate(show.date))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoBlock, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoLabel, null, "Date"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoValue, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      style: {
+        opacity: 0.8
+      }
+    }, show.day), " \xB7", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      style: {
+        fontWeight: 700
+      }
+    }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
       href: hasTicketLink ? show.ticketLink : "#",
       target: hasTicketLink ? "_blank" : undefined,
       rel: hasTicketLink ? "noreferrer" : undefined,

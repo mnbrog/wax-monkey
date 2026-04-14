@@ -2,12 +2,11 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Upright Medical Solutions`,
-    description: `Predict Risk. Prevent Falls. – Gatsby single-page site for Fall Risk Assessment.`,
+    title: `Wax Monkey`,
+    description: `Wax Monkey official site – shows, merch, and booking.`,
     author: `@mnbrog`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
-    // (Manifest / Offline plugins removed)
   ],
-}
+};
