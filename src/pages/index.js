@@ -184,6 +184,8 @@ const HomePage = () => (
         </HeroContent>
       </HeroVideo>
 
+      <Shows />
+
       <Section id="products">
         <SectionTitle>Follow Us</SectionTitle>
 
@@ -259,7 +261,6 @@ const HomePage = () => (
         </ProductGrid>
       </Section>
 
-      <Shows />
 
       <Contact />
     </main>
