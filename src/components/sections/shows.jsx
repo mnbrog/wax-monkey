@@ -56,7 +56,7 @@ const ShowCard = styled.div`
 
 const ShowInfo = styled.div`
   display: grid;
-  grid-template-columns: 120px 130px 1fr;
+  grid-template-columns: 150px 1fr;
   gap: 1rem;
   width: 100%;
 
@@ -82,6 +82,7 @@ const InfoValue = styled.span`
   font-size: 1rem;
   color: #0a2640;
   font-weight: 600;
+  letter-spacing: 0.02em;
 `;
 
 const VenueWrap = styled.div`
@@ -151,11 +152,7 @@ const getMonthLabel = (dateString) => {
 
 const groupedShows = shows.reduce((acc, show) => {
   const month = getMonthLabel(show.date);
-
-  if (!acc[month]) {
-    acc[month] = [];
-  }
-
+  if (!acc[month]) acc[month] = [];
   acc[month].push(show);
   return acc;
 }, {});
@@ -179,12 +176,12 @@ const Shows = () => {
                     <ShowInfo>
                       <InfoBlock>
                         <InfoLabel>Date</InfoLabel>
-                        <InfoValue>{formatDate(show.date)}</InfoValue>
-                      </InfoBlock>
-
-                      <InfoBlock>
-                        <InfoLabel>Day</InfoLabel>
-                        <InfoValue>{show.day}</InfoValue>
+                        <InfoValue>
+                          <span style={{ opacity: 0.8 }}>{show.day}</span> ·{" "}
+                          <span style={{ fontWeight: 700 }}>
+                            {formatDate(show.date)}
+                          </span>
+                        </InfoValue>
                       </InfoBlock>
 
                       <VenueWrap>
