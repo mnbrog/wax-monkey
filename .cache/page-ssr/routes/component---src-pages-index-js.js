@@ -7524,7 +7524,7 @@ const ProcessStep = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].di
   \*****************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('[{"title":"Wax Monkey Classic Tee","image":"/images/merch/wax-monkey-tee.jpg","price":"$30+","tag":"Best Seller","link":"https://www.bonfire.com/store/wax-monkey/"},{"title":"Wax Monkey Hoodie","image":"/images/merch/wax-monkey-hoodie.jpg","price":"$55+","tag":"Cozy Pick","link":"https://www.bonfire.com/store/wax-monkey/"},{"title":"Wax Monkey Tie Dye","image":"/images/merch/wax-monkey-tiedye.jpg","price":"$35+","tag":"Fan Favorite","link":"https://www.bonfire.com/store/wax-monkey/"}]');
+module.exports = /*#__PURE__*/JSON.parse('[{"title":"Wax Monkey Tie Dye","image":"/images/tiedie.jpg","price":"$32.99","tag":"Best Seller","link":"https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=adebdd85-9381-4443-b4d8-bc082edba303"},{"title":"Wax Monkey Hoodie","image":"/images/hoodie.jpg","price":"$39.99","tag":"Cozy Pick","link":"https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=0d740304-caed-4523-9662-ec5f86c44f6e"},{"title":"Wax Monkey T-Shirt","image":"/images/tshirt.jpg","price":"$32.99","tag":"Fan Favorite","link":"https://www.bonfire.com/wax-monkey-eco-triblend-tee/?productType=17aa4d4d-796d-4c58-8119-c96fa6e47e6b"}]');
 
 /***/ }),
 
@@ -7670,8 +7670,10 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
 }, "View Instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "YouTube"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Full performances and sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
   src: "https://www.youtube.com/embed/ivRSnX2bd_c",
   height: "220",
-  title: "Wax Monkey YouTube",
-  allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+  title: "Mama's Cookin' -- Wax Monkey",
+  frameBorder: "0",
+  allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+  referrerPolicy: "strict-origin-when-cross-origin",
   allowFullScreen: true
 }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.youtube.com/@waxmonkeyband",

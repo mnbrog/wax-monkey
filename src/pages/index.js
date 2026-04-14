@@ -220,14 +220,16 @@ const HomePage = () => (
               </ProductDescription>
 
               <EmbedWrapper>
-                <iframe
-                  src="https://www.youtube.com/embed/ivRSnX2bd_c"
-                  height="220"
-                  title="Wax Monkey YouTube"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </EmbedWrapper>
+              <iframe
+                src="https://www.youtube.com/embed/ivRSnX2bd_c"
+                height="220"
+                title="Mama's Cookin' -- Wax Monkey"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </EmbedWrapper>
             </div>
 
             <HeroButton
