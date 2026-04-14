@@ -219,19 +219,22 @@ const HomePage = () => (
                 Full performances and sessions.
               </ProductDescription>
 
-              <EmbedWrapper>
-              <iframe
-                src="https://www.youtube.com/embed/ivRSnX2bd_c"
-                height="220"
-                title="Mama's Cookin' -- Wax Monkey"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              />
-            </EmbedWrapper>
             </div>
-
+<div style={{ width: "100%", aspectRatio: "16 / 9" }}>
+  <iframe
+    src="https://www.youtube.com/embed/dPB4KC2Pb_c?autoplay=1&mute=1&rel=0&modestbranding=1"
+    title="Birds of a Feather - Phish (Wax Monkey Cover)"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    style={{
+      width: "100%",
+      height: "100%",
+      borderRadius: "12px"
+    }}
+  />
+</div>
             <HeroButton
               href="https://www.youtube.com/@waxmonkeyband"
               target="_blank"

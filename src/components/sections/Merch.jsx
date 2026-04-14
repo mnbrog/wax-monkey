@@ -91,6 +91,8 @@ const MerchPrice = styled.p`
 const MerchActions = styled.div`
   margin-top: auto;
   padding-top: 0.5rem;
+  display: flex;
+  justify-content: center;
 `;
 
 const Merch = () => {

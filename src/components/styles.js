@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const COLORS = {
   darkBlue: "#0a2640",
-  teal: "#6321ee",
+  teal: "#0a2640",
   cardBg: "#FFFFFF",
   lightTeal: "#A7F3D0",
   seriousRed: "#EF4444",

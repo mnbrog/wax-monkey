@@ -27,26 +27,35 @@ const Contact = () => (
 
        <ContactDetail style={{ justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
   
-  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-    <FaEnvelope color="#6321ee" size="20" />
-    <a href="mailto:waxmonkeyband@gmail.com">
-      waxmonkeyband@gmail.com
-    </a>
-  </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+        <FaEnvelope color="#0a2640" size={20} />
+        <a
+          href="mailto:waxmonkeyband@gmail.com"
+          style={{ color: "#0a2640", textDecoration: "none", fontWeight: 500 }}
+        >
+          waxmonkeyband@gmail.com
+        </a>
+      </div>
 
-  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
-    <FaEnvelope color="#6321ee" size="20" />
-    <a href="mailto:luke@atlas-touring.com">
-      luke@atlas-touring.com
-    </a>
-  </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
+        <FaEnvelope color="#0a2640" size={20} />
+        <a
+          href="mailto:luke@atlas-touring.com"
+          style={{ color: "#0a2640", textDecoration: "none", fontWeight: 500 }}
+        >
+          luke@atlas-touring.com
+        </a>
+      </div>
 
-  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
-    <FaEnvelope color="#6321ee" size="20" />
-    <a href="mailto:garrett@atlas-touring.com">
-      garrett@atlas-touring.com
-    </a>
-  </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginTop: "0.5rem" }}>
+        <FaEnvelope color="#0a2640" size={20} />
+        <a
+          href="mailto:garrett@atlas-touring.com"
+          style={{ color: "#0a2640", textDecoration: "none", fontWeight: 500 }}
+        >
+          garrett@atlas-touring.com
+        </a>
+      </div>
 
 </ContactDetail>
       </ContactInfo>
