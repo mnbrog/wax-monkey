@@ -160,8 +160,8 @@ const HomePage = () => (
           loop
           muted
           playsInline
-          poster="/images/porch+pic.jpg"
-          src="/videos/hero-wm.mp4"
+          poster="/images/heroimg.jpg"
+          src="/videos/hero-wm."
           type="video/mp4"
         />
         <HeroContent>

@@ -7002,10 +7002,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     gap: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:waxmonkeyband@gmail.com"
+  href: "mailto:waxmonkeyband@gmail.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "waxmonkeyband@gmail.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   style: {
     display: "flex",
@@ -7014,10 +7019,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     marginTop: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:luke@atlas-touring.com"
+  href: "mailto:luke@atlas-touring.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "luke@atlas-touring.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   style: {
     display: "flex",
@@ -7026,10 +7036,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     marginTop: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:garrett@atlas-touring.com"
+  href: "mailto:garrett@atlas-touring.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "garrett@atlas-touring.com")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, {
   name: "booking-form",
   method: "POST",
@@ -7138,7 +7153,7 @@ const MerchPrice = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p.w
 })(["margin:0;color:#334d6e;font-size:1rem;font-weight:600;"]);
 const MerchActions = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "Merch__MerchActions"
-})(["margin-top:auto;padding-top:0.5rem;"]);
+})(["margin-top:auto;padding-top:0.5rem;display:flex;justify-content:center;"]);
 const Merch = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
     id: "merch"
@@ -7644,8 +7659,8 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   loop: true,
   muted: true,
   playsInline: true,
-  poster: "/images/porch+pic.jpg",
-  src: "/videos/hero-wm.mp4",
+  poster: "/images/heroimg.jpg",
+  src: "/videos/hero-wm.",
   type: "video/mp4"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.SectionTitle, {
   style: {
@@ -7667,15 +7682,24 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   href: "https://www.instagram.com/waxmonkey",
   target: "_blank",
   rel: "noreferrer"
-}, "View Instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "YouTube"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Full performances and sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(EmbedWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
-  src: "https://www.youtube.com/embed/ivRSnX2bd_c",
-  height: "220",
-  title: "Mama's Cookin' -- Wax Monkey",
+}, "View Instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "YouTube"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Full performances and sessions.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  style: {
+    width: "100%",
+    aspectRatio: "16 / 9"
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+  src: "https://www.youtube.com/embed/dPB4KC2Pb_c?autoplay=1&mute=1&rel=0&modestbranding=1",
+  title: "Birds of a Feather - Phish (Wax Monkey Cover)",
   frameBorder: "0",
   allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
   referrerPolicy: "strict-origin-when-cross-origin",
-  allowFullScreen: true
-}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
+  allowFullScreen: true,
+  style: {
+    width: "100%",
+    height: "100%",
+    borderRadius: "12px"
+  }
+})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.youtube.com/@waxmonkeyband",
   target: "_blank",
   rel: "noreferrer"

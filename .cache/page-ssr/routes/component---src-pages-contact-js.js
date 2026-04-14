@@ -7002,10 +7002,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     gap: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:waxmonkeyband@gmail.com"
+  href: "mailto:waxmonkeyband@gmail.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "waxmonkeyband@gmail.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   style: {
     display: "flex",
@@ -7014,10 +7019,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     marginTop: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:luke@atlas-touring.com"
+  href: "mailto:luke@atlas-touring.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "luke@atlas-touring.com")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   style: {
     display: "flex",
@@ -7026,10 +7036,15 @@ const Contact = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().
     marginTop: "0.5rem"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaEnvelope, {
-  color: "#6321ee",
-  size: "20"
+  color: "#0a2640",
+  size: 20
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-  href: "mailto:garrett@atlas-touring.com"
+  href: "mailto:garrett@atlas-touring.com",
+  style: {
+    color: "#0a2640",
+    textDecoration: "none",
+    fontWeight: 500
+  }
 }, "garrett@atlas-touring.com")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.ContactForm, {
   name: "booking-form",
   method: "POST",
