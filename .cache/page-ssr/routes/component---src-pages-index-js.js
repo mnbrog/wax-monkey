@@ -7275,7 +7275,7 @@ const Shows = () => {
       }
     }, show.day), " \xB7", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
       style: {
-        fontWeight: 700
+        fontWeight: 600
       }
     }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
       href: hasTicketLink ? show.ticketLink : "#",

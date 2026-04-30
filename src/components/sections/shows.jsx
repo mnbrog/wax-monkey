@@ -178,7 +178,7 @@ const Shows = () => {
                         <InfoLabel>Date</InfoLabel>
                         <InfoValue>
                           <span style={{ opacity: 0.8 }}>{show.day}</span> ·{" "}
-                          <span style={{ fontWeight: 700 }}>
+                          <span style={{ fontWeight: 600}}>
                             {formatDate(show.date)}
                           </span>
                         </InfoValue>
