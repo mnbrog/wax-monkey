@@ -23,7 +23,7 @@
     "city": "Wilmington",
     "state": "NC",
     "venue": "Bowstring (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-06-04",
@@ -49,7 +49,7 @@
     "city": "Boone",
     "state": "NC",
     "venue": "Boone Saloon (Day of Show Tickets)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-06-12",
@@ -57,7 +57,7 @@
     "city": "Chattanooga",
     "state": "TN",
     "venue": "Hifi Clydes (Day of Show Tickets)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-06-13",
@@ -74,7 +74,7 @@
     "city": "Asheville",
     "state": "NC",
     "venue": "Sierra Nevada Brewing (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-06-25",
@@ -127,7 +127,7 @@
     "city": "Marshfield",
     "state": "MA",
     "venue": "Levitate Backyard (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-16",
@@ -135,7 +135,7 @@
     "city": "New Bedford",
     "state": "MA",
     "venue": "Cisco Brewing (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-17",
@@ -152,7 +152,7 @@
     "city": "Stowe",
     "state": "VT",
     "venue": "Shakedown Lounge (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-19",
@@ -160,7 +160,7 @@
     "city": "Hampton Beach",
     "state": "NH",
     "venue": "Wally's (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-21",
@@ -168,7 +168,7 @@
     "city": "Nantucket",
     "state": "MA",
     "venue": "Cisco Brewing (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-22",
@@ -176,7 +176,7 @@
     "city": "Nantucket",
     "state": "MA",
     "venue": "Cisco Brewing (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-24",
@@ -202,7 +202,7 @@
     "city": "Ocean City",
     "state": "MD",
     "venue": "Fager's Island (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-07-28",
@@ -246,7 +246,7 @@
     "city": "Swisher",
     "state": "IA",
     "venue": "Cedar Ridge Distillery (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-08-04",
@@ -272,7 +272,7 @@
     "city": "Evergreen",
     "state": "CO",
     "venue": "Little Bear Saloon (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-08-08",
@@ -298,7 +298,7 @@
     "city": "Littleton",
     "state": "CO",
     "venue": "Farm House Music Series (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-08-16",
@@ -306,7 +306,7 @@
     "city": "Colorado Springs",
     "state": "CO",
     "venue": "Vultures (Day of Show Tickets)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-08-17",
@@ -341,7 +341,7 @@
     "city": "Eagle",
     "state": "CO",
     "venue": "Moes BBQ (Free Show!)",
-    "featured": false,
+    "featured": false
   },
   {
     "date": "2026-08-22",
