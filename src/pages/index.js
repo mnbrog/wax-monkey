@@ -78,6 +78,138 @@ const EmbedWrapper = styled.div`
   }
 `;
 
+const AlbumReleaseCard = styled.div`
+  margin: clamp(0.85rem, 2vh, 1.25rem) auto 0;
+  width: min(92vw, 620px);
+  padding: clamp(0.9rem, 2vw, 1.25rem);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+
+  @media (max-width: 480px) {
+    width: min(94vw, 420px);
+    padding: 0.85rem;
+    border-radius: 14px;
+  }
+`;
+
+const AlbumEyebrow = styled.p`
+  margin: 0 0 0.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: clamp(0.62rem, 1.7vw, 0.72rem);
+  font-weight: 800;
+`;
+
+const AlbumTitle = styled.h2`
+  margin: 0 0 0.45rem;
+  color: #fff;
+  font-family: "Cooper Black", serif;
+  font-style: italic;
+  font-size: clamp(1.8rem, 6vw, 3.35rem);
+  line-height: 0.95;
+  text-align: center;
+`;
+
+const MusicButtonRow = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.9rem 0 0.85rem;
+
+  @media (max-width: 430px) {
+    gap: 0.5rem;
+  }
+`;
+
+const MusicButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: clamp(0.78rem, 2vw, 0.9rem);
+  font-weight: 800;
+  line-height: 1;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  background: ${({ $variant }) =>
+    $variant === "spotify" ? "#1DB954" : "#fff"};
+  color: #111;
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+
+  @media (max-width: 430px) {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 1rem;
+  }
+`;
+
+const HeroMusicEmbeds = styled.div`
+  width: 100%;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 0.7rem;
+  margin-top: 0.2rem;
+
+  iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    display: block;
+    background: #000;
+  }
+
+  .spotify-player {
+    height: 152px;
+  }
+
+  .apple-player {
+    height: 175px;
+  }
+
+  @media (max-width: 640px) {
+    max-width: 420px;
+    grid-template-columns: 1fr;
+
+    .spotify-player {
+      height: 152px;
+    }
+
+    .apple-player {
+      height: 175px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .spotify-player {
+      height: 140px;
+    }
+
+    .apple-player {
+      height: 165px;
+    }
+  }
+`;
+
 const TikTokEmbed = () => {
   useEffect(() => {
     const existingScript = document.querySelector(
@@ -150,23 +282,55 @@ const HomePage = () => (
       name="google-site-verification"
       content="YNZP5SDN7XocdqXz-pA1QKWTgdSgxo_Z8CGbZFCEx_E"
     />
+
     <GlobalStyles />
     <Nav active="home" />
 
     <main>
-      <HeroVideo id="intro">
+      <HeroVideo
+        id="intro"
+        style={{
+          minHeight: "100svh",
+          overflow: "hidden"
+        }}
+      >
         <BackgroundVideo
           autoPlay
           loop
           muted
           playsInline
           poster="/images/heroimg.jpg"
-          src="/videos/hero-wm."
+          src="/videos/hero-wm.mp4"
           type="video/mp4"
         />
-        <HeroContent>
-          <AboutIntroWrapper>
-            <SectionTitle style={{ color: "#fff" }}>
+
+        <HeroContent
+          style={{
+            justifyContent: "flex-start",
+            alignItems: "center",
+            paddingTop: "clamp(6rem, 12vh, 8rem)",
+            paddingBottom: "clamp(2rem, 6vh, 4rem)",
+            boxSizing: "border-box",
+            overflow: "visible"
+          }}
+        >
+          <AboutIntroWrapper
+            style={{
+              textAlign: "center",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}
+          >
+            <SectionTitle
+              style={{
+                color: "#fff",
+                lineHeight: 1.05,
+                marginTop: 0,
+                paddingTop: "0.15em"
+              }}
+            >
               Wax Monkey
             </SectionTitle>
 
@@ -175,9 +339,62 @@ const HomePage = () => (
               rock, psychedelic sound, and improvisational jams.
             </MissionStatement>
 
+            <AlbumReleaseCard>
+              <AlbumEyebrow>New Album Out Now</AlbumEyebrow>
+
+              <AlbumTitle>Encompass</AlbumTitle>
+
+              <MissionStatement style={{ color: "#fff", marginBottom: 0 }}>
+                Stream the new Wax Monkey album now on Spotify and Apple Music.
+              </MissionStatement>
+
+              <MusicButtonRow>
+                <MusicButton
+                  $variant="spotify"
+                  href="https://open.spotify.com/album/72cQh9jRMPDkRj6kfRsbQZ?si=89ac7deca78e478b"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Listen on Spotify
+                </MusicButton>
+
+                <MusicButton
+                  href="https://music.apple.com/us/album/encompass/6777398019"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Listen on Apple Music
+                </MusicButton>
+              </MusicButtonRow>
+
+              <HeroMusicEmbeds>
+                <iframe
+                  className="spotify-player"
+                  title="Encompass by Wax Monkey on Spotify"
+                  src="https://open.spotify.com/embed/album/72cQh9jRMPDkRj6kfRsbQZ?utm_source=generator&si=89ac7deca78e478b"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
+
+                <iframe
+                  className="apple-player"
+                  title="Encompass by Wax Monkey on Apple Music"
+                  allow="autoplay *; encrypted-media *; fullscreen *"
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                  src="https://embed.music.apple.com/us/album/encompass/6777398019"
+                />
+              </HeroMusicEmbeds>
+            </AlbumReleaseCard>
+
             <HeroButton
               href="#products"
-              style={{ color: "#fff", borderColor: "#fff" }}
+              style={{
+                color: "#fff",
+                borderColor: "#fff",
+                marginTop: "1.5rem"
+              }}
             >
               Follow Us
             </HeroButton>
@@ -194,6 +411,7 @@ const HomePage = () => (
           <ProductCard>
             <div>
               <ProductTitle>Instagram</ProductTitle>
+
               <ProductDescription>
                 Latest reel from Wax Monkey.
               </ProductDescription>
@@ -215,26 +433,28 @@ const HomePage = () => (
           <ProductCard>
             <div>
               <ProductTitle>YouTube</ProductTitle>
+
               <ProductDescription>
                 Full performances and sessions.
               </ProductDescription>
 
+              <div style={{ width: "100%", aspectRatio: "16 / 9" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/dPB4KC2Pb_c?autoplay=1&mute=1&rel=0&modestbranding=1"
+                  title="Birds of a Feather - Phish Wax Monkey Cover"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    borderRadius: "12px"
+                  }}
+                />
+              </div>
             </div>
-<div style={{ width: "100%", aspectRatio: "16 / 9" }}>
-  <iframe
-    src="https://www.youtube.com/embed/dPB4KC2Pb_c?autoplay=1&mute=1&rel=0&modestbranding=1"
-    title="Birds of a Feather - Phish (Wax Monkey Cover)"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-    style={{
-      width: "100%",
-      height: "100%",
-      borderRadius: "12px"
-    }}
-  />
-</div>
+
             <HeroButton
               href="https://www.youtube.com/@waxmonkeyband"
               target="_blank"
@@ -247,6 +467,7 @@ const HomePage = () => (
           <ProductCard>
             <div>
               <ProductTitle>TikTok</ProductTitle>
+
               <ProductDescription>
                 Short jams and live clips.
               </ProductDescription>
@@ -267,7 +488,7 @@ const HomePage = () => (
         </ProductGrid>
       </Section>
 
-<Merch />
+      <Merch />
       <Contact />
     </main>
 

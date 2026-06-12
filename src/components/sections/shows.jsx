@@ -120,8 +120,19 @@ const Badge = styled.span`
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: #8a5a00;
-  background: rgba(245, 179, 1, 0.14);
+  background: rgba(46, 25, 143, 0.14);
   border: 1px solid rgba(245, 179, 1, 0.28);
+`;
+
+const ActionButtons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `;
 
 const TicketButton = styled.a`
@@ -178,7 +189,7 @@ const Shows = () => {
                         <InfoLabel>Date</InfoLabel>
                         <InfoValue>
                           <span style={{ opacity: 0.8 }}>{show.day}</span> ·{" "}
-                          <span style={{ fontWeight: 600}}>
+                          <span style={{ fontWeight: 600 }}>
                             {formatDate(show.date)}
                           </span>
                         </InfoValue>
@@ -188,6 +199,7 @@ const Shows = () => {
                         <VenueTop>
                           <VenueName>{show.venue}</VenueName>
                           {show.featured && <Badge>Low Tickets</Badge>}
+                          {show.freeShow && <Badge>Free Show</Badge>}
                         </VenueTop>
 
                         <CityState>
@@ -196,16 +208,18 @@ const Shows = () => {
                       </VenueWrap>
                     </ShowInfo>
 
-                    <TicketButton
-                      href={hasTicketLink ? show.ticketLink : "#"}
-                      target={hasTicketLink ? "_blank" : undefined}
-                      rel={hasTicketLink ? "noreferrer" : undefined}
-                      $disabled={!hasTicketLink}
-                    >
-                      <HeroButton as="span">
-                        {hasTicketLink ? "Tickets" : "Tickets Soon"}
-                      </HeroButton>
-                    </TicketButton>
+                    <ActionButtons>
+                      <TicketButton
+                        href={hasTicketLink ? show.ticketLink : "#"}
+                        target={hasTicketLink ? "_blank" : undefined}
+                        rel={hasTicketLink ? "noreferrer" : undefined}
+                        $disabled={!hasTicketLink}
+                      >
+                        <HeroButton as="span">
+                          {hasTicketLink ? "Tickets" : "Tickets Soon"}
+                        </HeroButton>
+                      </TicketButton>
+                    </ActionButtons>
                   </ShowCard>
                 );
               })}

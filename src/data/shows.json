@@ -22,8 +22,9 @@
     "day": "Wednesday",
     "city": "Wilmington",
     "state": "NC",
-    "venue": "Bowstring (Free Show!)",
-    "featured": false
+    "venue": "Bowstring",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-06-04",
@@ -73,8 +74,9 @@
     "day": "Sunday",
     "city": "Asheville",
     "state": "NC",
-    "venue": "Sierra Nevada Brewing (Free Show!)",
-    "featured": false
+    "venue": "Sierra Nevada Brewing",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-06-25",
@@ -126,16 +128,18 @@
     "day": "Wednesday",
     "city": "Marshfield",
     "state": "MA",
-    "venue": "Levitate Backyard (Free Show!)",
-    "featured": false
+    "venue": "Levitate Backyard",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-16",
     "day": "Thursday",
     "city": "New Bedford",
     "state": "MA",
-    "venue": "Cisco Brewing (Free Show!)",
-    "featured": false
+    "venue": "Cisco Brewing",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-17",
@@ -151,32 +155,36 @@
     "day": "Saturday",
     "city": "Stowe",
     "state": "VT",
-    "venue": "Shakedown Lounge (Free Show!)",
-    "featured": false
+    "venue": "Shakedown Lounge",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-19",
     "day": "Sunday",
     "city": "Hampton Beach",
     "state": "NH",
-    "venue": "Wally's (Free Show!)",
-    "featured": false
+    "venue": "Wally's",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-21",
     "day": "Tuesday",
     "city": "Nantucket",
     "state": "MA",
-    "venue": "Cisco Brewing (Free Show!)",
-    "featured": false
+    "venue": "Cisco Brewing",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-22",
     "day": "Wednesday",
     "city": "Nantucket",
     "state": "MA",
-    "venue": "Cisco Brewing (Free Show!)",
-    "featured": false
+    "venue": "Cisco Brewing",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-24",
@@ -201,8 +209,9 @@
     "day": "Sunday",
     "city": "Ocean City",
     "state": "MD",
-    "venue": "Fager's Island (Free Show!)",
-    "featured": false
+    "venue": "Fager's Island",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-07-28",
@@ -245,8 +254,9 @@
     "day": "Sunday",
     "city": "Swisher",
     "state": "IA",
-    "venue": "Cedar Ridge Distillery (Free Show!)",
-    "featured": false
+    "venue": "Cedar Ridge Distillery",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-08-04",
@@ -271,8 +281,9 @@
     "day": "Friday",
     "city": "Evergreen",
     "state": "CO",
-    "venue": "Little Bear Saloon (Free Show!)",
-    "featured": false
+    "venue": "Little Bear Saloon",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-08-08",
@@ -297,8 +308,9 @@
     "day": "Saturday",
     "city": "Littleton",
     "state": "CO",
-    "venue": "Farm House Music Series (Free Show!)",
-    "featured": false
+    "venue": "Farm House Music Series",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-08-16",
@@ -340,8 +352,9 @@
     "day": "Friday",
     "city": "Eagle",
     "state": "CO",
-    "venue": "Moes BBQ (Free Show!)",
-    "featured": false
+    "venue": "Moes BBQ",
+    "featured": false,
+    "freeShow": true
   },
   {
     "date": "2026-08-22",
