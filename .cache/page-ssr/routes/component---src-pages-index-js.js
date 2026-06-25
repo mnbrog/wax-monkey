@@ -7232,7 +7232,10 @@ const CityState = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].p.wi
 })(["margin:0.35rem 0 0;font-size:1rem;color:#334d6e;"]);
 const Badge = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].span.withConfig({
   displayName: "shows__Badge"
-})(["display:inline-flex;align-items:center;padding:0.3rem 0.65rem;border-radius:999px;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#8a5a00;background:rgba(245,179,1,0.14);border:1px solid rgba(245,179,1,0.28);"]);
+})(["display:inline-flex;align-items:center;padding:0.3rem 0.65rem;border-radius:999px;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#8a5a00;background:rgba(46,25,143,0.14);border:1px solid rgba(245,179,1,0.28);"]);
+const ActionButtons = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
+  displayName: "shows__ActionButtons"
+})(["display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;@media (max-width:900px){width:100%;}"]);
 const TicketButton = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].a.withConfig({
   displayName: "shows__TicketButton"
 })(["display:inline-flex;align-items:center;justify-content:center;min-width:150px;text-decoration:none;pointer-events:", ";opacity:", ";"], ({
@@ -7254,13 +7257,21 @@ const getMonthLabel = dateString => {
     year: "numeric"
   });
 };
-const groupedShows = _data_shows_json__WEBPACK_IMPORTED_MODULE_2__.reduce((acc, show) => {
-  const month = getMonthLabel(show.date);
-  if (!acc[month]) acc[month] = [];
-  acc[month].push(show);
-  return acc;
-}, {});
+const isUpcomingOrToday = dateString => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const showDate = new Date(`${dateString}T00:00:00`);
+  showDate.setHours(0, 0, 0, 0);
+  return showDate >= today;
+};
 const Shows = () => {
+  const visibleShows = _data_shows_json__WEBPACK_IMPORTED_MODULE_2__.filter(show => isUpcomingOrToday(show.date));
+  const groupedShows = visibleShows.reduce((acc, show) => {
+    const month = getMonthLabel(show.date);
+    if (!acc[month]) acc[month] = [];
+    acc[month].push(show);
+    return acc;
+  }, {});
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.Section, {
     id: "shows"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.SectionTitle, null, "Shows"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowsWrapper, null, Object.entries(groupedShows).map(([month, monthShows]) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MonthGroup, {
@@ -7277,14 +7288,14 @@ const Shows = () => {
       style: {
         fontWeight: 600
       }
-    }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
+    }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets"), show.freeShow && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Free Show")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ActionButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
       href: hasTicketLink ? show.ticketLink : "#",
       target: hasTicketLink ? "_blank" : undefined,
       rel: hasTicketLink ? "noreferrer" : undefined,
       $disabled: !hasTicketLink
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles__WEBPACK_IMPORTED_MODULE_1__.HeroButton, {
       as: "span"
-    }, hasTicketLink ? "Tickets" : "Tickets Soon")));
+    }, hasTicketLink ? "Tickets" : "Tickets Soon"))));
   }))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Shows);
@@ -7555,7 +7566,7 @@ module.exports = /*#__PURE__*/JSON.parse('[{"title":"Wax Monkey Tie Dye","image"
   \*****************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('[{"date":"2026-05-28","day":"Thursday","city":"Jacksonville","state":"FL","venue":"The Blue Jay","featured":false,"ticketLink":"https://app.opendate.io/e/wax-monkey-may-28-2026-646017"},{"date":"2026-05-29","day":"Friday","city":"Charleston","state":"SC","venue":"The Pour House Deck","featured":false,"ticketLink":"https://aftontickets.com/event/buyticket/38jynrl7x7/preview"},{"date":"2026-06-03","day":"Wednesday","city":"Wilmington","state":"NC","venue":"Bowstring (Free Show!)","featured":false},{"date":"2026-06-04","day":"Thursday","city":"Richmond","state":"VA","venue":"Get Tight Lounge","featured":false,"ticketLink":"https://app.opendate.io/e/wax-monkey-and-the-sugar-hollows-june-04-2026-672742"},{"date":"2026-06-05","day":"Friday","city":"Roanoke","state":"VA","venue":"Martin\'s Downtown","featured":false,"ticketLink":"https://events.ticketleap.com/tickets/martins-downtown/wax-monkey-live-martin-s-downtown"},{"date":"2026-06-06","day":"Saturday","city":"Boone","state":"NC","venue":"Boone Saloon (Day of Show Tickets)","featured":false},{"date":"2026-06-12","day":"Friday","city":"Chattanooga","state":"TN","venue":"Hifi Clydes (Day of Show Tickets)","featured":false},{"date":"2026-06-13","day":"Saturday","city":"Roanoke","state":"VA","venue":"NokeFest","featured":false,"ticketLink":"https://aftontickets.com/nokefest"},{"date":"2026-06-14","day":"Sunday","city":"Asheville","state":"NC","venue":"Sierra Nevada Brewing (Free Show!)","featured":false},{"date":"2026-06-25","day":"Thursday","city":"Franklin","state":"TN","venue":"Kimbros","featured":false,"ticketLink":"https://tunehatch.com/shows/wax-monkey"},{"date":"2026-06-26","day":"Friday","city":"Lexington","state":"KY","venue":"The Burl","featured":false,"ticketLink":"https://www.theburltickets.com//events/buy-tickets/2GdK8S9wd6zRu6uVJQZf"},{"date":"2026-06-28","day":"Sunday","city":"Rothbury","state":"MI","venue":"Electric Forest","featured":false,"ticketLink":"https://www.electricforest.com/"},{"date":"2026-07-10","day":"Friday","city":"Charlotte","state":"NC","venue":"The Evening Muse","featured":false,"ticketLink":"https://www.eventbrite.com/e/wax-monkey-tickets-1987414180313"},{"date":"2026-07-11","day":"Saturday","city":"Norfolk","state":"VA","venue":"The Annex","featured":false,"ticketLink":"https://www.etix.com/ticket/p/67402001/wax-monkey-at-the-annex-norfolk-the-annex-nfk?partner_id=6880"},{"date":"2026-07-15","day":"Wednesday","city":"Marshfield","state":"MA","venue":"Levitate Backyard (Free Show!)","featured":false},{"date":"2026-07-16","day":"Thursday","city":"New Bedford","state":"MA","venue":"Cisco Brewing (Free Show!)","featured":false},{"date":"2026-07-17","day":"Friday","city":"Hyannis","state":"MA","venue":"Neptune\'s","featured":false,"ticketLink":"https://calendar.neptunes.cc/shows/wax-monkey-the-whole-loaf-17-jul#tickets"},{"date":"2026-07-18","day":"Saturday","city":"Stowe","state":"VT","venue":"Shakedown Lounge (Free Show!)","featured":false},{"date":"2026-07-19","day":"Sunday","city":"Hampton Beach","state":"NH","venue":"Wally\'s (Free Show!)","featured":false},{"date":"2026-07-21","day":"Tuesday","city":"Nantucket","state":"MA","venue":"Cisco Brewing (Free Show!)","featured":false},{"date":"2026-07-22","day":"Wednesday","city":"Nantucket","state":"MA","venue":"Cisco Brewing (Free Show!)","featured":false},{"date":"2026-07-24","day":"Friday","city":"New York City","state":"NY","venue":"Berlin","featured":false,"ticketLink":"https://www.ticketweb.com/event/wax-monkey-berlin-tickets/14841433?pl=berlin"},{"date":"2026-07-25","day":"Saturday","city":"Washington","state":"DC","venue":"Pearl Street Warehouse","featured":false,"ticketLink":"https://www.unionstagepresents.com/shows/wax-monkey-25-jul"},{"date":"2026-07-26","day":"Sunday","city":"Ocean City","state":"MD","venue":"Fager\'s Island (Free Show!)","featured":false},{"date":"2026-07-28","day":"Tuesday","city":"Chicago","state":"IL","venue":"Subterranean Downstairs","featured":false,"ticketLink":"https://wl.eventim.us/event/wax-monkey/687590?afflky=KickstandProductions"},{"date":"2026-07-30","day":"Thursday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-07-31","day":"Friday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-08-01","day":"Saturday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-08-02","day":"Sunday","city":"Swisher","state":"IA","venue":"Cedar Ridge Distillery (Free Show!)","featured":false},{"date":"2026-08-04","day":"Tuesday","city":"Des Moines","state":"IA","venue":"Locals","featured":false,"ticketLink":"https://tickets.midwestix.com/event/wax-monkey-at-locals-bar-stage/listing"},{"date":"2026-08-05","day":"Wednesday","city":"Omaha","state":"NE","venue":"Reverb Lounge","featured":false,"ticketLink":"https://www.etix.com/ticket/p/91126233/"},{"date":"2026-08-07","day":"Friday","city":"Evergreen","state":"CO","venue":"Little Bear Saloon (Free Show!)","featured":false},{"date":"2026-08-08","day":"Saturday","city":"Steamboat","state":"CO","venue":"Schmiggity\'s","featured":false,"ticketLink":"https://www.tickpick.com/organizer/event/wax-monkey-71864060"},{"date":"2026-08-14","day":"Friday","city":"Denver","state":"CO","venue":"Cervantes\' Other Side","featured":false,"ticketLink":"https://www.etix.com/ticket/p/84972059/wax-monkey-sam-walker-band-wspecial-guests-denver-cervantesother-side?cobrand=Cervantes&partner_id=100&_gl=1*1ollqdy*_ga*MjQyMzc3NDUyLjE3NzgxOTg2NzU.*_ga_KZX2Q5YDR7*czE3NzgxOTg2NzQkbzEkZzAkdDE3NzgxOTg2NzQkajYwJGwwJGgw*_gcl_au*NDIzMzQ1Nzc3LjE3NzgxOTg2NzU.*_ga_6G2E4FFZM6*czE3NzgxOTg2NzQkbzEkZzAkdDE3NzgxOTg2NzQkajYwJGwwJGgw&_ga=2.90196186.1941769030.1778198675-242377452.1778198675"},{"date":"2026-08-15","day":"Saturday","city":"Littleton","state":"CO","venue":"Farm House Music Series (Free Show!)","featured":false},{"date":"2026-08-16","day":"Sunday","city":"Colorado Springs","state":"CO","venue":"Vultures (Day of Show Tickets)","featured":false},{"date":"2026-08-17","day":"Monday","city":"Carbondale","state":"CO","venue":"Steve\'s Guitars","featured":false,"ticketLink":"https://app.showslinger.com/v4/wax-monkey?from=%2Fpromo_widget_v3%2Fcombo_widget%3Fid%3D225%26origin_url%3Dhttps%253A%252F%252Fwww.stevesguitars.net%252F%26secure_code%3D7a636edfc9&promo_widget_v3_id=225"},{"date":"2026-08-19","day":"Wednesday","city":"Fort Collins","state":"CO","venue":"Aggie Theatre","featured":false,"ticketLink":"https://www.axs.com/events/1405860/wax-monkey-tickets?skin=aggietheatre"},{"date":"2026-08-20","day":"Thursday","city":"Boulder","state":"CO","venue":"Fox Theatre","featured":false,"ticketLink":"https://www.axs.com/events/1405851/wax-monkey-tickets?skin=foxtheatre"},{"date":"2026-08-21","day":"Friday","city":"Eagle","state":"CO","venue":"Moes BBQ (Free Show!)","featured":false},{"date":"2026-08-22","day":"Saturday","city":"Telluride","state":"CO","venue":"The Alibi","featured":false,"ticketLink":"https://wl.eventim.us/event/wax-monkey/687482?afflky=TheAlibi"}]');
+module.exports = /*#__PURE__*/JSON.parse('[{"date":"2026-05-28","day":"Thursday","city":"Jacksonville","state":"FL","venue":"The Blue Jay","featured":false,"ticketLink":"https://app.opendate.io/e/wax-monkey-may-28-2026-646017"},{"date":"2026-05-29","day":"Friday","city":"Charleston","state":"SC","venue":"The Pour House Deck","featured":false,"ticketLink":"https://aftontickets.com/event/buyticket/38jynrl7x7/preview"},{"date":"2026-06-03","day":"Wednesday","city":"Wilmington","state":"NC","venue":"Bowstring","featured":false,"freeShow":true},{"date":"2026-06-04","day":"Thursday","city":"Richmond","state":"VA","venue":"Get Tight Lounge","featured":false,"ticketLink":"https://app.opendate.io/e/wax-monkey-and-the-sugar-hollows-june-04-2026-672742"},{"date":"2026-06-05","day":"Friday","city":"Roanoke","state":"VA","venue":"Martin\'s Downtown","featured":false,"ticketLink":"https://events.ticketleap.com/tickets/martins-downtown/wax-monkey-live-martin-s-downtown"},{"date":"2026-06-06","day":"Saturday","city":"Boone","state":"NC","venue":"Boone Saloon (Day of Show Tickets)","featured":false},{"date":"2026-06-12","day":"Friday","city":"Chattanooga","state":"TN","venue":"Hifi Clydes (Day of Show Tickets)","featured":false},{"date":"2026-06-13","day":"Saturday","city":"Roanoke","state":"VA","venue":"NokeFest","featured":false,"ticketLink":"https://aftontickets.com/nokefest"},{"date":"2026-06-14","day":"Sunday","city":"Asheville","state":"NC","venue":"Sierra Nevada Brewing","featured":false,"freeShow":true},{"date":"2026-06-25","day":"Thursday","city":"Franklin","state":"TN","venue":"Kimbros","featured":false,"ticketLink":"https://tunehatch.com/shows/wax-monkey"},{"date":"2026-06-26","day":"Friday","city":"Lexington","state":"KY","venue":"The Burl","featured":false,"ticketLink":"https://www.theburltickets.com//events/buy-tickets/2GdK8S9wd6zRu6uVJQZf"},{"date":"2026-06-28","day":"Sunday","city":"Rothbury","state":"MI","venue":"Electric Forest","featured":false,"ticketLink":"https://www.electricforest.com/"},{"date":"2026-07-10","day":"Friday","city":"Charlotte","state":"NC","venue":"The Evening Muse","featured":false,"ticketLink":"https://www.eventbrite.com/e/wax-monkey-tickets-1987414180313"},{"date":"2026-07-11","day":"Saturday","city":"Norfolk","state":"VA","venue":"The Annex","featured":false,"ticketLink":"https://www.etix.com/ticket/p/67402001/wax-monkey-at-the-annex-norfolk-the-annex-nfk?partner_id=6880"},{"date":"2026-07-15","day":"Wednesday","city":"Marshfield","state":"MA","venue":"Levitate Backyard","featured":false,"freeShow":true},{"date":"2026-07-16","day":"Thursday","city":"New Bedford","state":"MA","venue":"Cisco Brewing","featured":false,"freeShow":true},{"date":"2026-07-17","day":"Friday","city":"Hyannis","state":"MA","venue":"Neptune\'s","featured":false,"ticketLink":"https://calendar.neptunes.cc/shows/wax-monkey-the-whole-loaf-17-jul#tickets"},{"date":"2026-07-18","day":"Saturday","city":"Stowe","state":"VT","venue":"Shakedown Lounge","featured":false,"freeShow":true},{"date":"2026-07-19","day":"Sunday","city":"Hampton Beach","state":"NH","venue":"Wally\'s","featured":false,"freeShow":true},{"date":"2026-07-21","day":"Tuesday","city":"Nantucket","state":"MA","venue":"Cisco Brewing","featured":false,"freeShow":true},{"date":"2026-07-22","day":"Wednesday","city":"Nantucket","state":"MA","venue":"Cisco Brewing","featured":false,"freeShow":true},{"date":"2026-07-24","day":"Friday","city":"New York City","state":"NY","venue":"Berlin","featured":false,"ticketLink":"https://www.ticketweb.com/event/wax-monkey-berlin-tickets/14841433?pl=berlin"},{"date":"2026-07-25","day":"Saturday","city":"Washington","state":"DC","venue":"Pearl Street Warehouse","featured":false,"ticketLink":"https://www.unionstagepresents.com/shows/wax-monkey-25-jul"},{"date":"2026-07-26","day":"Sunday","city":"Ocean City","state":"MD","venue":"Fager\'s Island","featured":false,"freeShow":true},{"date":"2026-07-28","day":"Tuesday","city":"Chicago","state":"IL","venue":"Subterranean Downstairs","featured":false,"ticketLink":"https://wl.eventim.us/event/wax-monkey/687590?afflky=KickstandProductions"},{"date":"2026-07-30","day":"Thursday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-07-31","day":"Friday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-08-01","day":"Saturday","city":"Appleton","state":"WI","venue":"Mile of Music Festival","featured":false,"ticketLink":"https://mileofmusic.com/"},{"date":"2026-08-02","day":"Sunday","city":"Swisher","state":"IA","venue":"Cedar Ridge Distillery","featured":false,"freeShow":true},{"date":"2026-08-04","day":"Tuesday","city":"Des Moines","state":"IA","venue":"Locals","featured":false,"ticketLink":"https://tickets.midwestix.com/event/wax-monkey-at-locals-bar-stage/listing"},{"date":"2026-08-05","day":"Wednesday","city":"Omaha","state":"NE","venue":"Reverb Lounge","featured":false,"ticketLink":"https://www.etix.com/ticket/p/91126233/"},{"date":"2026-08-07","day":"Friday","city":"Evergreen","state":"CO","venue":"Little Bear Saloon","featured":false,"freeShow":true},{"date":"2026-08-08","day":"Saturday","city":"Steamboat","state":"CO","venue":"Schmiggity\'s","featured":false,"ticketLink":"https://www.tickpick.com/organizer/event/wax-monkey-71864060"},{"date":"2026-08-14","day":"Friday","city":"Denver","state":"CO","venue":"Cervantes\' Other Side","featured":false,"ticketLink":"https://www.etix.com/ticket/p/84972059/wax-monkey-sam-walker-band-wspecial-guests-denver-cervantesother-side?cobrand=Cervantes&partner_id=100&_gl=1*1ollqdy*_ga*MjQyMzc3NDUyLjE3NzgxOTg2NzU.*_ga_KZX2Q5YDR7*czE3NzgxOTg2NzQkbzEkZzAkdDE3NzgxOTg2NzQkajYwJGwwJGgw*_gcl_au*NDIzMzQ1Nzc3LjE3NzgxOTg2NzU.*_ga_6G2E4FFZM6*czE3NzgxOTg2NzQkbzEkZzAkdDE3NzgxOTg2NzQkajYwJGwwJGgw&_ga=2.90196186.1941769030.1778198675-242377452.1778198675"},{"date":"2026-08-15","day":"Saturday","city":"Littleton","state":"CO","venue":"Farm House Music Series","featured":false,"freeShow":true},{"date":"2026-08-16","day":"Sunday","city":"Colorado Springs","state":"CO","venue":"Vultures (Day of Show Tickets)","featured":false},{"date":"2026-08-17","day":"Monday","city":"Carbondale","state":"CO","venue":"Steve\'s Guitars","featured":false,"ticketLink":"https://app.showslinger.com/v4/wax-monkey?from=%2Fpromo_widget_v3%2Fcombo_widget%3Fid%3D225%26origin_url%3Dhttps%253A%252F%252Fwww.stevesguitars.net%252F%26secure_code%3D7a636edfc9&promo_widget_v3_id=225"},{"date":"2026-08-19","day":"Wednesday","city":"Fort Collins","state":"CO","venue":"Aggie Theatre","featured":false,"ticketLink":"https://www.axs.com/events/1405860/wax-monkey-tickets?skin=aggietheatre"},{"date":"2026-08-20","day":"Thursday","city":"Boulder","state":"CO","venue":"Fox Theatre","featured":false,"ticketLink":"https://www.axs.com/events/1405851/wax-monkey-tickets?skin=foxtheatre"},{"date":"2026-08-21","day":"Friday","city":"Eagle","state":"CO","venue":"Moes BBQ","featured":false,"freeShow":true},{"date":"2026-08-22","day":"Saturday","city":"Telluride","state":"CO","venue":"The Alibi","featured":false,"ticketLink":"https://wl.eventim.us/event/wax-monkey/687482?afflky=TheAlibi"}]');
 
 /***/ }),
 
@@ -7603,6 +7614,26 @@ const ProductDescription = styled_components__WEBPACK_IMPORTED_MODULE_8__["defau
 const EmbedWrapper = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
   displayName: "pages__EmbedWrapper"
 })(["width:100%;overflow:hidden;border-radius:12px;margin:1rem 0 1.5rem;background:#f8fafc;iframe{width:100%;border:0;display:block;}.tiktok-embed{margin:0 auto !important;min-width:100% !important;max-width:100% !important;}"]);
+const AlbumReleaseCard = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "pages__AlbumReleaseCard"
+})(["margin:clamp(0.85rem,2vh,1.25rem) auto 0;width:min(92vw,620px);padding:clamp(0.9rem,2vw,1.25rem);border-radius:18px;background:rgba(0,0,0,0.46);border:1px solid rgba(255,255,255,0.18);backdrop-filter:blur(10px);box-sizing:border-box;text-align:center;display:flex;flex-direction:column;align-items:center;overflow:hidden;@media (max-width:480px){width:min(94vw,420px);padding:0.85rem;border-radius:14px;}"]);
+const AlbumEyebrow = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].p.withConfig({
+  displayName: "pages__AlbumEyebrow"
+})(["margin:0 0 0.25rem;color:#fff;text-transform:uppercase;letter-spacing:1.6px;font-size:clamp(0.62rem,1.7vw,0.72rem);font-weight:800;"]);
+const AlbumTitle = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].h2.withConfig({
+  displayName: "pages__AlbumTitle"
+})(["margin:0 0 0.45rem;color:#fff;font-family:\"Cooper Black\",serif;font-style:italic;font-size:clamp(1.8rem,6vw,3.35rem);line-height:0.95;text-align:center;"]);
+const MusicButtonRow = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "pages__MusicButtonRow"
+})(["width:100%;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0.65rem;margin:0.9rem 0 0.85rem;@media (max-width:430px){gap:0.5rem;}"]);
+const MusicButton = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].a.withConfig({
+  displayName: "pages__MusicButton"
+})(["display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:0.7rem 1rem;border-radius:999px;text-decoration:none;font-size:clamp(0.78rem,2vw,0.9rem);font-weight:800;line-height:1;transition:transform 0.25s ease,opacity 0.25s ease;background:", ";color:#111;&:hover{transform:translateY(-2px);opacity:0.9;}@media (max-width:430px){width:100%;min-width:0;padding:0.75rem 1rem;}"], ({
+  $variant
+}) => $variant === "spotify" ? "#1DB954" : "#fff");
+const HeroMusicEmbeds = styled_components__WEBPACK_IMPORTED_MODULE_8__["default"].div.withConfig({
+  displayName: "pages__HeroMusicEmbeds"
+})(["width:100%;max-width:560px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:0.7rem;margin-top:0.2rem;iframe{width:100%;border:0;border-radius:12px;display:block;background:#000;}.spotify-player{height:152px;}.apple-player{height:175px;}@media (max-width:640px){max-width:420px;grid-template-columns:1fr;.spotify-player{height:152px;}.apple-player{height:175px;}}@media (max-width:380px){.spotify-player{height:140px;}.apple-player{height:165px;}}"]);
 const TikTokEmbed = () => {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     const existingScript = document.querySelector('script[src="https://www.tiktok.com/embed.js"]');
@@ -7659,28 +7690,81 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Layout_GlobalStyles__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
   active: "home"
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroVideo, {
-  id: "intro"
+  id: "intro",
+  style: {
+    minHeight: "100svh",
+    overflow: "hidden"
+  }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.BackgroundVideo, {
   autoPlay: true,
   loop: true,
   muted: true,
   playsInline: true,
   poster: "/images/heroimg.jpg",
-  src: "/videos/hero-wm.",
+  src: "/videos/hero-wm.mp4",
   type: "video/mp4"
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroContent, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.AboutIntroWrapper, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.SectionTitle, {
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroContent, {
   style: {
-    color: "#fff"
+    justifyContent: "flex-start",
+    alignItems: "center",
+    paddingTop: "clamp(6rem, 12vh, 8rem)",
+    paddingBottom: "clamp(2rem, 6vh, 4rem)",
+    boxSizing: "border-box",
+    overflow: "visible"
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.AboutIntroWrapper, {
+  style: {
+    textAlign: "center",
+    margin: "0 auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.SectionTitle, {
+  style: {
+    color: "#fff",
+    lineHeight: 1.05,
+    marginTop: 0,
+    paddingTop: "0.15em"
   }
 }, "Wax Monkey"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.MissionStatement, {
   style: {
     color: "#fff"
   }
-}, "A 5-piece jam band from Birmingham, Alabama blending southern rock, psychedelic sound, and improvisational jams."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
+}, "A 5-piece jam band from Birmingham, Alabama blending southern rock, psychedelic sound, and improvisational jams."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(AlbumReleaseCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(AlbumEyebrow, null, "New Album Out Now"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(AlbumTitle, null, "Encompass"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.MissionStatement, {
+  style: {
+    color: "#fff",
+    marginBottom: 0
+  }
+}, "Stream the new Wax Monkey album now on Spotify and Apple Music."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MusicButtonRow, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MusicButton, {
+  $variant: "spotify",
+  href: "https://open.spotify.com/album/72cQh9jRMPDkRj6kfRsbQZ?si=89ac7deca78e478b",
+  target: "_blank",
+  rel: "noreferrer"
+}, "Listen on Spotify"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MusicButton, {
+  href: "https://music.apple.com/us/album/encompass/6777398019",
+  target: "_blank",
+  rel: "noreferrer"
+}, "Listen on Apple Music")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(HeroMusicEmbeds, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+  className: "spotify-player",
+  title: "Encompass by Wax Monkey on Spotify",
+  src: "https://open.spotify.com/embed/album/72cQh9jRMPDkRj6kfRsbQZ?utm_source=generator&si=89ac7deca78e478b",
+  frameBorder: "0",
+  allowFullScreen: true,
+  allow: "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
+  loading: "lazy"
+}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
+  className: "apple-player",
+  title: "Encompass by Wax Monkey on Apple Music",
+  allow: "autoplay *; encrypted-media *; fullscreen *",
+  sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation",
+  src: "https://embed.music.apple.com/us/album/encompass/6777398019"
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "#products",
   style: {
     color: "#fff",
-    borderColor: "#fff"
+    borderColor: "#fff",
+    marginTop: "1.5rem"
   }
 }, "Follow Us")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_sections_shows__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.Section, {
   id: "products"
@@ -7688,14 +7772,14 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
   href: "https://www.instagram.com/waxmonkey",
   target: "_blank",
   rel: "noreferrer"
-}, "View Instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "YouTube"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Full performances and sessions.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+}, "View Instagram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductTitle, null, "YouTube"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ProductDescription, null, "Full performances and sessions."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
   style: {
     width: "100%",
     aspectRatio: "16 / 9"
   }
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("iframe", {
   src: "https://www.youtube.com/embed/dPB4KC2Pb_c?autoplay=1&mute=1&rel=0&modestbranding=1",
-  title: "Birds of a Feather - Phish (Wax Monkey Cover)",
+  title: "Birds of a Feather - Phish Wax Monkey Cover",
   frameBorder: "0",
   allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
   referrerPolicy: "strict-origin-when-cross-origin",
@@ -7705,7 +7789,7 @@ const HomePage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default()
     height: "100%",
     borderRadius: "12px"
   }
-})), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
+}))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_styles__WEBPACK_IMPORTED_MODULE_7__.HeroButton, {
   href: "https://www.youtube.com/@waxmonkeyband",
   target: "_blank",
   rel: "noreferrer"

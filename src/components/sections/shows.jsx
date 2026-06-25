@@ -161,14 +161,26 @@ const getMonthLabel = (dateString) => {
   });
 };
 
-const groupedShows = shows.reduce((acc, show) => {
-  const month = getMonthLabel(show.date);
-  if (!acc[month]) acc[month] = [];
-  acc[month].push(show);
-  return acc;
-}, {});
+const isUpcomingOrToday = (dateString) => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const showDate = new Date(`${dateString}T00:00:00`);
+  showDate.setHours(0, 0, 0, 0);
+
+  return showDate >= today;
+};
 
 const Shows = () => {
+  const visibleShows = shows.filter((show) => isUpcomingOrToday(show.date));
+
+  const groupedShows = visibleShows.reduce((acc, show) => {
+    const month = getMonthLabel(show.date);
+    if (!acc[month]) acc[month] = [];
+    acc[month].push(show);
+    return acc;
+  }, {});
+
   return (
     <Section id="shows">
       <SectionTitle>Shows</SectionTitle>
