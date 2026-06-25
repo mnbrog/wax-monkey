@@ -147,6 +147,7 @@ const TicketButton = styled.a`
 
 const formatDate = (dateString) => {
   const date = new Date(`${dateString}T12:00:00`);
+
   return date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -155,6 +156,7 @@ const formatDate = (dateString) => {
 
 const getMonthLabel = (dateString) => {
   const date = new Date(`${dateString}T12:00:00`);
+
   return date.toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
@@ -176,8 +178,13 @@ const Shows = () => {
 
   const groupedShows = visibleShows.reduce((acc, show) => {
     const month = getMonthLabel(show.date);
-    if (!acc[month]) acc[month] = [];
+
+    if (!acc[month]) {
+      acc[month] = [];
+    }
+
     acc[month].push(show);
+
     return acc;
   }, {});
 
@@ -193,9 +200,12 @@ const Shows = () => {
             <ShowsList>
               {monthShows.map((show, index) => {
                 const hasTicketLink = Boolean(show.ticketLink);
+                const isFreeShow = Boolean(show.freeShow || show.freeshow);
 
                 return (
-                  <ShowCard key={`${show.date}-${show.city}-${show.venue}-${index}`}>
+                  <ShowCard
+                    key={`${show.date}-${show.city}-${show.venue}-${index}`}
+                  >
                     <ShowInfo>
                       <InfoBlock>
                         <InfoLabel>Date</InfoLabel>
@@ -210,8 +220,10 @@ const Shows = () => {
                       <VenueWrap>
                         <VenueTop>
                           <VenueName>{show.venue}</VenueName>
+
                           {show.featured && <Badge>Low Tickets</Badge>}
-                          {show.freeShow && <Badge>Free Show</Badge>}
+
+                          {isFreeShow && <Badge>Free Show</Badge>}
                         </VenueTop>
 
                         <CityState>
@@ -220,18 +232,20 @@ const Shows = () => {
                       </VenueWrap>
                     </ShowInfo>
 
-                    <ActionButtons>
-                      <TicketButton
-                        href={hasTicketLink ? show.ticketLink : "#"}
-                        target={hasTicketLink ? "_blank" : undefined}
-                        rel={hasTicketLink ? "noreferrer" : undefined}
-                        $disabled={!hasTicketLink}
-                      >
-                        <HeroButton as="span">
-                          {hasTicketLink ? "Tickets" : "Tickets Soon"}
-                        </HeroButton>
-                      </TicketButton>
-                    </ActionButtons>
+                    {!isFreeShow && (
+                      <ActionButtons>
+                        <TicketButton
+                          href={hasTicketLink ? show.ticketLink : "#"}
+                          target={hasTicketLink ? "_blank" : undefined}
+                          rel={hasTicketLink ? "noreferrer" : undefined}
+                          $disabled={!hasTicketLink}
+                        >
+                          <HeroButton as="span">
+                            {hasTicketLink ? "Tickets" : "Tickets Soon"}
+                          </HeroButton>
+                        </TicketButton>
+                      </ActionButtons>
+                    )}
                   </ShowCard>
                 );
               })}
