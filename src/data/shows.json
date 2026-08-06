@@ -366,5 +366,23 @@
     "venue": "The Alibi",
     "featured": false,
     "ticketLink": "https://wl.eventim.us/event/wax-monkey/687482?afflky=TheAlibi"
+  },
+  {
+    "date": "2026-08-27",
+    "day": "Thursday",
+    "city": "Athens",
+    "state": "GA",
+    "venue": "40 Watt Club",
+    "featured": false,
+    "ticketLink": "https://www.eventbrite.com/e/wax-monkey-tickets-1992418233571"
+  },
+  {
+    "date": "2026-08-28",
+    "day": "Friday",
+    "city": "Birmingham",
+    "state": "AL",
+    "venue": "Lakeview Marina Music Park",
+    "featured": false,
+    "ticketLink": "https://www.ticketmaster.com/wax-monkey-birmingham-alabama-08-28-2026/event/200064CADA9D3776"
   }
 ]
