@@ -201,7 +201,7 @@ const Shows = () => {
               {monthShows.map((show, index) => {
                 const hasTicketLink = Boolean(show.ticketLink);
                 const isFreeShow = Boolean(show.freeShow || show.freeshow);
-
+                const ticketsAtDoor = Boolean(show.ticketsAtDoor || show.ticketsatthedoor);
                 return (
                   <ShowCard
                     key={`${show.date}-${show.city}-${show.venue}-${index}`}
@@ -224,6 +224,7 @@ const Shows = () => {
                           {show.featured && <Badge>Low Tickets</Badge>}
 
                           {isFreeShow && <Badge>Free Show</Badge>}
+                          {ticketsAtDoor && <Badge>Tickets at the Door</Badge>}
                         </VenueTop>
 
                         <CityState>
@@ -232,7 +233,7 @@ const Shows = () => {
                       </VenueWrap>
                     </ShowInfo>
 
-                    {!isFreeShow && (
+                    {!isFreeShow && !ticketsAtDoor &&(
                       <ActionButtons>
                         <TicketButton
                           href={hasTicketLink ? show.ticketLink : "#"}

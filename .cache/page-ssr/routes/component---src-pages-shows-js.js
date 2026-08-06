@@ -266,6 +266,7 @@ const Shows = () => {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(MonthHeading, null, month), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowsList, null, monthShows.map((show, index) => {
     const hasTicketLink = Boolean(show.ticketLink);
     const isFreeShow = Boolean(show.freeShow || show.freeshow);
+    const ticketsAtDoor = Boolean(show.ticketsAtDoor || show.ticketsatthedoor);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowCard, {
       key: `${show.date}-${show.city}-${show.venue}-${index}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ShowInfo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoBlock, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoLabel, null, "Date"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(InfoValue, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -276,7 +277,7 @@ const Shows = () => {
       style: {
         fontWeight: 600
       }
-    }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets"), isFreeShow && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Free Show")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), !isFreeShow && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ActionButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
+    }, formatDate(show.date)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueWrap, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueTop, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(VenueName, null, show.venue), show.featured && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Low Tickets"), isFreeShow && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Free Show"), ticketsAtDoor && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Badge, null, "Tickets at the Door")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(CityState, null, show.city, ", ", show.state))), !isFreeShow && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(ActionButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(TicketButton, {
       href: hasTicketLink ? show.ticketLink : "#",
       target: hasTicketLink ? "_blank" : undefined,
       rel: hasTicketLink ? "noreferrer" : undefined,
