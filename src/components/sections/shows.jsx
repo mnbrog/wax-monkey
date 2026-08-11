@@ -229,6 +229,7 @@ const Shows = () => {
 
                         <CityState>
                           {show.city}, {show.state}
+                          {show.support ? ` · w/ ${show.support}` : ""}
                         </CityState>
                       </VenueWrap>
                     </ShowInfo>
